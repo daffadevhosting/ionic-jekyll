@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% include head.html %}
+
+    <div id="main" role="main" class="container">
+      {{ content }}
+    {% if page.layout == "default" %}
+    {% include ion-sidebar.html %}
+    {% endif %}
+    </div>
+
+    {% include ion-footer.html %}
+
+    {% include analytics.html %}
+</html>

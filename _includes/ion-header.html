@@ -1,0 +1,57 @@
+      <ion-header collapse="fade" translucent="true">
+        <ion-toolbar>
+    {% if page.layout == "default" %}
+<a href="{{ site.baseurl }}/blog">
+          <ion-chip slot="start">
+            <ion-avatar>
+            <img src="{{ site.avatar }}" />
+            </ion-avatar>
+            <ion-label>{{ site.name }}</ion-label>
+          </ion-chip>
+</a>
+    {% endif %}
+    {% if page.layout == "webshop" %}
+<a href="{{ site.baseurl }}/blog">
+          <ion-chip slot="start">
+            <ion-avatar>
+            <img src="{{ site.avatar }}" />
+            </ion-avatar>
+            <ion-label>{{ site.name }}</ion-label>
+          </ion-chip>
+</a>
+    <ion-buttons class="mobile-hide" slot="end">
+      <ion-button>
+<ion-icon name="cart"></ion-icon>
+            <ion-badge color="danger" id="cart-menu" class="simpleCart_quantity" style="position: relative;top: -8px;right: 7px;border-radius: 50px;font-size: xx-small;"></ion-badge>
+    </ion-button>
+    </ion-buttons>
+    {% endif %}
+    {% if page.layout == "post" %}
+    <ion-buttons slot="start">
+      <ion-button onclick="history.back()"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+    </ion-buttons>
+    {% endif %}
+    {% if page.layout == "shop" %}
+    <ion-buttons slot="start">
+      <ion-button onclick="history.back()"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+    </ion-buttons>
+    {% endif %}
+    {% if page.layout == "page" %}
+    <ion-buttons slot="start">
+      <ion-button onclick="history.back()"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+    </ion-buttons>
+    {% endif %}
+          <ion-chip slot="end" onclick="setDarkMode(true)" id="darkBtn">
+            <div>
+            <ion-label>DarkMode</ion-label>
+            <ion-icon name="moon" color="dark"></ion-icon>
+            </div>
+          </ion-chip>
+          <ion-chip slot="end" onclick="setDarkMode(false)" id="lightBtn" style="display: none;">
+            <div>
+            <ion-label>LightMode</ion-label>
+            <ion-icon name="partly-sunny"></ion-icon>
+            </div>
+          </ion-chip>
+        </ion-toolbar>
+     </ion-header>

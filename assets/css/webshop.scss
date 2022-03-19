@@ -1,0 +1,176 @@
+---
+---
+
+@import "./reset";
+@import "./variables";
+
+#webshop {
+    max-width: 1080px;
+    margin: auto;
+}
+
+.grid {
+    max-width: 250px;
+    width: 100%;
+
+    @include mobile {
+    width: auto;
+    margin: 5px;}
+}
+
+.etalase {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    @include mobile {
+    width: auto;
+    margin: 0;}
+}
+
+.post-page {width:100%;}
+
+.post-shop {
+    width: auto;
+
+    @include mobile {
+    max-width: 50%;}
+}
+
+.shop-header {
+    padding: 0;
+    text-align: center;
+}
+
+.shop-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subtitle {
+    padding: 10px 0px;
+}
+
+.price {
+    font-size: 16px;
+    text-shadow: 2px 2px 3px #3880ff8f;
+    margin-bottom: 15px;
+}
+
+.entry {
+    padding: 6px;
+}
+
+.post-product {
+    display:flex;
+    flex-wrap: nowrap;
+    margin-left: -26px;
+
+    @include mobile {
+    flex-wrap: wrap;
+    width: -webkit-fill-available;
+    margin-left: 0px;}
+}
+
+.style-picker {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    grid-gap: 10px;
+    align-items: center;
+    align-content: space-between;
+}
+
+.product-page {
+    display: flex;
+    width: 790px;
+    flex-wrap: nowrap;
+
+    @include mobile {
+    width: auto;
+    flex-wrap: wrap;}
+}
+
+.detail-product {
+    width: 480px;
+    padding: 10px;
+}
+
+.product-img {
+    max-width: 680px;
+}
+
+.item-rate {
+    padding: 10px 0 0 20px;
+}
+
+.page-price {
+    padding: 10px 0 0 0px;
+    font-size: 25px;
+    font-style: oblique;
+    font-weight: bold;
+}
+
+select.form-control {
+    display: block;
+    background: transparent;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 50px;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 7px 0;
+    font-size: 18px;
+    border: 1px solid;
+    border-radius: 50px;
+}
+
+.btn-atc {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    @include mobile {
+    position: unset!important};
+}
+.review {width:300px;
+
+    @include mobile {
+    width: 100%;}
+}
+
+.review-checkout {
+    width:50%;
+    max-height: 390px;
+
+    @include mobile {
+    width: 100%;}
+}
+
+.mobile-show {display:none;
+
+    @include mobile {display:block;}
+}
+
+.mobile-hide {display:block;
+
+    @include mobile {display:none;}
+}
+
+.cekout {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+
+    @include mobile {
+    flex-wrap: wrap;}
+}
+@import "./highlights";

@@ -1,0 +1,71 @@
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark" />
+<meta name="google-site-verification" content="{{site.verify}}" />
+ 
+<title>{% if page.title and page.title != 'Home' %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+{% assign pagecontent_description = page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 160 %}
+<meta name="description" content="{% if pagecontent_description.size > 10 %}{{ pagecontent_description }}{% else %}{{ site.description }}{% endif %}">
+
+<link rel="shortcut icon" type="image/png" href="{{site.baseurl}}/assets/images/logo/maskable_icon_x192.png">
+<link rel="shortcut icon" sizes="192x192" href="{{site.baseurl}}/assets/images/logo/maskable_icon_x192.png">
+<link rel="apple-touch-icon" href="{{site.baseurl}}/assets/images/logo/maskable_icon_x192.png">
+
+ <!-- Facebook integration -->
+<meta property="og:title" content="{{ page.title }}"/>
+{% if page.image %}<meta property="og:image" content="{{ page.image | prepend: site.baseurl | prepend: site.url }}"/>{% endif %}
+<meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url }}"/>
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="{{ site.title }}"/>
+<meta property="og:description" content="{% if pagecontent_description.size > 10 %}{{ pagecontent_description }}{% else %}{{ site.description }}{% endif %}"/>
+
+<!-- Twitter integration -->
+<meta name="twitter:card" content="summary">
+{% if site.twitter_url %}<meta name="twitter:site" content="{{ site.twitter_url }}">{% endif %}
+<meta name="twitter:title" content="{{ page.title }}" />
+{% if page.image %}<meta name="twitter:image" content="{{ site.url }}{{ page.image }}" />{% endif %}
+<meta name="twitter:url" content="{{ site.url }}{{ page.url }}" />
+<meta name="twitter:description" content="{% if pagecontent_description.size > 10 %}{{ pagecontent_description }}{% else %}{{ site.description }}{% endif %}" />
+<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+<link rel="sitemap" type="application/xml" title="Sitemap" href="{{ "/sitemap.xml" | prepend: site.baseurl | prepend: site.url }}" />
+
+<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<link href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" rel="stylesheet" />
+    <style>
+      :root {
+        --ion-safe-area-left: 0px;
+        --ion-safe-area-right: 0px;
+      }
+    </style>
+    <script type="module">
+      import { alertController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
+      window.alertController = alertController;
+    </script>
+  <script type="module">
+    import { toastController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
+    window.toastController = toastController;
+  </script>
+  <script type="module">
+    import { modalController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
+    window.modalController = modalController;
+  </script>
+<link rel="stylesheet" href="{{ "/assets/css/style.css" | prepend: site.baseurl }}">
+<link rel="stylesheet" href="{{ "/assets/css/webshop.css" | prepend: site.baseurl }}">
+<link rel="stylesheet" href="{{ "/assets/css/darkmode.css" | prepend: site.baseurl }}">
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Created with Jekyll - https://jekyllrb.com -->
+</head>
+  <body>
+    <ion-app>
+    {% include ion-header.html %}
+      <ion-content fullscreen>

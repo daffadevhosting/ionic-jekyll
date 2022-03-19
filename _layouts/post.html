@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<ion-card class="post">
+<ion-card-header>
+  <ion-card-title>{{ page.title }}</ion-card-title>
+</ion-card-header>
+
+  <ion-card-content class="entry">
+    {{ content }}
+
+  <div class="date">
+    Written on {{ page.date | date: "%B %e, %Y" }}
+  </div>
+  </ion-card-content>
+</ion-card>
+  {% include post-sidebar.html %}

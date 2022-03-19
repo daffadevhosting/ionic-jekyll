@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark" />
+<meta name="google-site-verification" content="" />
+ 
+<title></title>
+
+<meta name="description" content="{% for post in site. product %}  &lt;article class="post-shop"&gt;        {{ post. title }}      Rp. {{ post. discount }},00    Rp. {{post. price}}          ...">
+
+<link rel="shortcut icon" type="image/png" href="/assets/images/logo/maskable_icon_x192.png">
+<link rel="shortcut icon" sizes="192x192" href="/assets/images/logo/maskable_icon_x192.png">
+<link rel="apple-touch-icon" href="/assets/images/logo/maskable_icon_x192.png">
+
+ <!-- Facebook integration -->
+<meta property="og:title" content=""/>
+
+<meta property="og:url" content="http://localhost:4000/product"/>
+<meta property="og:type" content="article">
+<meta property="og:site_name" content=""/>
+<meta property="og:description" content="{% for post in site. product %}  &lt;article class="post-shop"&gt;        {{ post. title }}      Rp. {{ post. discount }},00    Rp. {{post. price}}          ..."/>
+
+<!-- Twitter integration -->
+<meta name="twitter:card" content="summary">
+
+<meta name="twitter:title" content="" />
+
+<meta name="twitter:url" content="http://localhost:4000/product" />
+<meta name="twitter:description" content="{% for post in site. product %}  &lt;article class="post-shop"&gt;        {{ post. title }}      Rp. {{ post. discount }},00    Rp. {{post. price}}          ..." />
+<link rel="canonical" href="http://localhost:4000/product">
+<link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4000/feed.xml">
+<link rel="sitemap" type="application/xml" title="Sitemap" href="http://localhost:4000/sitemap.xml" />
+
+<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<link href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" rel="stylesheet" />
+    <style>
+      :root {
+        --ion-safe-area-left: 0px;
+        --ion-safe-area-right: 0px;
+      }
+    </style>
+    <script type="module">
+      import { alertController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
+      window.alertController = alertController;
+    </script>
+  <script type="module">
+    import { toastController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
+    window.toastController = toastController;
+  </script>
+  <script type="module">
+    import { modalController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
+    window.modalController = modalController;
+  </script>
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/webshop.css">
+<link rel="stylesheet" href="/assets/css/darkmode.css">
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Created with Jekyll - https://jekyllrb.com -->
+</head>
+  <body>
+    <ion-app>
+          <ion-header collapse="fade" translucent="true">
+        <ion-toolbar>
+    
+    
+<a href="/blog">
+          <ion-chip slot="start">
+            <ion-avatar>
+            <img src="https://1.bp.blogspot.com/-1bWHHqO2Jt0/X2ZgjgIVRVI/AAAAAAAAFZ8/XCb6roqGxhIn-K34II1L8BuLDoAePrmsgCLcBGAsYHQ/s0/192x192.png" />
+            </ion-avatar>
+            <ion-label>Plus62store</ion-label>
+          </ion-chip>
+</a>
+    <ion-buttons class="mobile-hide" slot="end">
+      <ion-button>
+<ion-icon name="cart"></ion-icon>
+            <ion-badge color="danger" id="cart-menu" class="simpleCart_quantity" style="position: relative;top: -8px;right: 7px;border-radius: 50px;font-size: xx-small;"></ion-badge>
+    </ion-button>
+    </ion-buttons>
+    
+    
+    
+    
+          <ion-chip slot="end" onclick="setDarkMode(true)" id="darkBtn">
+            <div>
+            <ion-label>DarkMode</ion-label>
+            <ion-icon name="moon" color="dark"></ion-icon>
+            </div>
+          </ion-chip>
+          <ion-chip slot="end" onclick="setDarkMode(false)" id="lightBtn" style="display: none;">
+            <div>
+            <ion-label>LightMode</ion-label>
+            <ion-icon name="partly-sunny"></ion-icon>
+            </div>
+          </ion-chip>
+        </ion-toolbar>
+     </ion-header>
+
+      <ion-content fullscreen>
+
+
+    <div id="webshop" class="shop-container">
+     <div class="etalase">
+        
+    <article class="post-shop">
+<ion-router-link href="/product/masker-3d-bodir-3lapis-tasikmalaya">
+    <ion-card class="grid">
+<img src="https://cf.shopee.co.id/file/86e632480a9b475919f2d3cf08caa4ef"/>
+    <ion-card-header class="shop-header">
+        <ion-card-subtitle class="subtitle">Masker 3D Bordir</ion-card-subtitle>
+            <div class="hiden diskon">Rp. 24.000,00</div>
+        <div class="price">Rp. 30.000</div>
+    </ion-card-header>
+      <ion-card-content class="entry">
+            <div class="shop-content">
+            <div class="sale">513 Terjual</div>
+            <div class="rate">
+            <ion-icon name="star" style="color:#f3ae0f;" aria-label="star" role="img" class="md hydrated"></ion-icon> 4.9</div>
+            </div>
+      </ion-card-content>
+    </ion-card>
+</ion-router-link>
+    </article>
+  
+    <article class="post-shop">
+<ion-router-link href="/product/masker-bordir-tasik-bunga-setaman">
+    <ion-card class="grid">
+<img src="https://cf.shopee.co.id/file/7b1760ae16b5a427c4c9ff32f68a69e4"/>
+    <ion-card-header class="shop-header">
+        <ion-card-subtitle class="subtitle">Masker Bordir Setaman</ion-card-subtitle>
+            <div class="hiden diskon">Rp. 15.600,00</div>
+        <div class="price">Rp. 20.000</div>
+    </ion-card-header>
+      <ion-card-content class="entry">
+            <div class="shop-content">
+            <div class="sale">643 Terjual</div>
+            <div class="rate">
+            <ion-icon name="star" style="color:#f3ae0f;" aria-label="star" role="img" class="md hydrated"></ion-icon> 5.0</div>
+            </div>
+      </ion-card-content>
+    </ion-card>
+</ion-router-link>
+    </article>
+  
+    <article class="post-shop">
+<ion-router-link href="/product/masker-bordir-tasik-dahlia">
+    <ion-card class="grid">
+<img src="https://cf.shopee.co.id/file/6549ebebfdff7f4355dc0398f5f5b9e2"/>
+    <ion-card-header class="shop-header">
+        <ion-card-subtitle class="subtitle">Masker Bordir Dahlia</ion-card-subtitle>
+            <div class="hiden diskon">Rp. 15.600,00</div>
+        <div class="price">Rp. 20.000</div>
+    </ion-card-header>
+      <ion-card-content class="entry">
+            <div class="shop-content">
+            <div class="sale">2148 Terjual</div>
+            <div class="rate">
+            <ion-icon name="star" style="color:#f3ae0f;" aria-label="star" role="img" class="md hydrated"></ion-icon> 5.0</div>
+            </div>
+      </ion-card-content>
+    </ion-card>
+</ion-router-link>
+    </article>
+  
+    <article class="post-shop">
+<ion-router-link href="/product/masker-bordir-tasik-ilalang">
+    <ion-card class="grid">
+<img src="https://cf.shopee.co.id/file/0031e5ba7ee62316a17ecbd36ec7bff6"/>
+    <ion-card-header class="shop-header">
+        <ion-card-subtitle class="subtitle">Masker Bordir Ilalang</ion-card-subtitle>
+            <div class="hiden diskon">Rp. 15.600,00</div>
+        <div class="price">Rp. 20.000</div>
+    </ion-card-header>
+      <ion-card-content class="entry">
+            <div class="shop-content">
+            <div class="sale">1853 Terjual</div>
+            <div class="rate">
+            <ion-icon name="star" style="color:#f3ae0f;" aria-label="star" role="img" class="md hydrated"></ion-icon> 5.0</div>
+            </div>
+      </ion-card-content>
+    </ion-card>
+</ion-router-link>
+    </article>
+  
+    <article class="post-shop">
+<ion-router-link href="/product/masker-bordir-tasik-rosse">
+    <ion-card class="grid">
+<img src="https://cf.shopee.co.id/file/465836a1d2cbfdd682656a259ebd06e1"/>
+    <ion-card-header class="shop-header">
+        <ion-card-subtitle class="subtitle">Masker Bordir Rosse</ion-card-subtitle>
+            <div class="hiden diskon">Rp. 15.600,00</div>
+        <div class="price">Rp. 20.000</div>
+    </ion-card-header>
+      <ion-card-content class="entry">
+            <div class="shop-content">
+            <div class="sale">463 Terjual</div>
+            <div class="rate">
+            <ion-icon name="star" style="color:#f3ae0f;" aria-label="star" role="img" class="md hydrated"></ion-icon> 4.9</div>
+            </div>
+      </ion-card-content>
+    </ion-card>
+</ion-router-link>
+    </article>
+  
+    <article class="post-shop">
+<ion-router-link href="/product/masker-bordir-tasik-smaya">
+    <ion-card class="grid">
+<img src="https://cf.shopee.co.id/file/0f895509b187d2da6ae3e06a460841c0"/>
+    <ion-card-header class="shop-header">
+        <ion-card-subtitle class="subtitle">Masker Bordir sMaya</ion-card-subtitle>
+            <div class="hiden diskon">Rp. 15.600,00</div>
+        <div class="price">Rp. 20.000</div>
+    </ion-card-header>
+      <ion-card-content class="entry">
+            <div class="shop-content">
+            <div class="sale">1453 Terjual</div>
+            <div class="rate">
+            <ion-icon name="star" style="color:#f3ae0f;" aria-label="star" role="img" class="md hydrated"></ion-icon> 5.0</div>
+            </div>
+      </ion-card-content>
+    </ion-card>
+</ion-router-link>
+    </article>
+  
+    <article class="post-shop">
+<ion-router-link href="/product/masker-bordir-tasik-tulip">
+    <ion-card class="grid">
+<img src="https://cf.shopee.co.id/file/b328e360371fe525dc18747276f31768"/>
+    <ion-card-header class="shop-header">
+        <ion-card-subtitle class="subtitle">Masker Bordir Tulip</ion-card-subtitle>
+            <div class="hiden diskon">Rp. 15.600,00</div>
+        <div class="price">Rp. 20.000</div>
+    </ion-card-header>
+      <ion-card-content class="entry">
+            <div class="shop-content">
+            <div class="sale">741 Terjual</div>
+            <div class="rate">
+            <ion-icon name="star" style="color:#f3ae0f;" aria-label="star" role="img" class="md hydrated"></ion-icon> 4.9</div>
+            </div>
+      </ion-card-content>
+    </ion-card>
+</ion-router-link>
+    </article>
+  
+    <article class="post-shop">
+<ion-router-link href="/product/masker-bordir-tasikmalaya-mawar">
+    <ion-card class="grid">
+<img src="https://cf.shopee.co.id/file/8beee9059f2728ffa401e9888064623e"/>
+    <ion-card-header class="shop-header">
+        <ion-card-subtitle class="subtitle">Masker Bordir Mawar</ion-card-subtitle>
+            <div class="hiden diskon">Rp. 15.600,00</div>
+        <div class="price">Rp. 20.000</div>
+    </ion-card-header>
+      <ion-card-content class="entry">
+            <div class="shop-content">
+            <div class="sale">2135 Terjual</div>
+            <div class="rate">
+            <ion-icon name="star" style="color:#f3ae0f;" aria-label="star" role="img" class="md hydrated"></ion-icon> 5.0</div>
+            </div>
+      </ion-card-content>
+    </ion-card>
+</ion-router-link>
+    </article>
+  
+    <article class="post-shop">
+<ion-router-link href="/product/masker-bordir-tasikmalaya-motif-kucing">
+    <ion-card class="grid">
+<img src="https://cf.shopee.co.id/file/529aa25edddbda7da170ec2e6488e615"/>
+    <ion-card-header class="shop-header">
+        <ion-card-subtitle class="subtitle">Masker Bordir Kucing</ion-card-subtitle>
+            <div class="hiden diskon">Rp. 17.600,00</div>
+        <div class="price">Rp. 22.000</div>
+    </ion-card-header>
+      <ion-card-content class="entry">
+            <div class="shop-content">
+            <div class="sale">711 Terjual</div>
+            <div class="rate">
+            <ion-icon name="star" style="color:#f3ae0f;" aria-label="star" role="img" class="md hydrated"></ion-icon> 5.0</div>
+            </div>
+      </ion-card-content>
+    </ion-card>
+</ion-router-link>
+    </article>
+  
+    <article class="post-shop">
+<ion-router-link href="/product/mukena-garcella-rayon-premium">
+    <ion-card class="grid">
+<img src="https://cf.shopee.co.id/file/09a49f974223ab7ee852275e9c0193e0"/>
+    <ion-card-header class="shop-header">
+        <ion-card-subtitle class="subtitle">Mukena Garcella</ion-card-subtitle>
+            <div class="hiden diskon">Rp. 162.600,00</div>
+        <div class="price">Rp. 185.000</div>
+    </ion-card-header>
+      <ion-card-content class="entry">
+            <div class="shop-content">
+            <div class="sale">553 Terjual</div>
+            <div class="rate">
+            <ion-icon name="star" style="color:#f3ae0f;" aria-label="star" role="img" class="md hydrated"></ion-icon> 5.0</div>
+            </div>
+      </ion-card-content>
+    </ion-card>
+</ion-router-link>
+    </article>
+  
+
+     </div>
+    </div>
+
+    
+      </ion-content>
+        <ion-footer collapse="fade" id="sticky-stop">
+  <ion-toolbar>
+    
+    
+    <ion-buttons class="mobile-show" slot="start">
+      <ion-button>
+<ion-icon name="cart"></ion-icon>
+            <ion-badge color="danger" id="cart-menu" class="simpleCart_quantity" style="position: relative;top: -8px;right: 7px;border-radius: 50px;font-size: xx-small;"></ion-badge>
+    </ion-button>
+    </ion-buttons>
+    
+    <ion-buttons slot="end"><note>
+    <ion-button><ion-label>Powered by GitHub</ion-label> <ion-icon name="logo-github" slot="end"></ion-icon></ion-button></note>
+    </ion-buttons>
+  </ion-toolbar>
+        </ion-footer>
+    </ion-app>
+  </body>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script>
+ function setDarkMode(isDark) {
+        var darkBtn = document.getElementById('darkBtn')
+        var lightBtn = document.getElementById('lightBtn')
+
+        if(isDark) {
+            lightBtn.style.display = "block"
+            darkBtn.style.display = "none"
+        } else {
+            lightBtn.style.display = "none"
+            darkBtn.style.display = "block"
+        }
+
+        document.body.classList.toggle("darkmode");
+    }
+
+//check localstorage
+if(localStorage.getItem('preferredTheme') == 'dark') {
+    setDarkMode(true)
+}
+
+function setDarkMode(isDark) {
+    var darkBtn = document.getElementById('darkBtn')
+    var lightBtn = document.getElementById('lightBtn')
+
+    if(isDark) {
+        lightBtn.style.display = "block"
+        darkBtn.style.display = "none" 
+    //tambahan localstorage
+        localStorage.setItem('preferredTheme', 'dark');
+    } else {
+        lightBtn.style.display = "none"
+        darkBtn.style.display = "block"
+     //tambahan localstorage
+        localStorage.removeItem('preferredTheme');
+    }
+
+    document.body.classList.toggle("darkmode");
+}
+
+</script>
+
+<script>
+      const button = document.querySelector('note');
+      button.addEventListener('click', handleButtonClick);
+
+      async function handleButtonClick() {
+        const alert = await alertController.create({
+          message: '<h4><center><ion-icon name="git-network" slot="start"></ion-icon> <ion-label>Fork This at <a href="https://github.com/">GitHub</ion-label> <ion-icon name="logo-github" slot="end"></ion-icon></a></center></h4>',
+          buttons: ['Nanti Saja'],
+        });
+
+        await alert.present();
+      }
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="/assets/js/jquery-3.6.0.js"></script>
+    <script src="/assets/js/simpleCart.js"></script>
+    <script async src="/assets/js/main.js"></script>
+    <script async src="/assets/js/responsive-menu.js"></script>
+    <script src="/assets/js/form-order.js" type="text/javascript"></script>
+    <script src="/assets/js/question.js" type="text/javascript"></script>
+
+
+
+    
+
+
+<script>
+ function setModal(modalBtn) {
+        var bagBtn = document.getElementById('bagBtn')
+        var xBtn = document.getElementById('xBtn')
+
+        if(modalBtn) {
+            xBtn.style.display = "block"
+            bagBtn.style.display = "none"
+        } else {
+            xBtn.style.display = "none"
+            bagBtn.style.display = "block"
+        }
+
+        document.body.classList.toggle("modalBtn");
+    }
+</script>
+<script type='text/javascript'>
+//<![CDATA[
+$(function() {
+  if ($('#sidesticky').length) {
+    var el = $('#sidesticky');
+    var stickyTop = $('#sidesticky').offset().top;
+    var stickyHeight = $('#sidesticky').height();
+    $(window).scroll(function() {
+      var limit = $('#sticky-stop').offset().top - stickyHeight - 120;
+      var windowTop = $(window).scrollTop();
+      if (stickyTop < windowTop) {
+        el.css({
+          position: 'fixed',
+          top: 20
+        });
+      } else {
+        el.css('position', 'static');
+      }
+      if (limit < windowTop) {
+        var diff = limit - windowTop;
+        el.css({
+          top: diff
+        });
+      }
+    });
+  }
+});
+//]]>
+</script>
+
+
+
+</html>

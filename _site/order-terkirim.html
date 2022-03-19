@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark" />
+<meta name="google-site-verification" content="" />
+ 
+<title></title>
+
+<meta name="description" content="Order Berhasil Terkirim, Silahkan Lakukan Pembayaran DISINI&lt;/center&gt;">
+
+<link rel="shortcut icon" type="image/png" href="/assets/images/logo/maskable_icon_x192.png">
+<link rel="shortcut icon" sizes="192x192" href="/assets/images/logo/maskable_icon_x192.png">
+<link rel="apple-touch-icon" href="/assets/images/logo/maskable_icon_x192.png">
+
+ <!-- Facebook integration -->
+<meta property="og:title" content=""/>
+
+<meta property="og:url" content="http://localhost:4000/order-terkirim"/>
+<meta property="og:type" content="article">
+<meta property="og:site_name" content=""/>
+<meta property="og:description" content="Order Berhasil Terkirim, Silahkan Lakukan Pembayaran DISINI&lt;/center&gt;"/>
+
+<!-- Twitter integration -->
+<meta name="twitter:card" content="summary">
+
+<meta name="twitter:title" content="" />
+
+<meta name="twitter:url" content="http://localhost:4000/order-terkirim" />
+<meta name="twitter:description" content="Order Berhasil Terkirim, Silahkan Lakukan Pembayaran DISINI&lt;/center&gt;" />
+<link rel="canonical" href="http://localhost:4000/order-terkirim">
+<link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4000/feed.xml">
+<link rel="sitemap" type="application/xml" title="Sitemap" href="http://localhost:4000/sitemap.xml" />
+
+<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<link href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" rel="stylesheet" />
+    <style>
+      :root {
+        --ion-safe-area-left: 0px;
+        --ion-safe-area-right: 0px;
+      }
+    </style>
+    <script type="module">
+      import { alertController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
+      window.alertController = alertController;
+    </script>
+  <script type="module">
+    import { toastController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
+    window.toastController = toastController;
+  </script>
+  <script type="module">
+    import { modalController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
+    window.modalController = modalController;
+  </script>
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/webshop.css">
+<link rel="stylesheet" href="/assets/css/darkmode.css">
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Created with Jekyll - https://jekyllrb.com -->
+</head>
+  <body>
+    <ion-app>
+          <ion-header collapse="fade" translucent="true">
+        <ion-toolbar>
+    
+    
+    
+    
+    
+    <ion-buttons slot="start">
+      <ion-button onclick="history.back()"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+    </ion-buttons>
+    
+          <ion-chip slot="end" onclick="setDarkMode(true)" id="darkBtn">
+            <div>
+            <ion-label>DarkMode</ion-label>
+            <ion-icon name="moon" color="dark"></ion-icon>
+            </div>
+          </ion-chip>
+          <ion-chip slot="end" onclick="setDarkMode(false)" id="lightBtn" style="display: none;">
+            <div>
+            <ion-label>LightMode</ion-label>
+            <ion-icon name="partly-sunny"></ion-icon>
+            </div>
+          </ion-chip>
+        </ion-toolbar>
+     </ion-header>
+
+      <ion-content fullscreen>
+
+
+    <div id="main" role="main" class="container">
+      <article class="post-page">
+  <div class="entry">
+    <style>main{background: #eceff1!important;}small{font-size:12px;}.qris{width:335px;}.navbar,.footer{display:none;}.gif{width:300px;border-radius:3%;}</style>
+<center><img class="gif" src="/assets/images/success.gif"/><br/><span>Order Berhasil Terkirim, Silahkan Lakukan <b>Pembayaran</b> <ion-router-link color="primary" href="/pembayaran"><b>DISINI</b></ion-router-link></center>
+
+  </div>
+</article>
+
+    
+    </div>
+
+    
+      </ion-content>
+        <ion-footer collapse="fade" id="sticky-stop">
+  <ion-toolbar>
+    
+    
+    <ion-buttons slot="end"><note>
+    <ion-button><ion-label>Powered by GitHub</ion-label> <ion-icon name="logo-github" slot="end"></ion-icon></ion-button></note>
+    </ion-buttons>
+  </ion-toolbar>
+        </ion-footer>
+    </ion-app>
+  </body>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script>
+ function setDarkMode(isDark) {
+        var darkBtn = document.getElementById('darkBtn')
+        var lightBtn = document.getElementById('lightBtn')
+
+        if(isDark) {
+            lightBtn.style.display = "block"
+            darkBtn.style.display = "none"
+        } else {
+            lightBtn.style.display = "none"
+            darkBtn.style.display = "block"
+        }
+
+        document.body.classList.toggle("darkmode");
+    }
+
+//check localstorage
+if(localStorage.getItem('preferredTheme') == 'dark') {
+    setDarkMode(true)
+}
+
+function setDarkMode(isDark) {
+    var darkBtn = document.getElementById('darkBtn')
+    var lightBtn = document.getElementById('lightBtn')
+
+    if(isDark) {
+        lightBtn.style.display = "block"
+        darkBtn.style.display = "none" 
+    //tambahan localstorage
+        localStorage.setItem('preferredTheme', 'dark');
+    } else {
+        lightBtn.style.display = "none"
+        darkBtn.style.display = "block"
+     //tambahan localstorage
+        localStorage.removeItem('preferredTheme');
+    }
+
+    document.body.classList.toggle("darkmode");
+}
+
+</script>
+
+    <script type="text/javascript">
+function myBtpn() {
+  var copyText = document.getElementById("btpn");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand("copy");
+  alert("Nomor rekening " + copyText.value + " Untuk BANK BTPN berhasil disalin, Silahkan melakukan pembayaran.");
+}
+</script>
+
+<script type="text/javascript">
+function myBri() {
+  var copyText = document.getElementById("bri");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand("copy");
+  alert("Nomor rekening " + copyText.value + " Untuk BANK BRI berhasil disalin, Silahkan melakukan pembayaran.");
+}
+    </script>
+
+<script>
+      const button = document.querySelector('note');
+      button.addEventListener('click', handleButtonClick);
+
+      async function handleButtonClick() {
+        const alert = await alertController.create({
+          message: '<h4><center><ion-icon name="git-network" slot="start"></ion-icon> <ion-label>Fork This at <a href="https://github.com/">GitHub</ion-label> <ion-icon name="logo-github" slot="end"></ion-icon></a></center></h4>',
+          buttons: ['Nanti Saja'],
+        });
+
+        await alert.present();
+      }
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="/assets/js/jquery-3.6.0.js"></script>
+    <script src="/assets/js/simpleCart.js"></script>
+    <script async src="/assets/js/main.js"></script>
+    <script async src="/assets/js/responsive-menu.js"></script>
+    <script src="/assets/js/form-order.js" type="text/javascript"></script>
+    <script src="/assets/js/question.js" type="text/javascript"></script>
+
+
+
+    
+
+
+<script>
+ function setModal(modalBtn) {
+        var bagBtn = document.getElementById('bagBtn')
+        var xBtn = document.getElementById('xBtn')
+
+        if(modalBtn) {
+            xBtn.style.display = "block"
+            bagBtn.style.display = "none"
+        } else {
+            xBtn.style.display = "none"
+            bagBtn.style.display = "block"
+        }
+
+        document.body.classList.toggle("modalBtn");
+    }
+</script>
+<script type='text/javascript'>
+//<![CDATA[
+$(function() {
+  if ($('#sidesticky').length) {
+    var el = $('#sidesticky');
+    var stickyTop = $('#sidesticky').offset().top;
+    var stickyHeight = $('#sidesticky').height();
+    $(window).scroll(function() {
+      var limit = $('#sticky-stop').offset().top - stickyHeight - 120;
+      var windowTop = $(window).scrollTop();
+      if (stickyTop < windowTop) {
+        el.css({
+          position: 'fixed',
+          top: 20
+        });
+      } else {
+        el.css('position', 'static');
+      }
+      if (limit < windowTop) {
+        var diff = limit - windowTop;
+        el.css({
+          top: diff
+        });
+      }
+    });
+  }
+});
+//]]>
+</script>
+
+
+
+    
+
+</html>

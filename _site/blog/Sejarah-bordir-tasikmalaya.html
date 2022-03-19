@@ -196,6 +196,26 @@ function setDarkMode(isDark) {
 
 </script>
 
+    <script type="text/javascript">
+function myBtpn() {
+  var copyText = document.getElementById("btpn");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand("copy");
+  alert("Nomor rekening " + copyText.value + " Untuk BANK BTPN berhasil disalin, Silahkan melakukan pembayaran.");
+}
+</script>
+
+<script type="text/javascript">
+function myBri() {
+  var copyText = document.getElementById("bri");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand("copy");
+  alert("Nomor rekening " + copyText.value + " Untuk BANK BRI berhasil disalin, Silahkan melakukan pembayaran.");
+}
+    </script>
+
 <script>
       const button = document.querySelector('note');
       button.addEventListener('click', handleButtonClick);

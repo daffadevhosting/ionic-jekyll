@@ -173,4 +173,16 @@ select.form-control {
     @include mobile {
     flex-wrap: wrap;}
 }
+
+.payment-point {
+    width: fit-content;
+    display: flex;
+    margin: auto;
+    margin-top: 45px;
+    flex-wrap: nowrap;
+
+    @include mobile {
+    width: min-content;
+    flex-wrap: wrap;}
+}
 @import "./highlights";

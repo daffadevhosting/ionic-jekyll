@@ -1,0 +1,21 @@
+I"<div class="posts">
+  {% for blog in site.blog %}
+    <ion-card class="post flex">
+<img class="img-post" src="{{ blog.img }}" />
+    <div class="post-body">
+      <ion-item>
+            <ion-label>
+                {{ blog.title }}
+            </ion-label>
+      </ion-item>
+      <ion-card-content>
+        {{ blog.excerpt }}
+      </ion-card-content>
+        <ion-item>
+      <ion-button href="{{ site.baseurl }}{{ blog.url }}" slot="end">Read More&lt;/a&gt;</ion-button>
+        </ion-item>
+</div>
+    </ion-card>
+  {% endfor %}
+</div>
+:ET

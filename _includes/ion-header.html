@@ -41,6 +41,11 @@
       <ion-button onclick="history.back()"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
     </ion-buttons>
     {% endif %}
+    {% if page.layout == "payment-page" %}
+    <ion-buttons slot="start">
+      <ion-button href="{{ site.baseurl }}/product"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+    </ion-buttons>
+    {% endif %}
           <ion-chip slot="end" onclick="setDarkMode(true)" id="darkBtn">
             <div>
             <ion-label>DarkMode</ion-label>

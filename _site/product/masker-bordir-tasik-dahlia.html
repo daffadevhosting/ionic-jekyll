@@ -81,6 +81,7 @@
     </ion-buttons>
     
     
+    
           <ion-chip slot="end" onclick="setDarkMode(true)" id="darkBtn">
             <div>
             <ion-label>DarkMode</ion-label>
@@ -200,7 +201,8 @@
 </div>
 <div class="entry" itemprop="description">Masker kain bordir manual tasikmalaya murah meriah,</div>
 <div class="app-description-content description-content" style="cursor:pointer;width:fit-content;color: #3880ff;">Selengkapnya...</div>
-  <ion-card class="app-description-text hiden" style="margin:0;">
+
+  <ion-card class="app-description-text" style="margin:0;display:none;">
 <ion-card-header style="padding:0;">
         <ion-buttons class="app-description-content">
           <ion-button color="danger"><ion-icon name="close-circle"></ion-icon>
@@ -248,7 +250,7 @@
 .keranjang-box .simpleCart_items::-webkit-scrollbar{width:2px;background-color:transparent}
 .keranjang-box:hover .simpleCart_items::-webkit-scrollbar-thumb{background-color:#ddd;border-radius:5px}
 .keranjang-box .headerRow,.keranjang-box .item-price{display:none}
-.keranjang-box .simpleCart_items{max-height: 253px;overflow-y:auto;margin-bottom:20px;padding: 0 5px;box-shadow: inset #000 0px -5px 8px -6px, inset #000 0 5px 8px -6px;border-radius: 3px;}
+.keranjang-box .simpleCart_items{max-height: 253px;overflow-y:auto;margin-bottom:20px;padding: 10px 5px 0 5px;box-shadow: inset #000 0px -5px 8px -6px, inset #000 0 5px 8px -6px;border-radius: 3px;}
 .keranjang-box .itemRow{overflow:hidden;font-size:12px;line-height:1.5;width:100%;font-weight:700;display:inline-block;margin-bottom: 10px;}
 .keranjang-box .simpleCart_items::after {content: "";text-align: center;z-index: 0;position: absolute;top: 50px;left: 50%;padding: 10px;transform: translate(-50%,-45%);max-width: 500px;width: 90%;overflow: hidden;margin: auto;}
 .keranjang-box .item-thumb{float:left}
@@ -382,7 +384,7 @@ function myBri() {
 
       async function handleButtonClick() {
         const alert = await alertController.create({
-          message: '<h4><center><ion-icon name="git-network" slot="start"></ion-icon> <ion-label>Fork This at <a href="https://github.com/">GitHub</ion-label> <ion-icon name="logo-github" slot="end"></ion-icon></a></center></h4>',
+          message: '<h4><center><ion-icon name="git-network" slot="start"></ion-icon> <ion-label>Fork This at <a href="https://github.com/daffadevhosting/ionic-jekyll">GitHub</ion-label> <ion-icon name="logo-github" slot="end"></ion-icon></a></center></h4>',
           buttons: ['Nanti Saja'],
         });
 

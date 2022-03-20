@@ -1,0 +1,16 @@
+I"Û<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;ion-card class="cart"&gt;
+        &lt;ion-list&gt;
+           &lt;ion-item&gt;
+</code></pre></div></div>
+<div class="keranjang-box simplecart-cart">
+    <div class="simpleCart_items"></div>
+               &lt;/ion-item&gt;
+    <div class="harga-total">
+      <span>Grand Total: </span><span class="simpleCart_quantity"></span> items = <span class="simpleCart_total"></span>
+          <ion-button class="co-btn item_add" style="float: right;" href="/checkout">CheckOut</ion-button><br />
+ <span style="font-size:10px;">( *Belum Termasuk Ongkir )</span></div>
+</div>
+<p>&lt;/div&gt;
+&lt;/ion-list&gt;
+&lt;/ion-card&gt;</p>
+:ET

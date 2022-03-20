@@ -76,9 +76,12 @@
     
     
     
+    
     <ion-buttons slot="start">
       <ion-button onclick="history.back()"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
     </ion-buttons>
+    
+    
     
     
           <ion-chip slot="end" onclick="setDarkMode(true)" id="darkBtn">
@@ -124,6 +127,24 @@
         </ion-footer>
     </ion-app>
   </body>
+
+<script>
+function myBlog() {
+  location.replace('/blog')
+}
+
+function myProduct() {
+  location.replace('/product')
+}
+
+function checkOut() {
+  location.replace('/checkout')
+}
+
+function myCart() {
+  location.replace('/cart')
+}
+</script>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
 <script>
  function setDarkMode(isDark) {
@@ -167,7 +188,7 @@ function setDarkMode(isDark) {
 
 </script>
 
-    <script type="text/javascript">
+<script type="text/javascript">
 function myBtpn() {
   var copyText = document.getElementById("btpn");
   copyText.select();
@@ -185,7 +206,7 @@ function myBri() {
   document.execCommand("copy");
   alert("Nomor rekening " + copyText.value + " Untuk BANK BRI berhasil disalin, Silahkan melakukan pembayaran.");
 }
-    </script>
+</script>
 
 <script>
       const button = document.querySelector('note');

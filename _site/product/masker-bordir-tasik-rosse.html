@@ -76,9 +76,12 @@
     
     
     
+    
     <ion-buttons slot="start">
       <ion-button onclick="history.back()"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
     </ion-buttons>
+    
+    
     
     
     
@@ -220,9 +223,9 @@
 </p>
 </ion-card-content>
   </ion-card>
-<ion-item class="btn-atc">
+<ion-list class="btn-atc">
         <ion-button id="cartButton" class="item_add" slot="end" color="tertiary" href="javascript:;" ><ion-icon slot="start" name="add-outline"></ion-icon> Add To Cart</ion-button>
-</ion-item>
+</ion-list>
 </div>
 </ion-card>
 <ion-card class="review">
@@ -289,7 +292,7 @@ span.simpleCart_shipping, span.simpleCart_grandTotal {font-weight: 600;color:#ff
 <span style="font-size:10px;">( *Belum Termasuk Ongkir )</span>
     
 <ion-item>
-          <ion-button fill="outline" slot="end" style="margin-top: 20px;" href="/checkout">CheckOut</ion-button>
+          <ion-button onclick="checkOut()" fill="outline" slot="end" style="margin-top: 20px;">CheckOut</ion-button>
 </ion-item>
 
     </div>
@@ -315,6 +318,24 @@ span.simpleCart_shipping, span.simpleCart_grandTotal {font-weight: 600;color:#ff
         </ion-footer>
     </ion-app>
   </body>
+
+<script>
+function myBlog() {
+  location.replace('/blog')
+}
+
+function myProduct() {
+  location.replace('/product')
+}
+
+function checkOut() {
+  location.replace('/checkout')
+}
+
+function myCart() {
+  location.replace('/cart')
+}
+</script>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
 <script>
  function setDarkMode(isDark) {
@@ -358,7 +379,7 @@ function setDarkMode(isDark) {
 
 </script>
 
-    <script type="text/javascript">
+<script type="text/javascript">
 function myBtpn() {
   var copyText = document.getElementById("btpn");
   copyText.select();
@@ -376,7 +397,7 @@ function myBri() {
   document.execCommand("copy");
   alert("Nomor rekening " + copyText.value + " Untuk BANK BRI berhasil disalin, Silahkan melakukan pembayaran.");
 }
-    </script>
+</script>
 
 <script>
       const button = document.querySelector('note');

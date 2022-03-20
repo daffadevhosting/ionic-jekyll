@@ -72,14 +72,21 @@
           <ion-header collapse="fade" translucent="true">
         <ion-toolbar>
     
-<a href="/blog">
-          <ion-chip slot="start">
+          <ion-chip onclick="myBlog()" slot="start">
             <ion-avatar>
             <img src="https://1.bp.blogspot.com/-1bWHHqO2Jt0/X2ZgjgIVRVI/AAAAAAAAFZ8/XCb6roqGxhIn-K34II1L8BuLDoAePrmsgCLcBGAsYHQ/s0/192x192.png" />
             </ion-avatar>
             <ion-label>Plus62store</ion-label>
           </ion-chip>
-</a>
+    
+    
+    
+    <ion-buttons class="mobile-hide" slot="end">
+      <ion-button onclick="myProduct()">
+         <ion-icon name="storefront" color="primary"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    
     
     
     
@@ -187,7 +194,7 @@
   <ion-item>
     <ion-icon name="storefront" slot="start"></ion-icon>
     <ion-label>WebShop</ion-label>
-    <ion-button fill="outline" href="/product" slot="end">Kunjungi</ion-button>
+    <ion-button fill="outline" onclick="myProduct()" slot="end">Kunjungi</ion-button>
   </ion-item>
 
   <ion-card-content>
@@ -233,9 +240,9 @@
         <ion-footer collapse="fade" id="sticky-stop">
   <ion-toolbar>
     
-    <ion-buttons>
-      <ion-button href="/product">
-         <ion-icon name="storefront" color="primary" slot="start"></ion-icon>
+    <ion-buttons class="mobile-show" slot="start">
+      <ion-button onclick="myProduct()">
+         <ion-icon name="storefront" color="primary"></ion-icon>
       </ion-button>
     </ion-buttons>
     
@@ -247,6 +254,24 @@
         </ion-footer>
     </ion-app>
   </body>
+
+<script>
+function myBlog() {
+  location.replace('/blog')
+}
+
+function myProduct() {
+  location.replace('/product')
+}
+
+function checkOut() {
+  location.replace('/checkout')
+}
+
+function myCart() {
+  location.replace('/cart')
+}
+</script>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
 <script>
  function setDarkMode(isDark) {
@@ -290,7 +315,7 @@ function setDarkMode(isDark) {
 
 </script>
 
-    <script type="text/javascript">
+<script type="text/javascript">
 function myBtpn() {
   var copyText = document.getElementById("btpn");
   copyText.select();
@@ -308,7 +333,7 @@ function myBri() {
   document.execCommand("copy");
   alert("Nomor rekening " + copyText.value + " Untuk BANK BRI berhasil disalin, Silahkan melakukan pembayaran.");
 }
-    </script>
+</script>
 
 <script>
       const button = document.querySelector('note');

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +10,7 @@
  
 <title>Keranjang Belanja Anda | </title>
 
-<meta name="description" content="  &lt;ion-card class="cart"&gt;    &lt;div class="row"&gt;      &lt;div class="medium-6 columns"&gt;       Grand Total: items =      CheckOut ( *Belum Termas...">
+<meta name="description" content="  &lt;ion-card class="cart"&gt;    &lt;ion-list&gt;      &lt;ion-item&gt;          &lt;/ion-item&gt;     Grand Total: items =      CheckOut ( *Belum Termasuk...">
 
 <link rel="shortcut icon" type="image/png" href="/assets/images/logo/maskable_icon_x192.png">
 <link rel="shortcut icon" sizes="192x192" href="/assets/images/logo/maskable_icon_x192.png">
@@ -21,7 +22,7 @@
 <meta property="og:url" content="http://localhost:4000/cart"/>
 <meta property="og:type" content="article">
 <meta property="og:site_name" content=""/>
-<meta property="og:description" content="  &lt;ion-card class="cart"&gt;    &lt;div class="row"&gt;      &lt;div class="medium-6 columns"&gt;       Grand Total: items =      CheckOut ( *Belum Termas..."/>
+<meta property="og:description" content="  &lt;ion-card class="cart"&gt;    &lt;ion-list&gt;      &lt;ion-item&gt;          &lt;/ion-item&gt;     Grand Total: items =      CheckOut ( *Belum Termasuk..."/>
 
 <!-- Twitter integration -->
 <meta name="twitter:card" content="summary">
@@ -29,7 +30,7 @@
 <meta name="twitter:title" content="Keranjang Belanja Anda" />
 
 <meta name="twitter:url" content="http://localhost:4000/cart" />
-<meta name="twitter:description" content="  &lt;ion-card class="cart"&gt;    &lt;div class="row"&gt;      &lt;div class="medium-6 columns"&gt;       Grand Total: items =      CheckOut ( *Belum Termas..." />
+<meta name="twitter:description" content="  &lt;ion-card class="cart"&gt;    &lt;ion-list&gt;      &lt;ion-item&gt;          &lt;/ion-item&gt;     Grand Total: items =      CheckOut ( *Belum Termasuk..." />
 <link rel="canonical" href="http://localhost:4000/cart">
 <link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4000/feed.xml">
 <link rel="sitemap" type="application/xml" title="Sitemap" href="http://localhost:4000/sitemap.xml" />
@@ -72,17 +73,15 @@
           <ion-header collapse="fade" translucent="true">
         <ion-toolbar>
     
-<a href="/blog">
-          <ion-chip slot="start">
-            <ion-avatar>
-            <img src="https://1.bp.blogspot.com/-1bWHHqO2Jt0/X2ZgjgIVRVI/AAAAAAAAFZ8/XCb6roqGxhIn-K34II1L8BuLDoAePrmsgCLcBGAsYHQ/s0/192x192.png" />
-            </ion-avatar>
-            <ion-label>Plus62store</ion-label>
-          </ion-chip>
-</a>
     
     
     
+    
+    
+    
+    <ion-buttons slot="start">
+      <ion-button onclick="myProduct()"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+    </ion-buttons>
     
     
     
@@ -104,8 +103,10 @@
       <ion-content fullscreen>
 
 
-    <div id="main" role="main" class="container">
-      <style>
+    <div id="webshop" class="shop-container">
+     <div class="etalase">
+        <div class="entry">
+    <style>
 .keranjang.dekstop{position:relative;width:60px;text-align:left;padding:5px 0;-webkit-box-ordinal-group:3;-ms-flex-order:3;order:3;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}
 .notif-tambah-product{width:255px;position:absolute;z-index:99;font-size:14px;right:-10px;background:#00b35e;padding:10px 20px;opacity:1;display:none;color:#fff;top:65px;border-radius:15px;-webkit-box-shadow:0 2px 5px 0 rgba(56,56,56,.49);box-shadow:0 2px 5px 0 rgba(56,56,56,.49);}
 .keranjang .simpleCart_quantity{width:20px;height:20px;background:#ff0000;position:absolute;border-radius:100%;color:#ffffff;text-align:center;line-height:20px;font-size:12px;z-index:3}
@@ -122,9 +123,9 @@
 .keranjang-box .simpleCart_items::-webkit-scrollbar{width:2px;background-color:transparent}
 .keranjang-box:hover .simpleCart_items::-webkit-scrollbar-thumb{background-color:#ddd;border-radius:5px}
 .keranjang-box .headerRow,.keranjang-box .item-price{display:none}
-.keranjang-box .simpleCart_items{max-height:250px;overflow:hidden;overflow-y:auto;margin-bottom:20px;padding:2px 10px;margin-top:30px}
-.keranjang-box .itemRow{overflow:hidden;font-size:12px;line-height:1.5;width:100%;font-weight:700;display:inline-block;background:#f7f8f9;padding:5px;border-radius:10px}
-.keranjang-box .simpleCart_items:after {content: "";text-align: center;z-index: -1;position: absolute;top: 50px;left: 50%;padding: 10px;transform: translate(-50%,-45%);max-width: 500px;width: 90%;overflow: hidden;margin: auto;}
+.keranjang-box .simpleCart_items{max-height: 253px;overflow-y:auto;margin-bottom:20px;padding: 10px 5px 0 5px;box-shadow: inset #000 0px -5px 8px -6px, inset #000 0 5px 8px -6px;border-radius: 3px;}
+.keranjang-box .itemRow{overflow:hidden;font-size:12px;line-height:1.5;width:100%;font-weight:700;display:inline-block;margin-bottom: 10px;}
+.keranjang-box .simpleCart_items::after {content: "";text-align: center;z-index: 0;position: absolute;top: 50px;left: 50%;padding: 10px;transform: translate(-50%,-45%);max-width: 500px;width: 90%;overflow: hidden;margin: auto;}
 .keranjang-box .item-thumb{float:left}
 .keranjang-box .item-thumb img{width:95px;height:auto;border-radius:.3rem;float:left;margin:0 10px 0 0}
 .keranjang-box .item-decrement,.item-quantity,.keranjang-box .item-increment{font-size:12px;display:table-cell}
@@ -137,7 +138,7 @@
 .keranjang-box .item-total{color:#ff460c;font-weight:600;font-size:14px}
 .keranjang-box sp.sub-total{display:inline-block;color:#333}
 .keranjang-box .item-remove,.simpleCart_items .item-remove{float:right;display:block;position:relative;}
-.keranjang-box .item-link {background:#0000001f;margin: 3px -5px -5px;padding: 3px 5px;}
+.keranjang-box .item-link {margin: 3px -5px -5px;padding: 3px 5px;}
 .keranjang-box .simpleCart_increment{background-image:url("data:image/svg+xml,<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M13,7H11V11H7V13H11V17H13V13H17V11H13V7Z' fill='%23a6a6ad'/></svg>")!important}
 .keranjang-box .simpleCart_increment,.keranjang-box .simpleCart_decrement{width:20px;height:20px;cursor:pointer;display:inline-block;background-image:url("data:image/svg+xml,<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M7,13H17V11H7' fill='%23a6a6ad'/></svg>");background-size:20px 20px;background-position:center center;background-repeat:no-repeat;vertical-align:middle;text-indent:-9999px}
 .keranjang-box .item-remove a.simpleCart_remove,.simpleCart_items .item-remove a.simpleCart_remove{display:block;width:20px;height:20px;background:url("data:image/svg+xml,<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19M8.46,11.88L9.87,10.47L12,12.59L14.12,10.47L15.53,11.88L13.41,14L15.53,16.12L14.12,17.53L12,15.41L9.88,17.53L8.47,16.12L10.59,14L8.46,11.88M15.5,4L14.5,3H9.5L8.5,4H5V6H19V4H15.5Z' fill='%23a6a6ad'/></svg>") no-repeat;text-indent:-9999px;background-size:20px}
@@ -147,7 +148,7 @@
 .keranjang-box a.view-cart:after{content: "Bayar Sekarang";}
 .keranjang-box a.view-cart.active:after{content: "Tutup";}
 .keranjang-box .ck-btn{margin-bottom:10px;text-align:center}
-.keranjang-box .harga-total{text-align:center;margin:10px 0;padding:0 5px;font-size:14px;font-weight:500}
+.keranjang-box .harga-total{margin:0 0 10px;padding:0 5px;font-size:14px;font-weight:500}
 .keranjang-box span.simpleCart_total{font-size:16px;font-weight:600;color:#ff460c}
 #jam, #menit, #detik{display:inline-block;}
 #jam-digital,#hasil,.wrapper-footer,.fab{display:none;}
@@ -155,76 +156,29 @@
 span.simpleCart_shipping, span.simpleCart_grandTotal {font-weight: 600;color:#ff460c;}
 </style>
         <ion-card class="cart">
-            <div class="row">
-                <div class="medium-6 columns">
+            <ion-list>
+               <ion-item>
   <div class="keranjang-box simplecart-cart">
     <div class="simpleCart_items"></div>
+               </ion-item>
     <div class="harga-total">
       <span>Grand Total: </span><span class="simpleCart_quantity"></span> items = <span class="simpleCart_total"></span>
           <ion-button class="co-btn item_add" style="float: right;" href="/checkout">CheckOut</ion-button><br />
  <span style="font-size:10px;">( *Belum Termasuk Ongkir )</span></div>
 </div>
 </div>
-</div>
-</div></ion-card>
-
-    
-    <div class="sidebar">
-<ion-card id="sidesticky">
-  <ion-item>
-    <ion-icon name="storefront" slot="start"></ion-icon>
-    <ion-label>WebShop</ion-label>
-    <ion-button fill="outline" href="/product" slot="end">Kunjungi</ion-button>
-  </ion-item>
-
-  <ion-card-content>
-    Menjual masker bordir cantik, aman, dan nyaman dipakai...
-  </ion-card-content>
+</ion-list>
 </ion-card>
 
-<ion-card class="hiden">
-      <ion-item color="warning">
-    <ion-icon name="bookmark" slot="start"></ion-icon>
-            <ion-label>SideBar
-            </ion-label>
-        </ion-item>
-<ion-item>
-  <ion-label>
-    Item
-  </ion-label>
-</ion-item>
-<ion-item button onclick="buttonClick()">
-  <ion-label>
-    Button Item
-  </ion-label>
-</ion-item>
-<ion-item href="https://www.ionicframework.com">
-  <ion-label>
-    Anchor Item
-  </ion-label>
-</ion-item>
-<ion-item color="danger">
-  <ion-label>
-    Secondary Color Item
-  </ion-label>
-</ion-item>
-</ion-card>
+  </div>
 
-</div>
-
-    
+     </div>
     </div>
 
     
       </ion-content>
         <ion-footer collapse="fade" id="sticky-stop">
   <ion-toolbar>
-    
-    <ion-buttons>
-      <ion-button href="/product">
-         <ion-icon name="storefront" color="primary" slot="start"></ion-icon>
-      </ion-button>
-    </ion-buttons>
     
     
     <ion-buttons slot="end"><note>
@@ -234,6 +188,24 @@ span.simpleCart_shipping, span.simpleCart_grandTotal {font-weight: 600;color:#ff
         </ion-footer>
     </ion-app>
   </body>
+
+<script>
+function myBlog() {
+  location.replace('/blog')
+}
+
+function myProduct() {
+  location.replace('/product')
+}
+
+function checkOut() {
+  location.replace('/checkout')
+}
+
+function myCart() {
+  location.replace('/cart')
+}
+</script>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
 <script>
  function setDarkMode(isDark) {
@@ -277,7 +249,7 @@ function setDarkMode(isDark) {
 
 </script>
 
-    <script type="text/javascript">
+<script type="text/javascript">
 function myBtpn() {
   var copyText = document.getElementById("btpn");
   copyText.select();
@@ -295,7 +267,7 @@ function myBri() {
   document.execCommand("copy");
   alert("Nomor rekening " + copyText.value + " Untuk BANK BRI berhasil disalin, Silahkan melakukan pembayaran.");
 }
-    </script>
+</script>
 
 <script>
       const button = document.querySelector('note');
@@ -370,7 +342,5 @@ $(function() {
 </script>
 
 
-
-    
 
 </html>

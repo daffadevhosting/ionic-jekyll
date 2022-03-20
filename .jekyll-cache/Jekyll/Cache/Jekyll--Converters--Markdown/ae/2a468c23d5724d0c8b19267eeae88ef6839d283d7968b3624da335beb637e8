@@ -1,5 +1,4 @@
-
-<style>
+I"·<style>
 .keranjang.dekstop{position:relative;width:60px;text-align:left;padding:5px 0;-webkit-box-ordinal-group:3;-ms-flex-order:3;order:3;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}
 .notif-tambah-product{width:255px;position:absolute;z-index:99;font-size:14px;right:-10px;background:#00b35e;padding:10px 20px;opacity:1;display:none;color:#fff;top:65px;border-radius:15px;-webkit-box-shadow:0 2px 5px 0 rgba(56,56,56,.49);box-shadow:0 2px 5px 0 rgba(56,56,56,.49);}
 .keranjang .simpleCart_quantity{width:20px;height:20px;background:#ff0000;position:absolute;border-radius:100%;color:#ffffff;text-align:center;line-height:20px;font-size:12px;z-index:3}
@@ -48,16 +47,20 @@
 .produk-page {margin:0px!important;}
 span.simpleCart_shipping, span.simpleCart_grandTotal {font-weight: 600;color:#ff460c;}
 </style>
-  <div class="keranjang-box simplecart-cart">
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;ion-card class="cart"&gt;
+        &lt;ion-list&gt;
+           &lt;ion-item&gt;
+</code></pre></div></div>
+<div class="keranjang-box simplecart-cart">
     <div class="simpleCart_items"></div>
+               &lt;/ion-item&gt;
     <div class="harga-total">
-   <ion-label><span>Total Pembelian </span><span class="simpleCart_quantity"></span> items : <span class="simpleCart_total"></span> </ion-label><br />
-<span style="font-size:10px;">( *Belum Termasuk Ongkir )</span>
-    {% if page.layout == "shop" %}
-<ion-item>
-          <ion-button onclick="checkOut()" fill="outline" slot="end" style="margin-top: 20px;">CheckOut</ion-button>
-</ion-item>
-{% endif %}
-    </div>
+      <span>Grand Total: </span><span class="simpleCart_quantity"></span> items = <span class="simpleCart_total"></span>
+          <ion-button class="co-btn item_add" style="float: right;" href="/checkout">CheckOut</ion-button><br />
+ <span style="font-size:10px;">( *Belum Termasuk Ongkir )</span></div>
 </div>
-</div>
+<p>&lt;/div&gt;
+&lt;/ion-list&gt;
+&lt;/ion-card&gt;</p>
+:ET

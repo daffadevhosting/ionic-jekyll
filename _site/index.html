@@ -8,7 +8,7 @@
     <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
     <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
-    <link rel="stylesheet" href="assets/css/darkmode.css" />
+    <link rel="stylesheet" href="assets/css/dark.css" />
     <style>
       :root {
         --ion-safe-area-top: 20px;
@@ -73,12 +73,12 @@ animation-iteration-count: infinite;
     </style>
 <script>
     function pageRedirect() {
-        window.location.replace("/product");
+        window.location.replace("/products");
     }      
-    setTimeout("pageRedirect()", 10000);
+    setTimeout("pageRedirect()", 20000);
 </script>
   </head>
-  <body onLoad="loadApp()">
+  <body>
     <ion-app>
       <ion-content fullscreen class="ion-padding" scroll-y="false">
         <ion-slides>
@@ -106,7 +106,7 @@ animation-iteration-count: infinite;
             <img src="assets/images/logo/24jam.png" />
             <h2>Online 1x24 Jam!</h2>
             <p>
-              <b>CS (Customer Service)</b> kami akan dengan senang hati untuk melayani :)
+              <b>CS (Customer Service)</b> kami akan dengan senang hati untuk melayani 24 Jam :)
             </p>
           </ion-slide>
 
@@ -161,6 +161,14 @@ function myProduct() {
 }
 </script>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script>
+var slides = document.querySelector('ion-slides');
+
+slides.options = {
+  initialSlide: 0,
+  speed: 400
+}
+</script>
 <script  src="assets/js/script.js"></script>
   </body>
 </html>

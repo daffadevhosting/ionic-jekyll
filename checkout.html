@@ -22,7 +22,8 @@ sitemap: false
 <form class='wrapHead data-form validate-form' id='whatsapp-order'>
 <div class="not_if">
       <span>Total belanja </span>sebesar <b><span class="simpleCart_total"></span></b><br/><p/><ion-note color="danger">Silahkan isi data pengiriman dibawah ini..</ion-note>
-</div><p/><br/>
+</div>
+<p/><br/>
 <input class='order' id='AdminToko' type='hidden'/>
 <ion-item>
   <ion-label position="stacked">Nama Lengkap</ion-label>
@@ -54,9 +55,16 @@ sitemap: false
         </ion-item>
 <br/><p/>
       <ion-router-link id='order' class="order">
-<ion-chip class="g-recaptcha"  data-sitekey="{{site.sitekey}}" data-callback='onSubmit' color="success" style="float:right;">
+<ion-chip color="success" style="float:right;">
 <ion-icon name="logo-whatsapp"></ion-icon>
 <ion-label>Send Order</ion-label>
 </ion-chip>
 </ion-router-link>
+<div class="g-recaptcha"
+      data-sitekey="{{site.sitekey}}"
+      data-callback="onSubmit"
+      data-size="invisible">
+</div>
+</form>
+<script>grecaptcha.execute();</script>
 </ion-card>

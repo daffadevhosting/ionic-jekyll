@@ -1,6 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Plus62store</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+    <link rel="stylesheet" href="assets/css/darkmode.css" />
+    <style>
+      :root {
+        --ion-safe-area-top: 20px;
+        --ion-safe-area-bottom: 22px;
+      }
+.lightSpeedIn {
+  -webkit-animation-name: lightSpeedIn;
+  animation-name: lightSpeedIn;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-duration: 4s;
+  animation-duration: 5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+-webkit-animation-iteration-count: infinite; 
+animation-iteration-count: infinite;
+  }
+  @-webkit-keyframes lightSpeedIn {
+  0% {
+  -webkit-transform: translate3d(50%, 0, 0) skewX(-30deg);
+  transform: translate3d(50%, 0, 0) skewX(-30deg);
+  opacity: 0;
+  }
+  60% {
+  -webkit-transform: skewX(20deg);
+  transform: skewX(20deg);
+  opacity: 1;
+  }
+  80% {
+  -webkit-transform: skewX(-5deg);
+  transform: skewX(-5deg);
+  opacity: 1;
+  }
+  50% {
+  -webkit-transform: none;
+  transform: none;
+  opacity: 1;
+  }
+  }
+  @keyframes lightSpeedIn {
+  0% {
+  -webkit-transform: translate3d(50%, 0, 0) skewX(-30deg);
+  transform: translate3d(50%, 0, 0) skewX(-30deg);
+  opacity: 0;
+  }
+ 10% {
+  -webkit-transform: skewX(20deg);
+  transform: skewX(20deg);
+  opacity: 1;
+  }
+  30% {
+  -webkit-transform: skewX(-5deg);
+  transform: skewX(-5deg);
+  opacity: 1;
+  }
+  50% {
+  -webkit-transform: none;
+  transform: none;
+  opacity: 1;
+  }
+  } 
+    </style>
 <script>
     function pageRedirect() {
-        window.location.replace("/blog");
+        window.location.replace("/product");
     }      
-    setTimeout("pageRedirect()", 1000);
+    setTimeout("pageRedirect()", 10000);
 </script>
+  </head>
+  <body onLoad="loadApp()">
+    <ion-app>
+      <ion-content fullscreen class="ion-padding" scroll-y="false">
+        <ion-slides>
+          <ion-slide>
+            <div class="slide">
+              <img src="assets/images/logo/maskable_icon_x192.png" />
+              <h2>Selamat Datang</h2>
+              <p>
+                WebShop <b>Plus62store</b> menawarkan berbagai macam jenis masker bordir yang aman dan nyaman dipakai sehari-hari.
+              </p>
+              <p class="lightSpeedIn"><ion-chip color="danger" disabled="true"><ion-icon name="arrow-back-outline"></ion-icon><ion-label> Geser</ion-label></ion-chip></p>
+            </div>
+          </ion-slide>
+
+          <ion-slide>
+            <img src="assets/images/logo/WhatsApp.webp" />
+            <h2>Order mudah! via WhatsApp.</h2>
+            <p>
+              <b>Instant Checkout</b> dengan Form Contact WhatsApp,
+              mempermudah siapa saja melakukan orderan.
+            </p>
+          </ion-slide>
+
+          <ion-slide>
+            <img src="assets/images/logo/24jam.png" />
+            <h2>Online 1x24 Jam!</h2>
+            <p>
+              <b>CS (Customer Service)</b> kami akan dengan senang hati untuk melayani :)
+            </p>
+          </ion-slide>
+
+          <ion-slide>
+            <img src="assets/images/logo/olshop.png" />
+            <h2>Siap Berbelanja?</h2>
+            <ion-button fill="clear" onclick="myProduct()">Lanjut <ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>
+          </ion-slide>
+        </ion-slides>
+      </ion-content>
+    </ion-app>
+
+    <style>
+      ion-slides {
+        height: 100%;
+      }
+
+      .swiper-slide {
+        display: block;
+      }
+
+      .swiper-slide h2 {
+        margin-top: 2.8rem;
+      }
+
+      .swiper-slide img {
+        width: 192px;
+        max-height: 50%;
+        max-width: 80%;
+        margin: 60px 0 40px;
+        pointer-events: none;
+      }
+
+      b {
+        font-weight: 500;
+      }
+
+      p {
+        padding: 0 40px;
+        font-size: 14px;
+        line-height: 1.5;
+        color: var(--ion-color-step-600, #60646b);
+      }
+
+      p b {
+        color: var(--ion-text-color, #000000);
+      }
+    </style>
+<script>
+function myProduct() {
+  location.replace('/product')
+}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script  src="assets/js/script.js"></script>
+  </body>
+</html>

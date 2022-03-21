@@ -9,7 +9,7 @@
 <title>Pembayaran | </title>
 
 <meta property="og:image" content="http://localhost:4000"/>
-<meta name="description" content="Scan Qris&lt;/ion-card&gt;&lt;/ion-item&gt;Transfer Bank&lt;/ion-card&gt;&lt;/div&gt;                                    Bank BRI                            ...">
+<meta name="description" content="Scan Qris&lt;/ion-card&gt;&lt;/ion-item&gt;Transfer Bank&lt;/ion-card&gt;&lt;/div&gt;    Scan Qris                       Transfer Bank        Bank BRI       ...">
 
 <link rel="shortcut icon" type="image/png" href="/assets/images/logo/maskable_icon_x192.png">
 <link rel="shortcut icon" sizes="192x192" href="/assets/images/logo/maskable_icon_x192.png">
@@ -21,7 +21,7 @@
 <meta property="og:url" content="http://localhost:4000/pembayaran"/>
 <meta property="og:type" content="article">
 <meta property="og:site_name" content=""/>
-<meta property="og:description" content="Scan Qris&lt;/ion-card&gt;&lt;/ion-item&gt;Transfer Bank&lt;/ion-card&gt;&lt;/div&gt;                                    Bank BRI                            ..."/>
+<meta property="og:description" content="Scan Qris&lt;/ion-card&gt;&lt;/ion-item&gt;Transfer Bank&lt;/ion-card&gt;&lt;/div&gt;    Scan Qris                       Transfer Bank        Bank BRI       ..."/>
 
 <!-- Twitter integration -->
 <meta name="twitter:card" content="summary">
@@ -29,7 +29,7 @@
 <meta name="twitter:title" content="Pembayaran" />
 
 <meta name="twitter:url" content="http://localhost:4000/pembayaran" />
-<meta name="twitter:description" content="Scan Qris&lt;/ion-card&gt;&lt;/ion-item&gt;Transfer Bank&lt;/ion-card&gt;&lt;/div&gt;                                    Bank BRI                            ..." />
+<meta name="twitter:description" content="Scan Qris&lt;/ion-card&gt;&lt;/ion-item&gt;Transfer Bank&lt;/ion-card&gt;&lt;/div&gt;    Scan Qris                       Transfer Bank        Bank BRI       ..." />
 <link rel="canonical" href="http://localhost:4000/pembayaran">
 <link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4000/feed.xml">
 <link rel="sitemap" type="application/xml" title="Sitemap" href="http://localhost:4000/sitemap.xml" />
@@ -134,11 +134,17 @@
 </ion-card>
 </div>
 
-<ion-modal  trigger="trigger-qris">
-<ion-header class="mobile-show" collapse="fade" translucent="true">
+<ion-modal  trigger="trigger-qris" id="scQris">
+<ion-header collapse="fade" translucent="true">
         <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-button onclick="location.reload()"><ion-icon color="danger" name="close-circle"></ion-icon></ion-button>
+<ion-chip>
+<ion-icon color="primary" name="barcode-outline"></ion-icon>
+<ion-label>Scan Qris</ion-label>
+</ion-chip>
+<ion-buttons slot="primary">
+      <ion-button onClick="dismissModal()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
     </ion-buttons>
         </ion-toolbar>
      </ion-header>
@@ -147,12 +153,13 @@
 </ion-content>
 </ion-modal>
 
-<ion-modal  trigger="trigger-transfer">
-<ion-header class="mobile-show" collapse="fade" translucent="true">
+<ion-modal  trigger="trigger-transfer" id="tfBank">
+<ion-header collapse="fade" translucent="true">
         <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-button onclick="location.reload()"><ion-icon color="danger" name="close-circle"></ion-icon></ion-button>
-    </ion-buttons>
+<ion-chip>
+<ion-icon color="primary" name="card-outline"></ion-icon>
+<ion-label>Transfer Bank</ion-label>
+</ion-chip>
         </ion-toolbar>
      </ion-header>
   <ion-content>
@@ -174,7 +181,13 @@
 </ion-item>
 </ion-content>
 </ion-modal>
-
+<script>
+async function dismissModal() {
+  await cardModal.dismiss({
+    'dismissed': true
+  });
+}
+</script>
 <script>
       const Bank = document.querySelector('buttonBank');
       Bank.addEventListener('click', handleButtonClick);
@@ -204,14 +217,14 @@
 </script>
 
 <script>
-  const sheetModal = document.querySelector('#trigger-qris');
-  const cardModal = document.querySelector('#trigger-transfer');
+  const sheetModal = document.querySelector('#tfBank');
+  const cardModal = document.querySelector('#scQris');
 
   sheetModal.breakpoints = [0.1, 0.5, 1];
   sheetModal.initialBreakpoint = 0.5;
   
   cardModal.swipeToClose = true;
-  cardModal.presentingElement = document.querySelector('ion-page');
+  cardModal.presentingElement = document.querySelector('ion-app');
 </script>
 
   </div>

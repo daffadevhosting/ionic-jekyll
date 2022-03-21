@@ -245,9 +245,16 @@ select.form-control {
   cursor: pointer;
 }
 
+.cart-card {
+    margin-top:6%;
+
+    @include mobile {
+    margin-top:25%;}
+}
 .keranjang-box {
 
     @include mobile {
     width: 100% !important;}
 }
+
 @import "./highlights";

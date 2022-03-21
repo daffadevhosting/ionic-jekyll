@@ -113,7 +113,7 @@
 .keranjang-box .simpleCart_increment, .keranjang-box .simpleCart_decrement, .keranjang-box .item-remove, .simpleCart_items .item-remove, .keranjang-box .item-link {display:none !important;}.keranjang-box .item-quantity {padding: 0 !important;}
 </style>
 
-    <style type="text/css">small{font-size:12px;}.masthead,.product{display:none!important;}.not_if{background: #18ce0f;color:#fff;padding: 10px;border-radius: 5px;line-height: 25px;}.form-coll{display:flex;justify-content:space-between;}</style>
+    <style type="text/css">small{font-size:12px;}.masthead,.product{display:none!important;}.not_if{background: #18ce0f;color:#fff;padding: 10px;border-radius: 5px;line-height: 25px;}.form-coll{display:flex;justify-content:space-between;}ion-footer{display:none !important;}@media only screen and (max-width:727px){.card-form{margin-bottom:22%;}</style>
 
 
 <ion-card class="review-checkout">
@@ -184,11 +184,12 @@ span.simpleCart_shipping, span.simpleCart_grandTotal {font-weight: 600;color:#ff
 </ion-card-content>
 </ion-card>
 
-<ion-card style="max-width: 680px;padding:6px;width: 100%;border: 1px solid #eee;border-radius: 5px;box-shadow: rgb(0 0 0 / 20%) 0px 3px 1px -2px, rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 1px 5px 0px;">
+<ion-card class="card-form" style="max-width: 680px;padding:6px;width: 100%;border: 1px solid #eee;border-radius: 5px;box-shadow: rgb(0 0 0 / 20%) 0px 3px 1px -2px, rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 1px 5px 0px;">
 <form class='wrapHead data-form validate-form' id='whatsapp-order'>
 <div class="not_if">
       <span>Total belanja </span>sebesar <b><span class="simpleCart_total"></span></b><br/><p/><ion-note color="danger">Silahkan isi data pengiriman dibawah ini..</ion-note>
-</div><p/><br/>
+</div>
+<p/><br/>
 <input class='order' id='AdminToko' type='hidden'/>
 <ion-item>
   <ion-label position="stacked">Nama Lengkap</ion-label>
@@ -220,11 +221,18 @@ span.simpleCart_shipping, span.simpleCart_grandTotal {font-weight: 600;color:#ff
         </ion-item>
 <br/><p/>
       <ion-router-link id='order' class="order">
-<ion-chip class="g-recaptcha"  data-sitekey="6LdPL-wZAAAAAAzUvjEWXHGLAgKL78wBzB1IR8t7" data-callback='onSubmit' color="success" style="float:right;">
+<ion-chip color="success" style="float:right;">
 <ion-icon name="logo-whatsapp"></ion-icon>
 <ion-label>Send Order</ion-label>
 </ion-chip>
 </ion-router-link>
+<div class="g-recaptcha"
+      data-sitekey="6LdPL-wZAAAAAAzUvjEWXHGLAgKL78wBzB1IR8t7"
+      data-callback="onSubmit"
+      data-size="invisible">
+</div>
+</form>
+<script>grecaptcha.execute();</script>
 </ion-card>
 
 

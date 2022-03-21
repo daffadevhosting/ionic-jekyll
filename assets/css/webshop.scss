@@ -245,12 +245,17 @@ select.form-control {
   cursor: pointer;
 }
 
+.cart-page {
+    margin: auto;
+}
+
 .cart-card {
     margin-top:6%;
 
     @include mobile {
     margin-top:25%;}
 }
+
 .keranjang-box {
 
     @include mobile {

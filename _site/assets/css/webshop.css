@@ -108,6 +108,8 @@ select.form-control { display: block; background: transparent; width: 100%; padd
 
 .close:hover, .close:focus { color: #000; text-decoration: none; cursor: pointer; }
 
+.cart-page { margin: auto; }
+
 .cart-card { margin-top: 6%; }
 
 @media (min-width: 320px) and (max-width: 767.98px) { .cart-card { margin-top: 25%; } }

@@ -1,4 +1,4 @@
-I"·<style>
+I"¶<style>
 .keranjang.dekstop{position:relative;width:60px;text-align:left;padding:5px 0;-webkit-box-ordinal-group:3;-ms-flex-order:3;order:3;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}
 .notif-tambah-product{width:255px;position:absolute;z-index:99;font-size:14px;right:-10px;background:#00b35e;padding:10px 20px;opacity:1;display:none;color:#fff;top:65px;border-radius:15px;-webkit-box-shadow:0 2px 5px 0 rgba(56,56,56,.49);box-shadow:0 2px 5px 0 rgba(56,56,56,.49);}
 .keranjang .simpleCart_quantity{width:20px;height:20px;background:#ff0000;position:absolute;border-radius:100%;color:#ffffff;text-align:center;line-height:20px;font-size:12px;z-index:3}
@@ -10,7 +10,7 @@
 .keranjang.dekstop .keranjang-icon{display:inline-block;padding:7px;margin:3px 0 3px 5px;border-radius:20px;width:24px;height:24px;cursor:pointer;-webkit-transition:all .2s;transition:all .2s}
 .keranjang.dekstop .keranjang-icon svg{height:22px;width:22px;display:inline-block;}
 .keranjang.dekstop .keranjang-icon path{fill:#ffffff;}
-@media only screen and (max-width:640px){.is-post .keranjang.mobile,.keranjang.dekstop{display:none;}.is-post .keranjang.dekstop{display:block;}.keranjang.mobile{position:relative;display:block;width:100%;text-align:center;}.keranjang.mobile .keranjang-icon{display:block;width:100%;height:100%;text-align:center;margin:0 auto;border-ridius:0;}.keranjang.mobile .keranjang-icon svg{position:relative;display:block;margin:0 auto;width:36px;height:36px;}.keranjang.mobile .keranjang-icon path{fill:#444444;}.keranjang.mobile .simpleCart_quantity{top:-5px;left:50%;}}
+@media only screen and (max-width:727px){.is-post .keranjang.mobile,.keranjang.dekstop{display:none;}.is-post .keranjang.dekstop{display:block;}.keranjang.mobile{position:relative;display:block;width:100%;text-align:center;}.keranjang.mobile .keranjang-icon{display:block;width:100%;height:100%;text-align:center;margin:0 auto;border-ridius:0;}.keranjang.mobile .keranjang-icon svg{position:relative;display:block;margin:0 auto;width:36px;height:36px;}.keranjang.mobile .keranjang-icon path{fill:#444444;}.keranjang.mobile .simpleCart_quantity{top:-5px;left:50%;}}
 /* Tabel Daftar Belanja*/
 .keranjang-box .simpleCart_items::-webkit-scrollbar{width:2px;background-color:transparent}
 .keranjang-box:hover .simpleCart_items::-webkit-scrollbar-thumb{background-color:#ddd;border-radius:5px}
@@ -48,7 +48,7 @@
 span.simpleCart_shipping, span.simpleCart_grandTotal {font-weight: 600;color:#ff460c;}
 </style>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;ion-card class="cart"&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;ion-card class="cart-page"&gt;
         &lt;ion-list&gt;
            &lt;ion-item&gt;
 </code></pre></div></div>
@@ -58,9 +58,9 @@ span.simpleCart_shipping, span.simpleCart_grandTotal {font-weight: 600;color:#ff
     <div class="harga-total">
       <span>Grand Total: </span><span class="simpleCart_quantity"></span> items = <span class="simpleCart_total"></span>
           <ion-button class="co-btn item_add" style="float: right;" href="/checkout">CheckOut</ion-button><br />
- <span style="font-size:10px;">( *Belum Termasuk Ongkir )</span></div>
-</div>
-<p>&lt;/div&gt;
-&lt;/ion-list&gt;
+ <span style="font-size:10px;">( *Belum Termasuk Ongkir )</span>
+    </div>
+  </div>
+<p>&lt;/ion-list&gt;
 &lt;/ion-card&gt;</p>
 :ET

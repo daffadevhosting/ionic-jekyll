@@ -1,5 +1,0 @@
-I"†<style>main{background: #eceff1!important;}small{font-size:12px;}.qris{width:335px;}.navbar,.footer{display:none;}.gif{width:300px;border-radius:3%;}</style>
-
-<ion-card>
-<img class="gif" src="/assets/images/success.gif" /><br /><ion-item>Order Berhasil Terkirim, Silahkan Lakukan <b>Pembayaran</b></ion-item> <ion-item color="primary" href="/pembayaran"><b>DISINI</b></ion-item></ion-card>
-:ET

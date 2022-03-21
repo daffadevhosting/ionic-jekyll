@@ -10,7 +10,7 @@
 <title>Keranjang Belanja Anda | </title>
 
 <meta property="og:image" content="http://localhost:4000"/>
-<meta name="description" content="  &lt;ion-card class="cart"&gt;    &lt;ion-list&gt;      &lt;ion-item&gt;          &lt;/ion-item&gt;     Grand Total: items =      CheckOut ( *Belum Termasuk...">
+<meta name="description" content="  &lt;ion-card class="cart-page"&gt;    &lt;ion-list&gt;      &lt;ion-item&gt;          &lt;/ion-item&gt;     Grand Total: items =      CheckOut ( *Belum Ter...">
 
 <link rel="shortcut icon" type="image/png" href="/assets/images/logo/maskable_icon_x192.png">
 <link rel="shortcut icon" sizes="192x192" href="/assets/images/logo/maskable_icon_x192.png">
@@ -22,7 +22,7 @@
 <meta property="og:url" content="http://localhost:4000/cart"/>
 <meta property="og:type" content="article">
 <meta property="og:site_name" content=""/>
-<meta property="og:description" content="  &lt;ion-card class="cart"&gt;    &lt;ion-list&gt;      &lt;ion-item&gt;          &lt;/ion-item&gt;     Grand Total: items =      CheckOut ( *Belum Termasuk..."/>
+<meta property="og:description" content="  &lt;ion-card class="cart-page"&gt;    &lt;ion-list&gt;      &lt;ion-item&gt;          &lt;/ion-item&gt;     Grand Total: items =      CheckOut ( *Belum Ter..."/>
 
 <!-- Twitter integration -->
 <meta name="twitter:card" content="summary">
@@ -30,7 +30,7 @@
 <meta name="twitter:title" content="Keranjang Belanja Anda" />
 
 <meta name="twitter:url" content="http://localhost:4000/cart" />
-<meta name="twitter:description" content="  &lt;ion-card class="cart"&gt;    &lt;ion-list&gt;      &lt;ion-item&gt;          &lt;/ion-item&gt;     Grand Total: items =      CheckOut ( *Belum Termasuk..." />
+<meta name="twitter:description" content="  &lt;ion-card class="cart-page"&gt;    &lt;ion-list&gt;      &lt;ion-item&gt;          &lt;/ion-item&gt;     Grand Total: items =      CheckOut ( *Belum Ter..." />
 <link rel="canonical" href="http://localhost:4000/cart">
 <link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4000/feed.xml">
 <link rel="sitemap" type="application/xml" title="Sitemap" href="http://localhost:4000/sitemap.xml" />
@@ -112,7 +112,7 @@
     <div id="webshop" class="shop-container">
      <div class="etalase">
       <style>
-.keranjang-box {overflow-x: hidden;overflow-y: auto;width: 1060px;}.entry{margin-top:6%;}@media only screen and (max-width:727px){.entry{margin-top:20%;}}
+.keranjang-box {overflow-x: hidden;overflow-y: auto;width: 1060px;}.entry{margin-top:6%;}@media only screen and (max-width:727px){.entry{width: 100%;margin-top:20%;}}
 </style>
   <div class="entry">
     <style>
@@ -127,7 +127,7 @@
 .keranjang.dekstop .keranjang-icon{display:inline-block;padding:7px;margin:3px 0 3px 5px;border-radius:20px;width:24px;height:24px;cursor:pointer;-webkit-transition:all .2s;transition:all .2s}
 .keranjang.dekstop .keranjang-icon svg{height:22px;width:22px;display:inline-block;}
 .keranjang.dekstop .keranjang-icon path{fill:#ffffff;}
-@media only screen and (max-width:640px){.is-post .keranjang.mobile,.keranjang.dekstop{display:none;}.is-post .keranjang.dekstop{display:block;}.keranjang.mobile{position:relative;display:block;width:100%;text-align:center;}.keranjang.mobile .keranjang-icon{display:block;width:100%;height:100%;text-align:center;margin:0 auto;border-ridius:0;}.keranjang.mobile .keranjang-icon svg{position:relative;display:block;margin:0 auto;width:36px;height:36px;}.keranjang.mobile .keranjang-icon path{fill:#444444;}.keranjang.mobile .simpleCart_quantity{top:-5px;left:50%;}}
+@media only screen and (max-width:727px){.is-post .keranjang.mobile,.keranjang.dekstop{display:none;}.is-post .keranjang.dekstop{display:block;}.keranjang.mobile{position:relative;display:block;width:100%;text-align:center;}.keranjang.mobile .keranjang-icon{display:block;width:100%;height:100%;text-align:center;margin:0 auto;border-ridius:0;}.keranjang.mobile .keranjang-icon svg{position:relative;display:block;margin:0 auto;width:36px;height:36px;}.keranjang.mobile .keranjang-icon path{fill:#444444;}.keranjang.mobile .simpleCart_quantity{top:-5px;left:50%;}}
 /* Tabel Daftar Belanja*/
 .keranjang-box .simpleCart_items::-webkit-scrollbar{width:2px;background-color:transparent}
 .keranjang-box:hover .simpleCart_items::-webkit-scrollbar-thumb{background-color:#ddd;border-radius:5px}
@@ -164,7 +164,7 @@
 .produk-page {margin:0px!important;}
 span.simpleCart_shipping, span.simpleCart_grandTotal {font-weight: 600;color:#ff460c;}
 </style>
-        <ion-card class="cart">
+        <ion-card class="cart-page">
             <ion-list>
                <ion-item>
   <div class="keranjang-box simplecart-cart">
@@ -173,9 +173,9 @@ span.simpleCart_shipping, span.simpleCart_grandTotal {font-weight: 600;color:#ff
     <div class="harga-total">
       <span>Grand Total: </span><span class="simpleCart_quantity"></span> items = <span class="simpleCart_total"></span>
           <ion-button class="co-btn item_add" style="float: right;" href="/checkout">CheckOut</ion-button><br />
- <span style="font-size:10px;">( *Belum Termasuk Ongkir )</span></div>
-</div>
-</div>
+ <span style="font-size:10px;">( *Belum Termasuk Ongkir )</span>
+    </div>
+  </div>
 </ion-list>
 </ion-card>
 

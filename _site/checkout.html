@@ -6,9 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark" />
 <meta name="google-site-verification" content="" />
- 
 <title>Checkout | </title>
 
+<meta property="og:image" content="http://localhost:4000"/>
 <meta name="description" content="     Keranjang Belanja Kamu     {% include keranjang. html %}   Total belanja sebesar Silahkan isi data pengiriman dibawah ini. .  Nama Lengkap          No. ...">
 
 <link rel="shortcut icon" type="image/png" href="/assets/images/logo/maskable_icon_x192.png">
@@ -33,6 +33,12 @@
 <link rel="canonical" href="http://localhost:4000/checkout">
 <link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4000/feed.xml">
 <link rel="sitemap" type="application/xml" title="Sitemap" href="http://localhost:4000/sitemap.xml" />
+     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+     <script>
+       function onSubmit(token) {
+         document.getElementById("whatsapp-order").submit();
+       }
+     </script>
 
 <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
 <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
@@ -150,8 +156,7 @@
 .keranjang-box .item-total{color:#ff460c;font-weight:600;font-size:14px}
 .keranjang-box sp.sub-total{display:inline-block;color:#333}
 .keranjang-box .item-remove,.simpleCart_items .item-remove{float:right;display:block;position:relative;}
-.keranjang-box .item-link {margin: 3px -5px -5px;padding: 3px 5px;}
-.keranjang-box .simpleCart_increment{background-image:url("data:image/svg+xml,<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M13,7H11V11H7V13H11V17H13V13H17V11H13V7Z' fill='%23a6a6ad'/></svg>")!important}
+.keranjang-box .item-link {display: none;margin: 3px -5px -5px;padding: 3px 5px;}.keranjang-box .simpleCart_increment{background-image:url("data:image/svg+xml,<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M13,7H11V11H7V13H11V17H13V13H17V11H13V7Z' fill='%23a6a6ad'/></svg>")!important}
 .keranjang-box .simpleCart_increment,.keranjang-box .simpleCart_decrement{width:20px;height:20px;cursor:pointer;display:inline-block;background-image:url("data:image/svg+xml,<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M7,13H17V11H7' fill='%23a6a6ad'/></svg>");background-size:20px 20px;background-position:center center;background-repeat:no-repeat;vertical-align:middle;text-indent:-9999px}
 .keranjang-box .item-remove a.simpleCart_remove,.simpleCart_items .item-remove a.simpleCart_remove{display:block;width:20px;height:20px;background:url("data:image/svg+xml,<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19M8.46,11.88L9.87,10.47L12,12.59L14.12,10.47L15.53,11.88L13.41,14L15.53,16.12L14.12,17.53L12,15.41L9.88,17.53L8.47,16.12L10.59,14L8.46,11.88M15.5,4L14.5,3H9.5L8.5,4H5V6H19V4H15.5Z' fill='%23a6a6ad'/></svg>") no-repeat;text-indent:-9999px;background-size:20px}
 .keranjang-box a.view-cart,.keranjang-box a.tombol-bukatutup{position:relative;display:inline-block;color:#ffffff;padding:5px 10px;border-radius:15px;text-align:center;width:40%}
@@ -160,7 +165,7 @@
 .keranjang-box a.view-cart:after{content: "Bayar Sekarang";}
 .keranjang-box a.view-cart.active:after{content: "Tutup";}
 .keranjang-box .ck-btn{margin-bottom:10px;text-align:center}
-.keranjang-box .harga-total{margin:0 0 10px;padding:0 5px;font-size:14px;font-weight:500}
+.keranjang-box .harga-total{margin:0 0 10px;padding:0 8px;font-size:14px;font-weight:500}
 .keranjang-box span.simpleCart_total{font-size:16px;font-weight:600;color:#ff460c}
 #jam, #menit, #detik{display:inline-block;}
 #jam-digital,#hasil,.wrapper-footer,.fab{display:none;}
@@ -215,18 +220,12 @@ span.simpleCart_shipping, span.simpleCart_grandTotal {font-weight: 600;color:#ff
         </ion-item>
 <br/><p/>
       <ion-router-link id='order' class="order">
-<ion-chip color="success" style="float:right;">
+<ion-chip class="g-recaptcha"  data-sitekey="6LdPL-wZAAAAAAzUvjEWXHGLAgKL78wBzB1IR8t7" data-callback='onSubmit' color="success" style="float:right;">
 <ion-icon name="logo-whatsapp"></ion-icon>
 <ion-label>Send Order</ion-label>
 </ion-chip>
 </ion-router-link>
-</form>
 </ion-card>
-      <div id='recaptcha' class="g-recaptcha"
-          data-sitekey=""
-          data-callback="onSubmit"
-          data-size="invisible"></div>
-    <script>onload();</script>
 
 
     

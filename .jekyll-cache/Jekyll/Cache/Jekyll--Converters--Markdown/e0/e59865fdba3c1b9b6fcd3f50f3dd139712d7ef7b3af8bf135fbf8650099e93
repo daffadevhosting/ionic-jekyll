@@ -1,4 +1,4 @@
-I"%<style type="text/css">small{font-size:12px;}.masthead,.product{display:none!important;}.not_if{background: #18ce0f;color:#fff;padding: 10px;border-radius: 5px;line-height: 25px;}.form-coll{display:flex;justify-content:space-between;}</style>
+I"8<style type="text/css">small{font-size:12px;}.masthead,.product{display:none!important;}.not_if{background: #18ce0f;color:#fff;padding: 10px;border-radius: 5px;line-height: 25px;}.form-coll{display:flex;justify-content:space-between;}</style>
 
 <ion-card class="review-checkout">
   <ion-item>
@@ -47,17 +47,11 @@
         </ion-item>
 <br /><p />
       <ion-router-link id="order" class="order">
-<ion-chip color="success" style="float:right;">
+<ion-chip class="g-recaptcha" data-sitekey="{{site.sitekey}}" data-callback="onSubmit" color="success" style="float:right;">
 <ion-icon name="logo-whatsapp"></ion-icon>
 <ion-label>Send Order</ion-label>
 </ion-chip>
 </ion-router-link>
-</form>
-</ion-card>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;div id='recaptcha' class="g-recaptcha"
-      data-sitekey="{{site.reCAPTCHA-key}}"
-      data-callback="onSubmit"
-      data-size="invisible"&gt;&lt;/div&gt;
-&lt;script&gt;onload();&lt;/script&gt;
-</code></pre></div></div>
+&lt;/ion-card&gt;
+</form></ion-card>
 :ET

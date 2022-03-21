@@ -54,15 +54,9 @@ sitemap: false
         </ion-item>
 <br/><p/>
       <ion-router-link id='order' class="order">
-<ion-chip color="success" style="float:right;">
+<ion-chip class="g-recaptcha"  data-sitekey="{{site.sitekey}}" data-callback='onSubmit' color="success" style="float:right;">
 <ion-icon name="logo-whatsapp"></ion-icon>
 <ion-label>Send Order</ion-label>
 </ion-chip>
 </ion-router-link>
-</form>
 </ion-card>
-      <div id='recaptcha' class="g-recaptcha"
-          data-sitekey="{{site.reCAPTCHA-key}}"
-          data-callback="onSubmit"
-          data-size="invisible"></div>
-    <script>onload();</script>

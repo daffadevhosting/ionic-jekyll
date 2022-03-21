@@ -1,25 +1,8 @@
 ---
-layout: webshop
+layout: default
 ---
 <style>
-.keranjang-box .simpleCart_increment, .keranjang-box .simpleCart_decrement, .keranjang-box .item-remove, .simpleCart_items .item-remove, .keranjang-box .item-link {display:none!important;}
+.keranjang-box .simpleCart_increment, .keranjang-box .simpleCart_decrement, .keranjang-box .item-remove, .simpleCart_items .item-remove, .keranjang-box .item-link {display:none !important;}.keranjang-box .item-quantity {padding: 0 !important;}
 </style>
 
-<div class="cekout">
-<article class="post-page">
-  <div class="entry">
     {{ content }}
-  </div>
-</article>
-<ion-card class="review-checkout">
-  <ion-item>
-    <ion-icon name="cart-outline" slot="start">
-            </ion-icon>
-    <ion-label>Keranjang Belanja Kamu</ion-label>
-    <ion-note slot="end" color="primary"><ion-badge color="danger" id="cart-menu" class="simpleCart_quantity"></ion-badge></ion-note>
-  </ion-item>
-<ion-card-content>
-    {% include keranjang.html %}
-</ion-card-content>
-</ion-card>
-</div>

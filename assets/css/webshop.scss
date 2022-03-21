@@ -246,12 +246,8 @@ select.form-control {
 }
 
 .keranjang-box {
-    overflow-x: hidden;
-    overflow-y: auto;
-    width: 1016px;
-    margin: auto;
 
     @include mobile {
-    width: 100%;}
+    width: 100% !important;}
 }
 @import "./highlights";

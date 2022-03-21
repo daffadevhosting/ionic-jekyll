@@ -4,11 +4,24 @@ title: Checkout
 description: Checkout Belanja
 sitemap: false
 ---
-<style type="text/css">small{font-size:12px;}.masthead,.product{display:none!important;}.not_if{background: #18ce0f;color:#fff;padding: 10px;border-radius: 5px;}.form-coll{display:flex;justify-content:space-between;}</style>
-<form class='wrapHead data-form validate-form' id='whatsapp-order' style="margin-bottom:30px;">
-<ion-card style="max-width: 680px;padding:2%;width: 100%;margin: 0 auto;border: 1px solid #eee;border-radius: 5px;box-shadow: rgb(0 0 0 / 20%) 0px 3px 1px -2px, rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 1px 5px 0px;">
+<style type="text/css">small{font-size:12px;}.masthead,.product{display:none!important;}.not_if{background: #18ce0f;color:#fff;padding: 10px;border-radius: 5px;line-height: 25px;}.form-coll{display:flex;justify-content:space-between;}</style>
+
+
+<ion-card class="review-checkout">
+  <ion-item>
+    <ion-icon name="cart-outline" slot="start"></ion-icon>
+    <ion-label>Keranjang Belanja Kamu</ion-label>
+    <ion-note slot="end" color="primary"><ion-badge color="danger" id="cart-menu" class="simpleCart_quantity"></ion-badge></ion-note>
+  </ion-item>
+<ion-card-content>
+    {% include keranjang.html %}
+</ion-card-content>
+</ion-card>
+
+<ion-card style="max-width: 680px;padding:6px;width: 100%;border: 1px solid #eee;border-radius: 5px;box-shadow: rgb(0 0 0 / 20%) 0px 3px 1px -2px, rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 1px 5px 0px;">
+<form class='wrapHead data-form validate-form' id='whatsapp-order'>
 <div class="not_if">
-      <span>Total belanja </span>sebesar <b><span class="simpleCart_total"></span></b><br/><small> *belum termasuk ongkir </small>
+      <span>Total belanja </span>sebesar <b><span class="simpleCart_total"></span></b><br/><p/><ion-note color="danger">Silahkan isi data pengiriman dibawah ini..</ion-note>
 </div><p/><br/>
 <input class='order' id='AdminToko' type='hidden'/>
 <ion-item>
@@ -38,10 +51,16 @@ sitemap: false
           <ion-input id="kota" class="kota wajib" placeholder="Kota"></ion-input>
           <ion-input id="provinsi" class="provinsi wajib" placeholder="Provinsi"></ion-input>
           <ion-input id="kodepos" class="kodepos wajib" placeholder="Kode Pos"></ion-input>
-        </ion-item><br/><p/>
-      <ion-router-link id='order' class="order"><ion-chip color="success" style="float:right;"><ion-icon name="logo-whatsapp"></ion-icon><ion-label>Send Order</ion-label></ion-chip></ion-router-link>
-</ion-card>
+        </ion-item>
+<br/><p/>
+      <ion-router-link id='order' class="order">
+<ion-chip color="success" style="float:right;">
+<ion-icon name="logo-whatsapp"></ion-icon>
+<ion-label>Send Order</ion-label>
+</ion-chip>
+</ion-router-link>
 </form>
+</ion-card>
       <div id='recaptcha' class="g-recaptcha"
           data-sitekey="{{site.reCAPTCHA-key}}"
           data-callback="onSubmit"

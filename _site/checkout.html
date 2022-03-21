@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +9,7 @@
  
 <title>Checkout | </title>
 
-<meta name="description" content="   Total belanja sebesar *belum termasuk ongkir  Nama Lengkap          No. WhatsApp          E-Mail                  Kurir           J&amp;T Express      JNE...">
+<meta name="description" content="     Keranjang Belanja Kamu     {% include keranjang. html %}   Total belanja sebesar Silahkan isi data pengiriman dibawah ini. .  Nama Lengkap          No. ...">
 
 <link rel="shortcut icon" type="image/png" href="/assets/images/logo/maskable_icon_x192.png">
 <link rel="shortcut icon" sizes="192x192" href="/assets/images/logo/maskable_icon_x192.png">
@@ -22,7 +21,7 @@
 <meta property="og:url" content="http://localhost:4000/checkout"/>
 <meta property="og:type" content="article">
 <meta property="og:site_name" content=""/>
-<meta property="og:description" content="   Total belanja sebesar *belum termasuk ongkir  Nama Lengkap          No. WhatsApp          E-Mail                  Kurir           J&amp;T Express      JNE..."/>
+<meta property="og:description" content="     Keranjang Belanja Kamu     {% include keranjang. html %}   Total belanja sebesar Silahkan isi data pengiriman dibawah ini. .  Nama Lengkap          No. ..."/>
 
 <!-- Twitter integration -->
 <meta name="twitter:card" content="summary">
@@ -30,7 +29,7 @@
 <meta name="twitter:title" content="Checkout" />
 
 <meta name="twitter:url" content="http://localhost:4000/checkout" />
-<meta name="twitter:description" content="   Total belanja sebesar *belum termasuk ongkir  Nama Lengkap          No. WhatsApp          E-Mail                  Kurir           J&amp;T Express      JNE..." />
+<meta name="twitter:description" content="     Keranjang Belanja Kamu     {% include keranjang. html %}   Total belanja sebesar Silahkan isi data pengiriman dibawah ini. .  Nama Lengkap          No. ..." />
 <link rel="canonical" href="http://localhost:4000/checkout">
 <link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4000/feed.xml">
 <link rel="sitemap" type="application/xml" title="Sitemap" href="http://localhost:4000/sitemap.xml" />
@@ -103,65 +102,17 @@
       <ion-content fullscreen>
 
 
-    <div id="webshop" class="shop-container">
-     <div class="etalase">
+    <div id="main" role="main" class="container">
       <style>
-.keranjang-box .simpleCart_increment, .keranjang-box .simpleCart_decrement, .keranjang-box .item-remove, .simpleCart_items .item-remove, .keranjang-box .item-link {display:none!important;}
+.keranjang-box .simpleCart_increment, .keranjang-box .simpleCart_decrement, .keranjang-box .item-remove, .simpleCart_items .item-remove, .keranjang-box .item-link {display:none !important;}.keranjang-box .item-quantity {padding: 0 !important;}
 </style>
 
-<div class="cekout">
-<article class="post-page">
-  <div class="entry">
-    <style type="text/css">small{font-size:12px;}.masthead,.product{display:none!important;}.not_if{background: #18ce0f;color:#fff;padding: 10px;border-radius: 5px;}.form-coll{display:flex;justify-content:space-between;}</style>
-<form class='wrapHead data-form validate-form' id='whatsapp-order' style="margin-bottom:30px;">
-<ion-card style="max-width: 680px;padding:2%;width: 100%;margin: 0 auto;border: 1px solid #eee;border-radius: 5px;box-shadow: rgb(0 0 0 / 20%) 0px 3px 1px -2px, rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 1px 5px 0px;">
-<div class="not_if">
-      <span>Total belanja </span>sebesar <b><span class="simpleCart_total"></span></b><br/><small> *belum termasuk ongkir </small>
-</div><p/><br/>
-<input class='order' id='AdminToko' type='hidden'/>
-<ion-item>
-  <ion-label position="stacked">Nama Lengkap</ion-label>
-                  <ion-input id="nama" type="text" class="nama wajib" placeholder="Nama Lengkap"></ion-input>
-</ion-item>
-<ion-item>
-  <ion-label position="stacked">No. WhatsApp</ion-label>
-                  <ion-input id="nomor" type="number" min="11" class="nomor wajib" placeholder="Nomor WhatsApp"></ion-input>
-</ion-item>
-<ion-item>
-  <ion-label position="stacked">E-Mail</ion-label>
-                  <ion-input id="email" type="email" class="email wajib" placeholder="Alamat E-mail"></ion-input>
-</ion-item>
-        <ion-item>
-          <ion-label>Kurir</ion-label>
-          <ion-select class="informasi wajib" value="J%26T Express" placeholder="Pilih Kurir " interface="action-sheet">
-            <ion-select-option value="J%26T Express">J&amp;T Express</ion-select-option>
-            <ion-select-option value="JNE Express">JNE Express</ion-select-option>
-            <ion-select-option value="*Grab Express">*GrabExpress</ion-select-option>
-            <ion-select-option value="*GoSend">*GoSend</ion-select-option>
-          </ion-select>
-        </ion-item>
-        <ion-item>
-          <ion-label position="stacked">Alamat Pengiriman</ion-label>
-          <ion-input id="alamat" class="alamat wajib" placeholder="Alamat Rumah"></ion-input>
-          <ion-input id="kota" class="kota wajib" placeholder="Kota"></ion-input>
-          <ion-input id="provinsi" class="provinsi wajib" placeholder="Provinsi"></ion-input>
-          <ion-input id="kodepos" class="kodepos wajib" placeholder="Kode Pos"></ion-input>
-        </ion-item><br/><p/>
-      <ion-router-link id='order' class="order"><ion-chip color="success" style="float:right;"><ion-icon name="logo-whatsapp"></ion-icon><ion-label>Send Order</ion-label></ion-chip></ion-router-link>
-</ion-card>
-</form>
-      <div id='recaptcha' class="g-recaptcha"
-          data-sitekey=""
-          data-callback="onSubmit"
-          data-size="invisible"></div>
-    <script>onload();</script>
+    <style type="text/css">small{font-size:12px;}.masthead,.product{display:none!important;}.not_if{background: #18ce0f;color:#fff;padding: 10px;border-radius: 5px;line-height: 25px;}.form-coll{display:flex;justify-content:space-between;}</style>
 
-  </div>
-</article>
+
 <ion-card class="review-checkout">
   <ion-item>
-    <ion-icon name="cart-outline" slot="start">
-            </ion-icon>
+    <ion-icon name="cart-outline" slot="start"></ion-icon>
     <ion-label>Keranjang Belanja Kamu</ion-label>
     <ion-note slot="end" color="primary"><ion-badge color="danger" id="cart-menu" class="simpleCart_quantity"></ion-badge></ion-note>
   </ion-item>
@@ -187,7 +138,7 @@
 .keranjang-box .simpleCart_items{max-height: 253px;overflow-y:auto;margin-bottom:20px;padding: 10px 5px 0 5px;box-shadow: inset #000 0px -5px 8px -6px, inset #000 0 5px 8px -6px;border-radius: 3px;}
 .keranjang-box .itemRow{overflow:hidden;font-size:12px;line-height:1.5;width:100%;font-weight:700;display:inline-block;margin-bottom: 10px;}
 .keranjang-box .simpleCart_items::after {content: "";text-align: center;z-index: 0;position: absolute;top: 50px;left: 50%;padding: 10px;transform: translate(-50%,-45%);max-width: 500px;width: 90%;overflow: hidden;margin: auto;}
-.keranjang-box .item-thumb{float:left}
+.keranjang-box .item-thumb{float:left;}
 .keranjang-box .item-thumb img{width:95px;height:auto;border-radius:.3rem;float:left;margin:0 10px 0 0}
 .keranjang-box .item-decrement,.item-quantity,.keranjang-box .item-increment{font-size:12px;display:table-cell}
 .keranjang-box .item-berat {display: none;}
@@ -224,13 +175,61 @@ span.simpleCart_shipping, span.simpleCart_grandTotal {font-weight: 600;color:#ff
     
     </div>
 </div>
-</div>
 
 </ion-card-content>
 </ion-card>
-</div>
 
-     </div>
+<ion-card style="max-width: 680px;padding:6px;width: 100%;border: 1px solid #eee;border-radius: 5px;box-shadow: rgb(0 0 0 / 20%) 0px 3px 1px -2px, rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 1px 5px 0px;">
+<form class='wrapHead data-form validate-form' id='whatsapp-order'>
+<div class="not_if">
+      <span>Total belanja </span>sebesar <b><span class="simpleCart_total"></span></b><br/><p/><ion-note color="danger">Silahkan isi data pengiriman dibawah ini..</ion-note>
+</div><p/><br/>
+<input class='order' id='AdminToko' type='hidden'/>
+<ion-item>
+  <ion-label position="stacked">Nama Lengkap</ion-label>
+                  <ion-input id="nama" type="text" class="nama wajib" placeholder="Nama Lengkap"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="stacked">No. WhatsApp</ion-label>
+                  <ion-input id="nomor" type="number" min="11" class="nomor wajib" placeholder="Nomor WhatsApp"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="stacked">E-Mail</ion-label>
+                  <ion-input id="email" type="email" class="email wajib" placeholder="Alamat E-mail"></ion-input>
+</ion-item>
+        <ion-item>
+          <ion-label>Kurir</ion-label>
+          <ion-select class="informasi wajib" value="J%26T Express" placeholder="Pilih Kurir " interface="action-sheet">
+            <ion-select-option value="J%26T Express">J&amp;T Express</ion-select-option>
+            <ion-select-option value="JNE Express">JNE Express</ion-select-option>
+            <ion-select-option value="*Grab Express">*GrabExpress</ion-select-option>
+            <ion-select-option value="*GoSend">*GoSend</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Alamat Pengiriman</ion-label>
+          <ion-input id="alamat" class="alamat wajib" placeholder="Alamat Rumah"></ion-input>
+          <ion-input id="kota" class="kota wajib" placeholder="Kota"></ion-input>
+          <ion-input id="provinsi" class="provinsi wajib" placeholder="Provinsi"></ion-input>
+          <ion-input id="kodepos" class="kodepos wajib" placeholder="Kode Pos"></ion-input>
+        </ion-item>
+<br/><p/>
+      <ion-router-link id='order' class="order">
+<ion-chip color="success" style="float:right;">
+<ion-icon name="logo-whatsapp"></ion-icon>
+<ion-label>Send Order</ion-label>
+</ion-chip>
+</ion-router-link>
+</form>
+</ion-card>
+      <div id='recaptcha' class="g-recaptcha"
+          data-sitekey=""
+          data-callback="onSubmit"
+          data-size="invisible"></div>
+    <script>onload();</script>
+
+
+    
     </div>
 
     
@@ -400,5 +399,7 @@ $(function() {
 </script>
 
 
+
+    
 
 </html>

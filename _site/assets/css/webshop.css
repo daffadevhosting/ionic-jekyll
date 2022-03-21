@@ -108,9 +108,7 @@ select.form-control { display: block; background: transparent; width: 100%; padd
 
 .close:hover, .close:focus { color: #000; text-decoration: none; cursor: pointer; }
 
-.keranjang-box { overflow-x: hidden; overflow-y: auto; width: 1016px; margin: auto; }
-
-@media (min-width: 320px) and (max-width: 767.98px) { .keranjang-box { width: 100%; } }
+@media (min-width: 320px) and (max-width: 767.98px) { .keranjang-box { width: 100% !important; } }
 
 .highlight { background-color: #efefef; padding: 7px 7px 7px 10px; border: 1px solid #ddd; -moz-box-shadow: 3px 3px rgba(0, 0, 0, 0.1); -webkit-box-shadow: 3px 3px rgba(0, 0, 0, 0.1); box-shadow: 3px 3px rgba(0, 0, 0, 0.1); margin: 20px 0 20px 0; overflow: scroll; }
 

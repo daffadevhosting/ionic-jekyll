@@ -7,7 +7,7 @@ simpleCart({
 { attr: "color", label: 'Warna', view: "warna" },
 { attr: "model", label: 'Model', view: "tali" },
 { view: "decrement", label: false },
-{ attr: "quantity", label: 'Jumlah', view: "jumlah" },
+{ attr: "quantity", label: 'false', view: "qty" },
 { view: "increment", label: false },
 { attr: "total", label: false, view: "currency" },
 { attr: "link", label: false, view: "link" },

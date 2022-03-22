@@ -65,6 +65,74 @@
 <link rel="stylesheet" href="{{ "/assets/css/webshop.css" | prepend: site.baseurl }}">
 <link rel="stylesheet" href="{{ "/assets/css/darkmode.css" | prepend: site.baseurl }}">
 
+    <!-- Products FB Meta Tags -->
+    {% if page.layout == "shop" %}
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:description" content="{{ page.description }}">
+    <meta property="og:url" content="{{site.url}}{{page.url}}">
+    <meta property="og:image" content="{{ page.image }}">
+    <meta property="product:brand" content="Plus62Bordir">
+    <meta property="product:availability" content="in stock">
+    <meta property="product:condition" content="new">
+    <meta property="product:price:amount" content="{{ page.price }}">
+    <meta property="product:price:currency" content="IDR">
+    <meta property="product:retailer_item_id" content="{{page.sku}}">
+    <meta property="product:item_group_id" content="{{page.noID}}">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": "{{ page.title }}",
+  "image": "{{ page.image }}",
+  "brand":"plus62bordir",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "IDR",
+    "price": "{{ page.price }}",
+    "sale_price": "{{ page.discount }}",
+    "availability": "https://schema.org/InStock",
+    "url": "{{site.baseurl}}{{page.url}}",
+    "priceValidUntil": "2025-01-01T00:00:00.000Z"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "{{page.rating}}",
+    "ratingCount": "{{page.rC}}",
+    "reviewCount": "{{page.riv}}",
+    "bestRating": "5.",
+    "worstRating": "1"
+  },
+  "review": {
+    "@type": "Review",
+    "author": {
+      "@type": "Person",
+      "name": "NdanG"
+    }
+  },
+  "description": "{{ page.description }}",
+  "sku": "{{page.sku}}",
+  "mpn": "{{page.mpn}}",
+  "productID": "{{page.noID}}"
+}
+</script>
+    {% endif %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "WebSite",
+  "url": "{{site.url}}",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "/search?keyword={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+    {% include fb-pixel.html %}
+    {% include onesignal.html %}
+    {% include analytics.html %}
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->

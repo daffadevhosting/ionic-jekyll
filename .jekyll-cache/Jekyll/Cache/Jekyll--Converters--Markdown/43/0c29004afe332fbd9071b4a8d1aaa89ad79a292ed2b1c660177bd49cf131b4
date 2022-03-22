@@ -1,9 +1,4 @@
----
-permalink: /404.html
-layout: default
----
-
-<style type="text/css" media="screen">
+I"4<style type="text/css" media="screen">
   .container {
     margin: 10px auto;
     max-width: 600px;
@@ -55,8 +50,9 @@ layout: default
 </style>
 
 <div class="container">
-  <h1 class='shake'>404</h1>
+  <h1 class="shake">404</h1>
 
   <p><strong>Page not found :(</strong></p>
   <p>The requested page could not be found.</p>
 </div>
+:ET

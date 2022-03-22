@@ -1,9 +1,40 @@
-I"â<style>
+I"x<style>
 :root {
     --ion-safe-area-top: 20px;
     --ion-safe-area-bottom: 22px;
       }
 ion-header, ion-footer{display: none !important;}
+       .slideOutLeft {
+  -webkit-animation-name: slideOutLeft;
+  animation-name: slideOutLeft;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  }
+  @-webkit-keyframes slideOutLeft {
+  0% {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  }
+  100% {
+  visibility: hidden;
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  }
+  }
+  @keyframes slideOutLeft {
+  0% {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  }
+  100% {
+  visibility: hidden;
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  }
+  } 
+
 .lightSpeedIn {
   -webkit-animation-name: lightSpeedIn;
   animation-name: lightSpeedIn;
@@ -64,7 +95,7 @@ animation-iteration-count: infinite;
 
 <script>
     function pageRedirect() {
-        window.location.replace("/products");
+        window.location.replace("/product");
     }      
     setTimeout("pageRedirect()", 20000);
 </script>
@@ -81,7 +112,7 @@ animation-iteration-count: infinite;
               <p>
                 WebShop <b>Plus62store</b> menawarkan berbagai macam jenis masker bordir yang aman dan nyaman dipakai sehari-hari.
               </p>
-              <p class="lightSpeedIn"><ion-chip color="danger" disabled="true"><ion-icon name="arrow-back-outline"></ion-icon><ion-label> Geser</ion-label></ion-chip></p>
+              <p class="slideOutLeft"><ion-chip color="danger" disabled="true"><ion-icon name="arrow-back-outline"></ion-icon><ion-label> Geser</ion-label></ion-chip></p>
             </div>
           </ion-slide>
 

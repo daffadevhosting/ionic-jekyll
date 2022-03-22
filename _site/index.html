@@ -111,6 +111,39 @@
     --ion-safe-area-bottom: 22px;
       }
 ion-header, ion-footer{display: none !important;}
+       .slideOutLeft {
+  -webkit-animation-name: slideOutLeft;
+  animation-name: slideOutLeft;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: infinite; 
+  animation-iteration-count: infinite;
+  }
+  @-webkit-keyframes slideOutLeft {
+  0% {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  }
+  100% {
+  visibility: hidden;
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  }
+  }
+  @keyframes slideOutLeft {
+  0% {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  }
+  100% {
+  visibility: hidden;
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  }
+  } 
+
 .lightSpeedIn {
   -webkit-animation-name: lightSpeedIn;
   animation-name: lightSpeedIn;
@@ -172,7 +205,7 @@ animation-iteration-count: infinite;
     function pageRedirect() {
         window.location.replace("/product");
     }      
-    setTimeout("pageRedirect()", 20000);
+    setTimeout("pageRedirect()", 50000);
 </script>
   </head>
   <body>
@@ -186,7 +219,9 @@ animation-iteration-count: infinite;
               <p>
                 WebShop <b>Plus62store</b> menawarkan berbagai macam jenis masker bordir yang aman dan nyaman dipakai sehari-hari.
               </p>
-              <p class="lightSpeedIn"><ion-chip color="danger" disabled="true"><ion-icon name="arrow-back-outline"></ion-icon><ion-label> Geser</ion-label></ion-chip></p>
+                <p class="slideOutLeft" style="margin-top:20px;">
+            <ion-chip disabled="true"><ion-icon color="dark" name="arrow-back-outline"></ion-icon><ion-label> Geser</ion-label></ion-chip>
+                </p>
             </div>
           </ion-slide>
 
@@ -210,7 +245,7 @@ animation-iteration-count: infinite;
           <ion-slide>
             <img src="assets/images/logo/olshop.png" />
             <h2>Siap Berbelanja?</h2>
-            <ion-button fill="clear" onclick="myProduct()">Lanjut <ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>
+            <ion-button fill="clear" onclick="myProduct()" style="margin-top:20px;">Go Shop <ion-icon slot="end" name="cart"></ion-icon></ion-button>
           </ion-slide>
         </ion-slides>
       </ion-content>

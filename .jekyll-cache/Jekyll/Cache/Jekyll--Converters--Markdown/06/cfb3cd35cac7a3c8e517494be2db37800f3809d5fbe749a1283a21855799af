@@ -1,8 +1,4 @@
----
-layout: index
----
-
-<style>
+I"í<style>
 :root {
     --ion-safe-area-top: 20px;
     --ion-safe-area-bottom: 22px;
@@ -98,16 +94,18 @@ animation-iteration-count: infinite;
   }
   } 
     </style>
+
 <script>
     function pageRedirect() {
         window.location.replace("/product");
     }      
     setTimeout("pageRedirect()", 50000);
 </script>
-  </head>
-  <body>
+
+<p>&lt;/head&gt;</p>
+<body>
     <ion-app>
-      <ion-content fullscreen class="ion-padding" scroll-y="false">
+      <ion-content fullscreen="" class="ion-padding" scroll-y="false">
         <ion-slides>
           <ion-slide>
             <div class="slide">
@@ -116,7 +114,7 @@ animation-iteration-count: infinite;
               <p>
                 WebShop <b>Plus62store</b> menawarkan berbagai macam jenis masker bordir yang aman dan nyaman dipakai sehari-hari.
               </p>
-                <p class="slideOutLeft" style="margin-top:20px;">
+                <p class="slideOutLeft">
             <ion-chip disabled="true"><ion-icon color="dark" name="arrow-back-outline"></ion-icon><ion-label> Geser</ion-label></ion-chip>
                 </p>
             </div>
@@ -142,7 +140,7 @@ animation-iteration-count: infinite;
           <ion-slide>
             <img src="assets/images/logo/olshop.png" />
             <h2>Siap Berbelanja?</h2>
-            <ion-button fill="clear" onclick="myProduct()" style="margin-top:20px;">Go Shop <ion-icon slot="end" name="cart"></ion-icon></ion-button>
+            <ion-button fill="clear" onclick="myProduct()">Lanjut <ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>
           </ion-slide>
         </ion-slides>
       </ion-content>
@@ -198,4 +196,6 @@ slides.options = {
   speed: 400
 }
 </script>
-<script  src="assets/js/script.js"></script>
+<script src="assets/js/script.js"></script>
+</body>
+:ET

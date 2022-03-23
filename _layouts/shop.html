@@ -34,7 +34,7 @@ layout: webshop
 <link itemprop="availability" href="https://schema.org/InStock" /><ion-note color="tertiary">{{page.stok}}</ion-note>
         	<div class="style-picker">
             {% for style in page.styles %}
-              <div id="product-{{ forloop.index }}" {% if forloop.first %} class="item_color" {% endif %} style="text-align:center;width:70px;border-radius:5px;padding:8px;background-color:{{ style.color }};cursor:pointer;"><span style="color:#fff">{{ style.name }}</span></div>
+              <div id="product-{{ forloop.index }}" {% if forloop.first %} class="item_color" {% endif %} style="text-align:center;width:75px;border-radius:5px;padding:8px;background-color:{{ style.color }};cursor:pointer;"><span style="color:#fff">{{ style.name }}</span></div>
             {% endfor %}
         	</div>
           <select class="item form-control item_model" style="display:{{page.display}};">
@@ -51,7 +51,7 @@ layout: webshop
                 <i class="fa fa-minus-circle"></i>
               </span>
         </div>
-          <input type="number" id="counter" class="form-control item_Quantity" value="1" min="1" max="100" style="text-align:center;background:transparent;font-weight:700;border:none;" disabled/>
+          <input type="number" id="counter" class="form-control item_Quantity" value="1" min="1" max="100" style="width: 100%;text-align:center;background:transparent;font-weight:700;border:none;" disabled/>
         <div class="input-group-prepend" style="cursor: pointer;padding: 0 10px;">
               <span class="input-group-right" id="plus" onclick="plus()">
                   <i class="fa fa-plus-circle"></i>

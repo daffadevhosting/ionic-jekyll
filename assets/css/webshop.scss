@@ -80,7 +80,11 @@
     flex-wrap: wrap;
     grid-gap: 10px;
     align-items: center;
+    margin: 0 10%;
     align-content: space-between;
+
+    @include mobile {
+    margin: 0;}
 }
 
 .product-page {
@@ -100,6 +104,9 @@
 
 .product-img {
     max-width: 680px;
+
+    @include mobile {
+    max-width: auto;}
 }
 
 .item-rate {

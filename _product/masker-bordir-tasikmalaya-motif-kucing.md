@@ -38,6 +38,8 @@ facebook_image_path:
 - https://cf.shopee.co.id/file/9add457c9abbb638eeed99c601075160
 - https://cf.shopee.co.id/file/f3d6e1490cf857c9157510583ab681aa
 display: block
+stat: Stok Habis
+buttonColor: danger
 ---
 
 - Bahan kain Katun,

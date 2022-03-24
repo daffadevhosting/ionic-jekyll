@@ -78,9 +78,9 @@ layout: webshop
 </ion-card-content>
   </ion-card>
 
-<ion-list class="btn-atc">
-        <ion-button id="cartButton" class="item_add" slot="end" color="tertiary" href="javascript:;" {{page.outstock}}>Add To Cart</ion-button>
-</ion-list>
+<ion-buttons class="btn-atc">
+        <ion-button color="{{page.btnclr}}" id="cartButton" class="item_add" slot="end" fill="outline" shape="round" href="javascript:;" {{page.outstock}}>{{page.stat}}</ion-button>
+</ion-buttons>
 </div>
 </ion-card>
 <ion-card class="review">

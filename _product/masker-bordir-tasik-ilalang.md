@@ -51,6 +51,8 @@ facebook_image_path:
 - https://cf.shopee.co.id/file/f1ff7e7d7dcd04231bbe267c9bca4b07
 - https://cf.shopee.co.id/file/1ada2636aaa18cc18fcfc6415526f48a
 display: block
+stat: add to cart
+btnclr: primary
 ---
 
 - Lapisan Katun + Vislin,

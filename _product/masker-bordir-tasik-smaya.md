@@ -57,6 +57,8 @@ facebook_image_path:
 - https://cf.shopee.co.id/file/19cc7a4f1ba1a82f2596323730ca093b
 - https://cf.shopee.co.id/file/ab2777be709bc6aa0c31093c23b1b566
 display: block
+stat: Stok Habis
+btnclr: danger
 ---
 
 - Lapisan Tengah : Interlining,

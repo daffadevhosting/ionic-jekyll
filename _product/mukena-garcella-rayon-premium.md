@@ -42,6 +42,8 @@ facebook_image_path:
 - https://cf.shopee.co.id/file/f3e89f094e8c67e67f953680d14817d6
 - https://cf.shopee.co.id/file/0e200dc5e3d7509e77a839e5f8e98717
 display: none
+stat: Add To cart
+btnclr: primary
 ---
 
 ### Material : 

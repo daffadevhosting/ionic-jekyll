@@ -58,6 +58,8 @@ facebook_image_path:
 - https://cf.shopee.co.id/file/857494984bfb05f7b9fac6b02032a784
 - https://cf.shopee.co.id/file/cb4eb041c407779ad49d2e9d5b2b9320
 display: block
+stat: Stok Habis
+btnclr: danger
 ---
 
 - Bordir : Manual (JUKI),

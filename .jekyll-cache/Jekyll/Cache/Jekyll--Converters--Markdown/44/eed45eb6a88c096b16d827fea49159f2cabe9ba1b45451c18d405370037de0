@@ -1,4 +1,4 @@
-I"<style>
+I"<style>
 :root {
     --ion-safe-area-top: 20px;
     --ion-safe-area-bottom: 22px;
@@ -7,8 +7,8 @@ ion-header, ion-footer{display: none !important;}
        .slideOutLeft {
   -webkit-animation-name: slideOutLeft;
   animation-name: slideOutLeft;
-  -webkit-animation-duration: 5s;
-  animation-duration: 5s;
+  -webkit-animation-duration: 4s;
+  animation-duration: 6s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
   -webkit-animation-iteration-count: infinite; 
@@ -109,7 +109,7 @@ animation-iteration-count: infinite;
         <ion-slides>
           <ion-slide>
             <div class="slide">
-              <img src="assets/images/logo/maskable_icon_x192.png" />
+              <img src="assets/images/logo/plus62.webp" />
               <h2>Selamat Datang</h2>
               <p>
                 WebShop <b>Plus62store</b> menawarkan berbagai macam jenis masker bordir yang aman dan nyaman dipakai sehari-hari.
@@ -130,7 +130,7 @@ animation-iteration-count: infinite;
           </ion-slide>
 
           <ion-slide>
-            <img src="assets/images/logo/24jam.png" />
+            <img src="assets/images/logo/24jam.webp" />
             <h2>Online 1x24 Jam!</h2>
             <p>
               <b>CS (Customer Service)</b> kami akan dengan senang hati untuk melayani 24 Jam :)
@@ -138,7 +138,7 @@ animation-iteration-count: infinite;
           </ion-slide>
 
           <ion-slide>
-            <img src="assets/images/logo/olshop.png" />
+            <img src="assets/images/logo/olshop.webp" />
             <h2>Siap Berbelanja?</h2>
             <ion-button fill="clear" onclick="myProduct()" style="margin-top:20px;">Go Shop <ion-icon slot="end" name="cart"></ion-icon></ion-button>
           </ion-slide>

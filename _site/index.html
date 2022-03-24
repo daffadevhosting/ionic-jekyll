@@ -6,7 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark" />
 <meta name="google-site-verification" content="" />
-<title></title>
+<meta http-equiv='cache-control' content='no-cache'>
+<meta http-equiv='expires' content='0'>
+<meta http-equiv='pragma' content='no-cache'>
+<title>Wellcome @ Plus62store</title>
 
 <meta property="og:image" content="http://localhost:4000"/>
 <meta name="description" content="&lt;/head&gt;                                  Selamat Datang:                WebShop Plus62store menawarkan berbagai macam jenis masker bordir yang aman dan...">
@@ -16,7 +19,7 @@
 <link rel="apple-touch-icon" href="/assets/images/logo/maskable_icon_x192.png">
 
  <!-- Facebook integration -->
-<meta property="og:title" content=""/>
+<meta property="og:title" content="Wellcome"/>
 
 <meta property="og:url" content="http://localhost:4000/"/>
 <meta property="og:type" content="article">
@@ -26,7 +29,7 @@
 <!-- Twitter integration -->
 <meta name="twitter:card" content="summary">
 
-<meta name="twitter:title" content="" />
+<meta name="twitter:title" content="Wellcome" />
 
 <meta name="twitter:url" content="http://localhost:4000/" />
 <meta name="twitter:description" content="&lt;/head&gt;                                  Selamat Datang:                WebShop Plus62store menawarkan berbagai macam jenis masker bordir yang aman dan..." />
@@ -66,6 +69,17 @@
 <link rel="stylesheet" href="/assets/css/style.css">
 <link rel="stylesheet" href="/assets/css/webshop.css">
 <link rel="stylesheet" href="/assets/css/darkmode.css">
+<link rel="manifest" href="/manifest.json">
+
+    <!-- pwa -->
+    <meta name="Description" content="Jual Masker Bordir Tasikmalaya.." />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Plus62store" />
+    <link rel="apple-touch-icon" href="/assets/images/logo/maskable_icon_x192.png" />
+    <meta name="msapplication-TileImage" content="/assets/images/logo/maskable_icon_x192.png" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
 
     <!-- Products FB Meta Tags -->
     
@@ -145,8 +159,8 @@ ion-header, ion-footer{display: none !important;}
        .slideOutLeft {
   -webkit-animation-name: slideOutLeft;
   animation-name: slideOutLeft;
-  -webkit-animation-duration: 5s;
-  animation-duration: 5s;
+  -webkit-animation-duration: 4s;
+  animation-duration: 6s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
   -webkit-animation-iteration-count: infinite; 
@@ -245,7 +259,7 @@ animation-iteration-count: infinite;
         <ion-slides>
           <ion-slide>
             <div class="slide">
-              <img src="assets/images/logo/maskable_icon_x192.png" />
+              <img src="assets/images/logo/plus62.webp" />
               <h2>Selamat Datang</h2>
               <p>
                 WebShop <b>Plus62store</b> menawarkan berbagai macam jenis masker bordir yang aman dan nyaman dipakai sehari-hari.
@@ -266,7 +280,7 @@ animation-iteration-count: infinite;
           </ion-slide>
 
           <ion-slide>
-            <img src="assets/images/logo/24jam.png" />
+            <img src="assets/images/logo/24jam.webp" />
             <h2>Online 1x24 Jam!</h2>
             <p>
               <b>CS (Customer Service)</b> kami akan dengan senang hati untuk melayani 24 Jam :)
@@ -274,7 +288,7 @@ animation-iteration-count: infinite;
           </ion-slide>
 
           <ion-slide>
-            <img src="assets/images/logo/olshop.png" />
+            <img src="assets/images/logo/olshop.webp" />
             <h2>Siap Berbelanja?</h2>
             <ion-button fill="clear" onclick="myProduct()" style="margin-top:20px;">Go Shop <ion-icon slot="end" name="cart"></ion-icon></ion-button>
           </ion-slide>
@@ -343,11 +357,18 @@ slides.options = {
     
     
     <ion-buttons slot="end"><note>
-    <ion-button><ion-label>Powered by GitHub</ion-label> <ion-icon name="logo-github" slot="end"></ion-icon></ion-button></note>
+    <ion-button><ion-icon name="logo-github"></ion-icon></ion-button></note>
     </ion-buttons>
   </ion-toolbar>
         </ion-footer>
     </ion-app>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js');
+        });
+      }
+    </script>
   </body>
 
 <script>
@@ -445,10 +466,10 @@ function myBri() {
 </script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
     <script src="/assets/js/jquery-3.6.0.js"></script>
-    <script src="/assets/js/simpleCart.js"></script>
+    <script src="/assets/js/simpleCart.js?version = 1.1"></script>
     <script async src="/assets/js/main.js"></script>
     <script async src="/assets/js/responsive-menu.js"></script>
-    <script src="/assets/js/form-order.js" type="text/javascript"></script>
+    <script src="/assets/js/form-order.js?version = 1.0" type="text/javascript"></script>
     <script src="/assets/js/question.js" type="text/javascript"></script>
 
 

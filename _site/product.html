@@ -7,7 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark" />
 <meta name="google-site-verification" content="" />
-<title>Product | </title>
+<meta http-equiv='cache-control' content='no-cache'>
+<meta http-equiv='expires' content='0'>
+<meta http-equiv='pragma' content='no-cache'>
+<title>Product @ Plus62store</title>
 
 <meta property="og:image" content="http://localhost:4000"/>
 <meta name="description" content="{% for post in site. product %}  &lt;article class="post-shop"&gt;        {{ post. title }}      Rp. {{ post. discount }},00    Rp. {{post. price}}          ...">
@@ -67,6 +70,17 @@
 <link rel="stylesheet" href="/assets/css/style.css">
 <link rel="stylesheet" href="/assets/css/webshop.css">
 <link rel="stylesheet" href="/assets/css/darkmode.css">
+<link rel="manifest" href="/manifest.json">
+
+    <!-- pwa -->
+    <meta name="Description" content="Jual Masker Bordir Tasikmalaya.." />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Plus62store" />
+    <link rel="apple-touch-icon" href="/assets/images/logo/maskable_icon_x192.png" />
+    <meta name="msapplication-TileImage" content="/assets/images/logo/maskable_icon_x192.png" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
 
     <!-- Products FB Meta Tags -->
     
@@ -370,11 +384,18 @@
     </ion-buttons>
     
     <ion-buttons slot="end"><note>
-    <ion-button><ion-label>Powered by GitHub</ion-label> <ion-icon name="logo-github" slot="end"></ion-icon></ion-button></note>
+    <ion-button><ion-icon name="logo-github"></ion-icon></ion-button></note>
     </ion-buttons>
   </ion-toolbar>
         </ion-footer>
     </ion-app>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js');
+        });
+      }
+    </script>
   </body>
 
 <script>
@@ -472,10 +493,10 @@ function myBri() {
 </script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
     <script src="/assets/js/jquery-3.6.0.js"></script>
-    <script src="/assets/js/simpleCart.js"></script>
+    <script src="/assets/js/simpleCart.js?version = 1.1"></script>
     <script async src="/assets/js/main.js"></script>
     <script async src="/assets/js/responsive-menu.js"></script>
-    <script src="/assets/js/form-order.js" type="text/javascript"></script>
+    <script src="/assets/js/form-order.js?version = 1.0" type="text/javascript"></script>
     <script src="/assets/js/question.js" type="text/javascript"></script>
 
 

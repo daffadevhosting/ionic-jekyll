@@ -1,4 +1,4 @@
-I"5<div class="payment-point">
+I"’<div class="payment-point">
 <ion-card>
 <img src="/assets/images/qris_logo.jpg" />
 <buttonQris>
@@ -24,12 +24,9 @@
 <ion-modal trigger="trigger-qris" id="scQris">
 <ion-header collapse="fade" translucent="true">
         <ion-toolbar>
-<ion-chip>
-<ion-icon color="primary" name="barcode-outline"></ion-icon>
-<ion-label>Scan Qris</ion-label>
-</ion-chip>
-<ion-buttons slot="primary">
-      <ion-button onClick="dismissModal()">
+<ion-title>Scan Qris</ion-title>
+    <ion-buttons slot="end">
+      <ion-button onClick="dismissQris()">
         <ion-icon slot="icon-only" name="close"></ion-icon>
       </ion-button>
     </ion-buttons>
@@ -43,10 +40,12 @@
 <ion-modal trigger="trigger-transfer" id="tfBank">
 <ion-header collapse="fade" translucent="true">
         <ion-toolbar>
-<ion-chip>
-<ion-icon color="primary" name="card-outline"></ion-icon>
-<ion-label>Transfer Bank</ion-label>
-</ion-chip>
+<ion-title>Transfer Bank</ion-title>
+<ion-buttons slot="end">
+      <ion-button onClick="dismissTbank()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
         </ion-toolbar>
      </ion-header>
   <ion-content>
@@ -69,8 +68,14 @@
 </ion-content>
 </ion-modal>
 <script>
-async function dismissModal() {
+async function dismissQris() {
   await cardModal.dismiss({
+    'dismissed': true
+  });
+}
+
+async function dismissTbank() {
+  await sheetModal.dismiss({
     'dismissed': true
   });
 }

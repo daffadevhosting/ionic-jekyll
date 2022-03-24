@@ -10,7 +10,7 @@ stok:
  - stokis: Stok Habis
    color: eb445a
 stat: out off stock
-buttonColor: danger
+btnclr: danger
 outstock: disabled
 rating: 5.0
 rC: 676

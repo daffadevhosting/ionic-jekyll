@@ -4,7 +4,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark" />
 <meta name="google-site-verification" content="{{site.verify}}" />
-<title>{% if page.title and page.title != 'Home' %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+<meta http-equiv='cache-control' content='no-cache'>
+<meta http-equiv='expires' content='0'>
+<meta http-equiv='pragma' content='no-cache'>
+<title>{% if page.title and page.title != 'Home' %}{{ page.title }} @ {% endif %}{{ site.name }}</title>
 {% assign pagecontent_description = page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 160 %}
 <meta property="og:image" content="{{ page.image | prepend: site.baseurl | prepend: site.url }}"/>
 <meta name="description" content="{% if pagecontent_description.size > 10 %}{{ pagecontent_description }}{% else %}{{ site.description }}{% endif %}">
@@ -64,6 +67,17 @@
 <link rel="stylesheet" href="{{ "/assets/css/style.css" | prepend: site.baseurl }}">
 <link rel="stylesheet" href="{{ "/assets/css/webshop.css" | prepend: site.baseurl }}">
 <link rel="stylesheet" href="{{ "/assets/css/darkmode.css" | prepend: site.baseurl }}">
+<link rel="manifest" href="{{site.baseurl}}/manifest.json">
+
+    <!-- pwa -->
+    <meta name="Description" content="{{site.description}}" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="{{site.name}}" />
+    <link rel="apple-touch-icon" href="{{site.baseurl}}/assets/images/logo/maskable_icon_x192.png" />
+    <meta name="msapplication-TileImage" content="{{site.baseurl}}/assets/images/logo/maskable_icon_x192.png" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
 
     <!-- Products FB Meta Tags -->
     {% if page.layout == "shop" %}

@@ -1,0 +1,119 @@
+I"]<style>.entry{margin-top: 6%;}</style>
+
+<div class="payment-point">
+<ion-card>
+<img src="/assets/images/qris_logo.jpg" />
+<buttonQris>
+<ion-item id="trigger-qris" class="ion-activated">
+<ion-icon name="barcode-outline" slot="start"></ion-icon>
+<ion-label>Scan Qris</ion-label>
+<ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+&lt;/ion-card&gt;
+<ion-card>
+<img src="/assets/images/bank_transfer.jpg" />
+&lt;/ion-item&gt;
+<buttonQris>
+<buttonBank>
+<ion-item id="trigger-transfer" class="ion-activated">
+<ion-icon name="card-outline" slot="start"></ion-icon>
+<ion-label>Transfer Bank</ion-label>
+<ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+</ion-item>
+</buttonBank>
+&lt;/ion-card&gt;
+&lt;/div&gt;
+
+<ion-modal trigger="trigger-qris" id="scQris">
+<ion-header collapse="fade" translucent="true">
+        <ion-toolbar>
+<ion-chip>
+<ion-icon color="primary" name="barcode-outline"></ion-icon>
+<ion-label>Scan Qris</ion-label>
+</ion-chip>
+<ion-buttons slot="primary">
+      <ion-button onClick="dismissModal()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+        </ion-toolbar>
+     </ion-header>
+<ion-content>
+<img src="/assets/images/qris.jpeg" />
+</ion-content>
+</ion-modal>
+
+<ion-modal trigger="trigger-transfer" id="tfBank">
+<ion-header collapse="fade" translucent="true">
+        <ion-toolbar>
+<ion-chip>
+<ion-icon color="primary" name="card-outline"></ion-icon>
+<ion-label>Transfer Bank</ion-label>
+</ion-chip>
+        </ion-toolbar>
+     </ion-header>
+  <ion-content>
+<ion-item>
+<ion-label>Bank BRI</ion-label>
+<input type="text" id="bri" value="000501121217502" style="border: none!important;background: transparent;" readonly="" />
+                  <div class="input-group-append">
+                    <span onclick="myBri()">
+<i class="far fa-copy" style="font-size:25px;cursor:pointer;"></i></span>
+                  </div>
+</ion-item>
+<ion-item>
+<ion-label>Bank BTPN</ion-label>
+<input type="text" id="btpn" value="903700011795" style="border: none!important;background: transparent;" readonly="" />
+                  <div class="input-group-append">
+                    <span onclick="myBtpn()">
+<i class="far fa-copy" style="font-size:25px;cursor:pointer;"></i></span>
+                  </div>
+</ion-item>
+</ion-content>
+</ion-modal>
+<script>
+async function dismissModal() {
+  await cardModal.dismiss({
+    'dismissed': true
+  });
+}
+</script>
+<script>
+      const Bank = document.querySelector('buttonBank');
+      Bank.addEventListener('click', handleButtonClick);
+
+      async function handleButtonClick() {
+        const alert = await alertController.create({
+          message: 'Kamu akan melakukan pembayaran melalui transfer BANK, silahkan Copy Paste nomor Rekening kami.',
+          buttons: ['Agree'],
+        });
+
+        await alert.present();
+      }
+</script>
+
+<script>
+      const Qris = document.querySelector('buttonQris');
+      Qris.addEventListener('click', handleButtonClick);
+
+      async function handleButtonClick() {
+        const alert = await alertController.create({
+          message: 'Silahkan Scan BarCode dengan aplikasi E-Wallet kamu, menerima pembayaran dari semua E-Wallet.',
+          buttons: ['Oke'],
+        });
+
+        await alert.present();
+      }
+</script>
+
+<script>
+  const sheetModal = document.querySelector('#tfBank');
+  const cardModal = document.querySelector('#scQris');
+
+  sheetModal.breakpoints = [0.1, 0.5, 1];
+  sheetModal.initialBreakpoint = 0.5;
+  
+  cardModal.swipeToClose = true;
+  cardModal.presentingElement = document.querySelector('ion-app');
+</script>
+</buttonQris></ion-card></ion-item></buttonQris></ion-card></div>
+:ET

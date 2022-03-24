@@ -46,7 +46,7 @@ value: cart
 .keranjang-box a.view-cart:after{content: "Bayar Sekarang";}
 .keranjang-box a.view-cart.active:after{content: "Tutup";}
 .keranjang-box .ck-btn{margin-bottom:10px;text-align:center}
-.keranjang-box .harga-total{margin:0 0 10px;padding:0 5px;font-size:14px;font-weight:500}
+.keranjang-box .harga-total{margin:0 0 10px;padding:10px;font-size:14px;font-weight:500}
 .keranjang-box span.simpleCart_total{font-size:16px;font-weight:600;color:#ff460c}
 #jam, #menit, #detik{display:inline-block;}
 #jam-digital,#hasil,.wrapper-footer,.fab{display:none;}
@@ -55,10 +55,11 @@ span.simpleCart_shipping, span.simpleCart_grandTotal {font-weight: 600;color:#ff
 </style>
         <ion-card class="cart-page">
             <ion-list>
-               <ion-item>
+<ion-list-header> Keranjang Belanja <ion-note color="primary" class="simpleCart_quantity" slot="end"></ion-note></ion-list-header>
+               <ion-item-sliding>
   <div class="keranjang-box simplecart-cart">
     <div class="simpleCart_items"></div>
-               </ion-item>
+               </ion-item-sliding>
     <div class="harga-total">
       <span>Grand Total: </span><span class="simpleCart_quantity"></span> items = <span class="simpleCart_total"></span>
           <ion-button class="co-btn item_add" style="float: right;" href="/checkout">CheckOut</ion-button><br />

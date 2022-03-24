@@ -3,7 +3,7 @@ layout: webshop
 ---
 
 <style>
-.keranjang-box {overflow-x: hidden;overflow-y: auto;width: 1060px;}.entry{margin-top:6%;}@media only screen and (max-width:727px){.entry{width: 100%;margin-top:20%;}}
+.keranjang-box {max-height: 100%;overflow-x: hidden;overflow-y: auto;width: 1060px;}.keranjang-box .simpleCart_items {max-height: 375px!important;margin-bottom: 0px!important;box-shadow: none!important;}.entry{margin-top:0;}@media only screen and (max-width:727px){.entry{width: 100%;margin-top:0%;}.keranjang-box .simpleCart_items {max-height: 600px!important;}}
 </style>
   <div class="entry">
     {{ content }}

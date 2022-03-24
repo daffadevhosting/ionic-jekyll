@@ -6,11 +6,13 @@ tags: Terbaru Terlaris
 price: '20.000'
 diskon: 22%
 discount: '15.600'
-stok: Stok Tersedia
-icon: ui-1_check
+stok:
+ - stokis: Stok Habis
+   color: eb445a
+outstock: disabled
 rating: 5.0
-rC: 1980
-riv: 2135
+rC: 2580
+riv: 3040
 sku: mawar
 mpn: p62s-2143
 noID: i.226754372.4657392882

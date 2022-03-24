@@ -6,12 +6,13 @@ tags: Terbaru Terlaris
 price: '30.000'
 diskon: 20%
 discount: '24.000'
-stok: Stok Tersedia
-outstock: 
-icon: ui-1_simple-remove
-rating: 4.9
-rC: 429
-riv: 513
+stok:
+ - stokis: Stok Habis
+   color: eb445a
+outstock: disabled
+rating: 5.0
+rC: 859
+riv: 1020
 sku: masker3D
 mpn: p62s-2154
 noID: i.226754372.9014129020

@@ -6,8 +6,9 @@ tags: Termurah
 price: '20.000'
 diskon: 22%
 discount: '15.600'
-stok: Stok Tersedia
-icon: ui-1_check
+stok:
+ - stokis: Stok Tersedia
+   color: 3880ff
 rating: 4.9
 rC: 469
 riv: 741

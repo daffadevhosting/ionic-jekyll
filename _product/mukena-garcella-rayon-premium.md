@@ -6,8 +6,9 @@ tags: Terbaru
 price: '185.000'
 diskon: 12%
 discount: '162.600'
-stok: Stok Tersedia
-icon: ui-1_check
+stok:
+ - stokis: Stok Tersedia
+   color: 3880ff
 rating: 5.0
 rC: 285
 riv: 553

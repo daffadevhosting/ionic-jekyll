@@ -61,7 +61,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 @media (min-width: 320px) and (max-width: 767.98px) { .product-img { max-width: auto; } }
 
-.item-rate { padding: 10px 0 0 20px; }
+.item-rate { padding: 12px 0; }
 
 .page-price { padding: 10px 0 0 0px; font-size: 25px; font-style: oblique; font-weight: bold; }
 

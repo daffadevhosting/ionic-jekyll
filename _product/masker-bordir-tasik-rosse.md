@@ -6,12 +6,12 @@ tags: Terbaru Termurah
 price: '20.000'
 diskon: 22%
 discount: '15.600'
-stok: Stok Tersedia
-outstock: 
-icon: ui-1_simple-remove
+stok:
+ - stokis: Stok Tersedia
+   color: 3880ff
 rating: 4.9
-rC: 328
-riv: 463
+rC: 425
+riv: 656
 sku: rosse
 mpn: p62s-0154
 kategori: Bordir-cat.38.17873.17876

@@ -18,23 +18,28 @@ layout: webshop
 <img class="item_thumb hiden" src="{{page.image}}" alt="{{page.title}}"/>
 </div>
 <div class="detail-product">
-  <ion-title itemprop="name" class="item_name">{{ page.title }}</ion-title>
-  <div class="item-rate" itemprop="aggregateRating"
+  <div itemprop="name" class="item_name" style="padding: 0 0 10px  0;"><h2>{{ page.title }}</h2></div>
+  <span class="item-rate" itemprop="aggregateRating"
     itemscope itemtype="https://schema.org/AggregateRating">
-    <i class="fa fa-{{page.stars}}" style="color:#ffb236;"></i> <span itemprop="ratingValue">{{page.rating}}</span>/5.0
-   dari <span itemprop="reviewCount">{{page.rC}}</span> penilaian
-  </div>
+    <i class="fa fa-{{page.stars}}" style="color:#ffb236;"></i> <span itemprop="ratingValue">{{page.rating}}/5.0</span>
+   <span itemprop="reviewCount">dari {{page.rC}} penilaian</span></span>
   <span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-<div class="display-none" style="display:none;grid-gap:5px;">
+<div class="hiden" style="display:none;grid-gap:5px;">
 <div class="page-diskon">Rp. {{page.discount}}</div>
 <ion-badge class="badge"><ion-label>{{page.diskon}}</ion-label></ion-badge>
-</div>
-<div class="page-price item_price" itemprop="priceCurrency" content="IDR">Rp. {{page.price}}</div></span>
-<p style="padding: 20px 0;" />
-<link itemprop="availability" href="https://schema.org/InStock" /><ion-note color="tertiary">{{page.stok}}</ion-note>
+</div></span>
+
+<div class="page-price item_price" itemprop="priceCurrency" content="IDR">Rp. {{page.price}}</div>
+
+<link itemprop="availability" href="https://schema.org/InStock" />
+            {% for stock in page.stok %}
+<div style="padding: 10px  0;color: #{{ stock.color }};">{{stock.stokis}}</div>
+            {% endfor %}
+
         	<div class="style-picker">
             {% for style in page.styles %}
-              <div id="product-{{ forloop.index }}" {% if forloop.first %} class="item_color" {% endif %} style="text-align:center;width:75px;border-radius:5px;padding:8px;background-color:{{ style.color }};cursor:pointer;"><span style="color:#fff">{{ style.name }}</span></div>
+              <div id="product-{{ forloop.index }}" {% if forloop.first %} class="item_color" {% endif %} style="text-align:center;width:75px;border-radius:5px;padding:8px;background-color:{{ style.color }};cursor:pointer;">
+<span style="color:#fff">{{ style.name }}</span></div>
             {% endfor %}
         	</div>
           <select class="item form-control item_model" style="display:{{page.display}};">
@@ -48,19 +53,18 @@ layout: webshop
     <div class="input-group">
         <div class="input-group-prepend" style="cursor:pointer;padding: 0 10px;">
               <span class="input-group-text" id="minus" onclick="minus()">
-                <i class="fa fa-minus-circle"></i>
-              </span>
+                <i class="fa fa-minus-circle"></i></span>
         </div>
           <input type="number" id="counter" class="form-control item_Quantity" value="1" min="1" max="100" style="width: 100%;text-align:center;background:transparent;font-weight:700;border:none;" disabled/>
         <div class="input-group-prepend" style="cursor: pointer;padding: 0 10px;">
               <span class="input-group-right" id="plus" onclick="plus()">
-                  <i class="fa fa-plus-circle"></i>
-              </span>
+                  <i class="fa fa-plus-circle"></i></span>
         </div>
     </div>
 </div>
-<div class="entry" itemprop="description">{{page.description}}</div>
-<div class="app-description-content description-content" style="cursor:pointer;width:fit-content;color: #3880ff;">Selengkapnya...</div>
+
+<div class="entry" style="margin-top: 15px;" itemprop="description">{{page.description}}
+<div class="app-description-content description-content" style="cursor:pointer;width:fit-content;color: #3880ff;"> Selengkapnya...</div></div>
 
   <ion-card class="app-description-text" style="margin:0;display:none;">
 <ion-card-header style="padding:0;">
@@ -73,8 +77,9 @@ layout: webshop
     <p>{{ content }}</p>
 </ion-card-content>
   </ion-card>
+
 <ion-list class="btn-atc">
-        <ion-button id="cartButton" class="item_add" slot="end" color="tertiary" href="javascript:;" {{page.outstock}}><ion-icon slot="start" name="add-outline"></ion-icon> Add To Cart</ion-button>
+        <ion-button id="cartButton" class="item_add" slot="end" color="tertiary" href="javascript:;" {{page.outstock}}>Add To Cart</ion-button>
 </ion-list>
 </div>
 </ion-card>

@@ -6,12 +6,13 @@ tags: Terbaru
 price: '22.000'
 diskon: 22%
 discount: '17.600'
-stok: Stok Tersedia
-outstock: 
-icon: ui-1_simple-remove
+stok:
+ - stokis: Stok Habis
+   color: eb445a
+outstock: disabled
 rating: 5.0
-rC: 576
-riv: 711
+rC: 676
+riv: 800
 sku: bordirkucing
 mpn: p62s-2143
 noID: i.226754372.8705962853

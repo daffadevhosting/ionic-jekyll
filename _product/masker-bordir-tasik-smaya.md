@@ -5,11 +5,13 @@ categories: masker-bordir
 price: '20.000'
 diskon: 22%
 discount: '15.600'
-stok: Stok Tersedia
-icon: ui-1_check
+stok:
+ - stokis: Stok Habis
+   color: eb445a
+outstock: disabled
 rating: 5.0
-rC: 1251
-riv: 1453
+rC: 2265
+riv: 3550
 sku: smaya
 mpn: p62s-2200
 noID: i.226754372.3554451614

@@ -42,7 +42,7 @@ layout: webshop
 <span style="color:#fff">{{ style.name }}</span></div>
             {% endfor %}
         	</div>
-          <select class="item form-control item_model" style="display:{{page.display}};">
+          <select class="item form-control item_model" style="display:{{page.display}};" {{page.outstock}}>
         <label>Model Tali</label>
             {% for tali in page.tali %}
               <option value="{{ tali }}"> {{ tali }} </option>

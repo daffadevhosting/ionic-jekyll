@@ -9,6 +9,8 @@ discount: '17.600'
 stok:
  - stokis: Stok Habis
    color: eb445a
+stat: Stok Habis
+buttonColor: danger
 outstock: disabled
 rating: 5.0
 rC: 676
@@ -38,8 +40,6 @@ facebook_image_path:
 - https://cf.shopee.co.id/file/9add457c9abbb638eeed99c601075160
 - https://cf.shopee.co.id/file/f3d6e1490cf857c9157510583ab681aa
 display: block
-stat: Stok Habis
-buttonColor: danger
 ---
 
 - Bahan kain Katun,

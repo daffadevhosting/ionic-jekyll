@@ -9,6 +9,8 @@ discount: '15.600'
 stok:
  - stokis: Stok Tersedia
    color: 3880ff
+stat: Add To Cart
+btnclr: primary
 rating: 5.0
 rC: 447
 riv: 643
@@ -57,8 +59,6 @@ facebook_image_path:
 - https://cf.shopee.co.id/file/558f78e9145e397d7602680aab8f9e46
 - https://cf.shopee.co.id/file/54598674c8596988d618a624476ef710
 display: block
-stat: Add To Cart
-btnclr: primary
 ---
 
 - Lapisan Katun + Vislin, 

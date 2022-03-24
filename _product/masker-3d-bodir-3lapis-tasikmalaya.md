@@ -9,6 +9,8 @@ discount: '24.000'
 stok:
  - stokis: Stok Habis
    color: eb445a
+stat: Stok Habis
+btnclr: danger
 outstock: disabled
 rating: 5.0
 rC: 859
@@ -62,8 +64,6 @@ facebook_image_path:
 - https://cf.shopee.co.id/file/6761d66ebb1f34b00a07583091ff62c6
 - https://cf.shopee.co.id/file/5194cfd90af282168d7351d1350c924c
 display: block
-stat: Stok Habis
-btnclr: danger
 ---
 
 - Kain : 100% Katun,

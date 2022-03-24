@@ -9,6 +9,8 @@ discount: '15.600'
 stok:
  - stokis: Stok Tersedia
    color: 3880ff
+stat: Add To cart
+btnclr: primary
 rating: 4.9
 rC: 425
 riv: 656
@@ -55,8 +57,6 @@ facebook_image_path:
 - https://cf.shopee.co.id/file/da19119617b94205d3343bfbb4f56008
 - https://cf.shopee.co.id/file/0414c39a62e077ff0813791085d55352
 display: block
-stat: Add To cart
-btnclr: primary
 ---
 
 - Katun dengan 3 lapisan.

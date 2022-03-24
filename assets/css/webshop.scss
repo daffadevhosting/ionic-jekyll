@@ -80,11 +80,11 @@
     flex-wrap: wrap;
     grid-gap: 10px;
     align-items: center;
-    margin: 0 10%;
+    margin: 0% 10%;
     align-content: space-between;
 
     @include mobile {
-    margin: 0;}
+    margin: 5% 12%;}
 }
 
 .product-page {

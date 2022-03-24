@@ -281,7 +281,7 @@
 <span style="color:#fff">Ungu</span></div>
             
         	</div>
-          <select class="item form-control item_model" style="display:block;">
+          <select class="item form-control item_model" style="display:block;" disabled>
         <label>Model Tali</label>
             
               <option value="HeadLoop"> HeadLoop </option>
@@ -394,9 +394,11 @@ span.simpleCart_shipping, span.simpleCart_grandTotal {font-weight: 600;color:#ff
    <ion-label><span>Total Pembelian </span><span class="simpleCart_quantity"></span> items : <span class="simpleCart_total"></span> </ion-label><br />
 <span style="font-size:10px;">( *Belum Termasuk Ongkir )</span>
     
-<ion-item>
-          <ion-button onclick="checkOut()" fill="outline" slot="end" style="margin-top: 20px;">CheckOut</ion-button>
-</ion-item>
+<ion-item-sliding>
+    <ion-buttons slot="end">
+          <ion-button onclick="checkOut()" fill="outline" color="primary" style="margin-top: 20px;">CheckOut</ion-button>
+    <ion-buttons>
+</ion-item-sliding>
 
     </div>
 </div>

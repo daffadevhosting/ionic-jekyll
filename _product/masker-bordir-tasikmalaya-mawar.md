@@ -9,7 +9,7 @@ discount: '15.600'
 stok:
  - stokis: Stok Habis
    color: eb445a
-stat: Stok Habis
+stat: out off stock
 btnclr: danger
 outstock: disabled
 rating: 5.0

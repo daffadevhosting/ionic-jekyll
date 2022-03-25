@@ -43,7 +43,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 .entry { padding: 6px; }
 
-.entry-description { padding: 6px; height: 80px; overflow-y: auto; margin-top: 15px; }
+.entry-description { padding: 6px; height: 80px; overflow-y: auto; margin-top: 15px; box-shadow: inset #33333387 0px 3px 12px -5px, inset #33333387 0px -3px 12px -5px; border-radius: 5px; }
 
 .post-product { display: flex; flex-wrap: nowrap; margin: auto; width: 1020px; }
 

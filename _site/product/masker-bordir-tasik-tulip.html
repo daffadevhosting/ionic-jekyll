@@ -70,6 +70,7 @@
 <link rel="stylesheet" href="/assets/css/style.css">
 <link rel="stylesheet" href="/assets/css/webshop.css">
 <link rel="stylesheet" href="/assets/css/darkmode.css">
+<link rel="stylesheet" href="/assets/css/scrollbar.css">
 <link rel="manifest" href="/manifest.json">
 
     <!-- pwa -->
@@ -295,6 +296,31 @@
 <span style="color:#fff">Toska</span></div>
             
         	</div>
+
+<div class="entry-description" itemprop="description">Masker Kain Bordir Bunga. -Bahan kain 100% Katun
+    <p><ul>
+  <li>Bahan kain 100% Katun dengan 3 lapisan,</li>
+  <li>Lapisan Katun + Vislin,</li>
+  <li>Bordir Manual ( JUKI ),</li>
+  <li>Tali Karet Earloop &amp; Headloop,</li>
+  <li>Tali Kain Ikat.</li>
+</ul>
+</p>
+</div>
+
+<ion-buttons class="btn-order">
+<ion-button color="primary" class="app-description-content description-content" >Order</ion-button>
+</ion-buttons>
+
+  <ion-card class="app-description-text" style="margin:0;display:none;">
+<ion-card-header style="padding:0;">
+        <ion-buttons class="app-description-content">
+          <ion-button color="danger"><ion-icon name="close-circle"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+</ion-card-header>
+<ion-card-content style="padding:0;">
+
           <select class="item form-control item_model" style="display:block;" >
         <label>Model Tali</label>
             
@@ -307,7 +333,7 @@
           </select>
 
 <div id="input_div">
-    <div class="input-group">
+    <div class="input-groupQ">
         <div class="input-group-prepend" style="cursor:pointer;padding: 0 10px;">
               <span class="input-group-text" id="minus" onclick="minus()">
                 <i class="fa fa-minus-circle"></i></span>
@@ -320,31 +346,12 @@
     </div>
 </div>
 
-<div class="entry" style="margin-top: 15px;" itemprop="description">Masker Kain Bordir Bunga. -Bahan kain 100% Katun
-<div class="app-description-content description-content" style="cursor:pointer;width:fit-content;color: #3880ff;"> Selengkapnya...</div></div>
-
-  <ion-card class="app-description-text" style="margin:0;display:none;">
-<ion-card-header style="padding:0;">
-        <ion-buttons class="app-description-content">
-          <ion-button color="danger"><ion-icon name="close-circle"></ion-icon>
-          </ion-button>
-        </ion-buttons>
-</ion-card-header>
-<ion-card-content>
-    <p><ul>
-  <li>Bahan kain 100% Katun dengan 3 lapisan,</li>
-  <li>Lapisan Katun + Vislin,</li>
-  <li>Bordir Manual ( JUKI ),</li>
-  <li>Tali Karet Earloop &amp; Headloop,</li>
-  <li>Tali Kain Ikat.</li>
-</ul>
-</p>
-</ion-card-content>
-  </ion-card>
 
 <ion-buttons class="btn-atc">
-        <ion-button color="primary" id="cartButton" class="item_add" slot="end" fill="outline" shape="round" href="javascript:;" >add to cart</ion-button>
+        <ion-button color="primary" id="cartButton" class="item_add" slot="end" fill="outline" shape="round" href="javascript:;">Add To Cart</ion-button>
 </ion-buttons>
+</ion-card-content>
+  </ion-card>
 </div>
 </ion-card>
 <ion-card class="review">
@@ -436,14 +443,6 @@ span.simpleCart_shipping, span.simpleCart_grandTotal {font-weight: 600;color:#ff
   </ion-toolbar>
         </ion-footer>
     </ion-app>
-    <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js');
-        });
-      }
-    </script>
-  </body>
 
 <script>
 function myBlog() {

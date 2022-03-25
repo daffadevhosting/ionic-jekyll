@@ -9,7 +9,7 @@ discount: '162.600'
 stok:
  - stokis: Stok Tersedia
    color: 3880ff
-stat: Add To cart
+stat: Order
 btnclr: primary
 rating: 5.0
 rC: 285

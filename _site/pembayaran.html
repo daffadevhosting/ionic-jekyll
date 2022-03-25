@@ -69,6 +69,7 @@
 <link rel="stylesheet" href="/assets/css/style.css">
 <link rel="stylesheet" href="/assets/css/webshop.css">
 <link rel="stylesheet" href="/assets/css/darkmode.css">
+<link rel="stylesheet" href="/assets/css/scrollbar.css">
 <link rel="manifest" href="/manifest.json">
 
     <!-- pwa -->
@@ -160,7 +161,7 @@
 <ion-card>
 <img src="/assets/images/qris_logo.jpg" />
 <buttonQris>
-<ion-item id="trigger-qris" class="ion-activated">
+<ion-item id="trigger-qris" class="ion-activated" style="cursor:pointer">
 <ion-icon name="barcode-outline" slot="start"></ion-icon>
 <ion-label>Scan Qris</ion-label>
 <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
@@ -170,7 +171,7 @@
 </ion-item>
 <buttonQris>
 <buttonBank>
-<ion-item id="trigger-transfer" class="ion-activated">
+<ion-item id="trigger-transfer" class="ion-activated" style="cursor:pointer">
 <ion-icon name="card-outline" slot="start"></ion-icon>
 <ion-label>Transfer Bank</ion-label>
 <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
@@ -295,14 +296,6 @@ async function dismissTbank() {
   </ion-toolbar>
         </ion-footer>
     </ion-app>
-    <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js');
-        });
-      }
-    </script>
-  </body>
 
 <script>
 function myBlog() {

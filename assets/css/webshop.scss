@@ -5,12 +5,12 @@
 @import "./variables";
 
 #webshop {
-    max-width: 1080px;
+    max-width: 1020px;
     margin: auto;
 }
 
 .grid {
-    max-width: 250px;
+    max-width: 320px;
     width: 100%;
 
     @include mobile {
@@ -63,15 +63,23 @@
     padding: 6px;
 }
 
+.entry-description {
+    padding: 6px;
+    height: 80px;
+    overflow-y: auto;
+    margin-top: 15px;
+}
+
 .post-product {
     display:flex;
     flex-wrap: nowrap;
-    margin-left: -26px;
+    margin: auto;
+    width: 1020px;
 
     @include mobile {
     flex-wrap: wrap;
     width: -webkit-fill-available;
-    margin-left: 0px;}
+    width: 100% !important;}
 }
 
 .style-picker {
@@ -80,7 +88,7 @@
     flex-wrap: wrap;
     grid-gap: 10px;
     align-items: center;
-    margin: 0% 10%;
+    margin: 0% 6%;
     align-content: space-between;
 
     @include mobile {
@@ -129,13 +137,13 @@ select.form-control {
     border-radius: 50px;
 }
 
-.input-group {
+.input-groupQ {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
-    padding: 7px 0;
-    font-size: 18px;
+    padding: 6px 0;
+    font-size: 15px;
     border: 1px solid;
     border-radius: 50px;
 }
@@ -145,29 +153,37 @@ select.form-control {
     bottom: 0px;
     right: 0px;
     width: 41%;
-    height: 100%;
+    height: 70%;
     padding: 10px;
     overflow-y: auto;
+    box-shadow: #000 0px -3px 15px -5px;
 
     @include mobile {
     position: absolute;
     bottom: 0px;
     right: 0px;
     width: 100%;
-    height: 390px;
+    height: 290px;
     padding: 10px;
     overflow-y: auto;}
 }
 
 .btn-atc {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
+    position: relative;
+    bottom: -60px;
 
     @include mobile {
-    position: unset!important;
     float: right;}
 }
+
+.btn-order{
+    float:right;
+    margin-top: 14%;
+
+    @include mobile {
+    margin-top: 0%;}
+}
+
 .review {width:300px;
 
     @include mobile {

@@ -1,0 +1,14 @@
+::-webkit-scrollbar {display:none;
+}
+
+::-webkit-scrollbar-thumb {display:none;
+}
+
+::-webkit-scrollbar-thumb:hover {display:none;
+}
+
+::-webkit-scrollbar-thumb:active {display:none;
+}
+
+::-webkit-scrollbar-button {display:none;
+}

@@ -1,4 +1,4 @@
-I"<style>
+I"-<style>
 :root {
     --ion-safe-area-top: 20px;
     --ion-safe-area-bottom: 22px;
@@ -99,7 +99,7 @@ animation-iteration-count: infinite;
     function pageRedirect() {
         window.location.replace("/product");
     }      
-    setTimeout("pageRedirect()", 50000);
+    setTimeout("pageRedirect()", 5000000);
 </script>
 
 <p>&lt;/head&gt;</p>
@@ -109,7 +109,7 @@ animation-iteration-count: infinite;
         <ion-slides>
           <ion-slide>
             <div class="slide">
-              <img src="assets/images/logo/plus62.webp" />
+              <img src="assets/images/logo/plus62.webp" style="border-radius: 100%;" />
               <h2>Selamat Datang</h2>
               <p>
                 WebShop <b>Plus62store</b> menawarkan berbagai macam jenis masker bordir yang aman dan nyaman dipakai sehari-hari.

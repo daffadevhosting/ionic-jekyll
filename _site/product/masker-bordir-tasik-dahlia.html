@@ -54,6 +54,10 @@
         --ion-safe-area-left: 0px;
         --ion-safe-area-right: 0px;
       }
+.fancybox__container.is-animated[aria-hidden=false] .fancybox__backdrop, .fancybox__container.is-animated[aria-hidden=false] .fancybox__caption, .fancybox__container.is-animated[aria-hidden=false] .fancybox__nav, .fancybox__container.is-animated[aria-hidden=false] .carousel__dots, .fancybox__container.is-animated[aria-hidden=false] .carousel__button.is-close{
+    top: 0;
+    color: #dc322f;
+}
     </style>
     <script type="module">
       import { alertController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
@@ -372,7 +376,7 @@
 .keranjang-box .simpleCart_items::-webkit-scrollbar{width:2px;background-color:transparent}
 .keranjang-box:hover .simpleCart_items::-webkit-scrollbar-thumb{background-color:#ddd;border-radius:5px}
 .keranjang-box .headerRow,.keranjang-box .item-price{display:none}
-.keranjang-box .simpleCart_items{max-height: 250px;overflow-y:auto;margin-bottom:20px;padding: 10px 5px 0 5px;box-shadow: inset #000 0px -5px 8px -6px, inset #000 0 5px 8px -6px;border-radius: 3px;}
+.keranjang-box .simpleCart_items{max-height: 250px;overflow-y:auto;margin-bottom:20px;padding: 10px 5px 0 5px;box-shadow: inset #93a1a1 0px -5px 8px -6px, inset #93a1a1 0 5px 8px -6px, inset #93a1a1 5px 0px 8px -6px, inset #93a1a1 -5px 0px 8px -6px;border-radius: 3px;}
 .keranjang-box .itemRow{overflow:hidden;font-size:12px;line-height:1.5;width:100%;font-weight:700;display:inline-block;margin-bottom: 10px;}
 .keranjang-box .simpleCart_items::after {content: "";text-align: center;z-index: 0;position: absolute;top: 50px;left: 50%;padding: 10px;transform: translate(-50%,-45%);max-width: 500px;width: 90%;overflow: hidden;margin: auto;}
 .keranjang-box .item-thumb{float:left;}
@@ -423,6 +427,39 @@ span.simpleCart_shipping, span.simpleCart_grandTotal {font-weight: 600;color:#ff
 
      </div>
     </div>
+    <style>
+.widgetCopyright .widgetFooter {
+    padding: 40px 0;
+    font-size: 95%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+    text-align: center;
+}
+.widgetCopyright .widgetFooter .widget .payShipIcon li {
+    display: inline-block;
+    height: 36px;
+    width: 72px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    margin: 3px 2px;
+    background-color: #fff;
+    border-radius: 2px;
+    background-position: center center;
+    background-size: 70% auto;
+    background-repeat: no-repeat;
+}
+
+@media (min-width: 320px) and (max-width: 767.98px){
+.widgetCopyright .widgetFooter {
+    padding: 40px 20px;
+    font-size: 95%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 40px;}
+}
+</style>
+
+
 
     
       </ion-content>
@@ -436,6 +473,23 @@ span.simpleCart_shipping, span.simpleCart_grandTotal {font-weight: 600;color:#ff
   </ion-toolbar>
         </ion-footer>
     </ion-app>
+<form style="display:none;width:100%;max-width:400px;margin:0px;align-items:stretch;border-radius: 5px;" validate-form id='whatsapp'>
+<input class='pertanyaan' id='nomorAdmin' type='hidden'/>
+        <span class="mb-3" style="margin-bottom: 20px;text-align: center;">
+            Assalamualaikum! lengkapi data berikut
+        </span>
+        <ion-item>
+          <ion-label position="floating">Nama Lengkap</ion-label>
+            <ion-input class='nama wajib' type="text" highlight-color="success" placeholder="Nama"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Pertanyaan</ion-label>
+            <ion-textarea class='tanya wajib' type="text" style="border-color:#07bc4c;max-width: 320px;" placeholder="Pertanyaan"></ion-textarea>
+        </ion-item>
+        <div class="mb-0 text-right">
+            <a type="button" class="sendWAclik kirim" style="margin-right:10px;color:#07bc4c"><ion-icon class="wa" name="paper-plane-outline"style="position: absolute;height: 34px;width: 34px;right: 20px;bottom: 10px;z-index: 40;"></ion-icon></a>
+        </div>
+    </form>
 
 <script>
 function myBlog() {

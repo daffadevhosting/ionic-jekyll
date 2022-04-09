@@ -67,9 +67,12 @@
     padding: 6px;
     height: 80px;
     overflow-y: auto;
-    margin-top: 15px;
+    margin: 15px 0 0 0;
     box-shadow: inset #33333387 0px 3px 12px -5px, inset #33333387 0px -3px 12px -5px;
     border-radius: 5px;
+
+    @include mobile {
+    margin: 15px 0 15px 0;}
 }
 
 .post-product {
@@ -154,7 +157,7 @@ select.form-control {
     position: absolute;
     bottom: 0px;
     right: 0px;
-    width: 41%;
+    width: 42%;
     height: 70%;
     padding: 10px;
     overflow-y: auto;

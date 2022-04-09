@@ -18,7 +18,14 @@ layout: webshop
 <img class="item_thumb hiden" src="{{page.image}}" alt="{{page.title}}"/>
 </div>
 <div class="detail-product">
-  <div itemprop="name" class="item_name" style="padding: 0 0 10px  0;"><h2>{{ page.title }}</h2></div>
+  <ion-item style="margin-bottom: 6px;">
+  <div itemprop="name" class="item_name"><ion-label>{{ page.title }}</ion-label>
+<a class="fav_btn" onclick="favOptions()" >
+    <span id="like-{{ page.noID }}" class="like-btn">
+    <ion-icon name="heart" slot="end"></ion-icon>
+    </span>
+</a></div>
+  </ion-item>
   <span class="item-rate" itemprop="aggregateRating"
     itemscope itemtype="https://schema.org/AggregateRating">
     <i class="fa fa-{{page.stars}}" style="color:#ffb236;"></i> <span itemprop="ratingValue">{{page.rating}}/5.0</span>

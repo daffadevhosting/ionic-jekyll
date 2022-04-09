@@ -35,7 +35,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 .shop-header { padding: 0; text-align: center; }
 
-a.fav_btn { color: #00000066; position: absolute; right: 0; font-size: 25px; padding: 5px 5px 0 5px; background: #f4f5f885; border-radius: 100%; margin: 5px; }
+a.fav_btn { color: #00000066; position: absolute; right: 0; top: 0; font-size: 25px; padding: 5px 5px 0 5px; background: #f4f5f885; border-radius: 100%; margin: 5px; }
 
 span.clicked { color: crimson; font-weight: bold; }
 
@@ -63,7 +63,7 @@ span.clicked { color: crimson; font-weight: bold; }
 
 @media (min-width: 320px) and (max-width: 767.98px) { .product-page { width: auto; flex-wrap: wrap; } }
 
-.detail-product { width: 480px; padding: 10px; }
+.detail-product { width: 480px; padding: 0 10px 10px; }
 
 .product-img { max-width: 680px; }
 
@@ -85,7 +85,7 @@ select.form-control { display: block; background: transparent; width: 100%; padd
 
 @media (min-width: 320px) and (max-width: 767.98px) { .btn-atc { float: right; } }
 
-.btn-order { float: right; margin-top: 14%; }
+.btn-order { float: right; margin-top: 10%; }
 
 @media (min-width: 320px) and (max-width: 767.98px) { .btn-order { margin-top: 0%; } }
 

@@ -47,6 +47,7 @@ a.fav_btn {
     color: #00000066;
     position: absolute;
     right: 0;
+    top: 0;
     font-size: 25px;
     padding: 5px 5px 0 5px;
     background: #f4f5f885;
@@ -126,7 +127,7 @@ span.clicked {
 
 .detail-product {
     width: 480px;
-    padding: 10px;
+    padding: 0 10px 10px;
 }
 
 .product-img {
@@ -197,7 +198,7 @@ select.form-control {
 
 .btn-order{
     float:right;
-    margin-top: 14%;
+    margin-top: 10%;
 
     @include mobile {
     margin-top: 0%;}

@@ -12,7 +12,7 @@
 <title>Checkout @ Plus62store</title>
 
 <meta property="og:image" content="http://localhost:4000"/>
-<meta name="description" content="     Keranjang Belanja Kamu     {% include keranjang. html %}   Total belanja sebesar Silahkan isi data pengiriman dibawah ini. .  Nama Lengkap          No. ...">
+<meta name="description" content="     Keranjang Belanja Kamu     {% include keranjang. html %}   Total belanja sebesar ( *Belum Termasuk Ongkir )Silahkan isi data pengiriman dibawah ini. .  ...">
 
 <link rel="shortcut icon" type="image/png" href="/assets/images/logo/maskable_icon_x192.png">
 <link rel="shortcut icon" sizes="192x192" href="/assets/images/logo/maskable_icon_x192.png">
@@ -24,7 +24,7 @@
 <meta property="og:url" content="http://localhost:4000/checkout"/>
 <meta property="og:type" content="article">
 <meta property="og:site_name" content=""/>
-<meta property="og:description" content="     Keranjang Belanja Kamu     {% include keranjang. html %}   Total belanja sebesar Silahkan isi data pengiriman dibawah ini. .  Nama Lengkap          No. ..."/>
+<meta property="og:description" content="     Keranjang Belanja Kamu     {% include keranjang. html %}   Total belanja sebesar ( *Belum Termasuk Ongkir )Silahkan isi data pengiriman dibawah ini. .  ..."/>
 
 <!-- Twitter integration -->
 <meta name="twitter:card" content="summary">
@@ -32,7 +32,7 @@
 <meta name="twitter:title" content="Checkout" />
 
 <meta name="twitter:url" content="http://localhost:4000/checkout" />
-<meta name="twitter:description" content="     Keranjang Belanja Kamu     {% include keranjang. html %}   Total belanja sebesar Silahkan isi data pengiriman dibawah ini. .  Nama Lengkap          No. ..." />
+<meta name="twitter:description" content="     Keranjang Belanja Kamu     {% include keranjang. html %}   Total belanja sebesar ( *Belum Termasuk Ongkir )Silahkan isi data pengiriman dibawah ini. .  ..." />
 <link rel="canonical" href="http://localhost:4000/checkout">
 <link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4000/feed.xml">
 <link rel="sitemap" type="application/xml" title="Sitemap" href="http://localhost:4000/sitemap.xml" />
@@ -156,7 +156,7 @@
 .keranjang-box .simpleCart_increment, .keranjang-box .simpleCart_decrement, .keranjang-box .item-remove, .simpleCart_items .item-remove, .keranjang-box .item-link {display:none !important;}.keranjang-box .item-quantity {padding: 0 !important;}
 </style>
 
-    <style type="text/css">small{font-size:12px;}.masthead,.product{display:none!important;}.not_if{background: #18ce0f;color:#fff;padding: 10px;border-radius: 5px;line-height: 25px;}.form-coll{display:flex;justify-content:space-between;}ion-footer{display:none !important;}@media only screen and (max-width:727px){.card-form{margin-bottom:22%;}</style>
+    <style type="text/css">.keranjang-box .harga-total{display:none!important;}.keranjang-box .simpleCart_items{max-height: 310px!important;}.keranjang-box .item-thumb img{width: 75px!important;}small{font-size:12px;}.masthead,.product{display:none!important;}.not_if{background: #18ce0f;color:#fff;padding: 10px;border-radius: 5px;line-height: 25px;}.form-coll{display:flex;justify-content:space-between;}ion-footer{display:none !important;}@media only screen and (max-width:767px){.card-form{margin-bottom:22%;}.keranjang-box .simpleCart_items {max-height: 250px!important;}}</style>
 
 
 <ion-card class="review-checkout">
@@ -230,7 +230,9 @@ span.simpleCart_shipping, span.simpleCart_grandTotal {font-weight: 600;color:#ff
 <ion-card class="card-form" style="max-width: 680px;padding:6px;width: 100%;border: 1px solid #eee;border-radius: 5px;box-shadow: rgb(0 0 0 / 20%) 0px 3px 1px -2px, rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 1px 5px 0px;">
 <form class='wrapHead data-form validate-form' id='whatsapp-order'>
 <div class="not_if">
-      <span>Total belanja </span>sebesar <b><span class="simpleCart_total"></span></b><br/><p/><ion-note color="danger">Silahkan isi data pengiriman dibawah ini..</ion-note>
+      <span>Total belanja </span>sebesar <b><span class="simpleCart_total"></span></b><p/>
+<span style="font-size:10px;"> ( *Belum Termasuk Ongkir )</span><p/>
+<ion-note color="danger">Silahkan isi data pengiriman dibawah ini..</ion-note>
 </div>
 <p/><br/>
 <input class='order' id='AdminToko' type='hidden'/>
@@ -269,12 +271,12 @@ span.simpleCart_shipping, span.simpleCart_grandTotal {font-weight: 600;color:#ff
 <ion-label>Send Order</ion-label>
 </ion-chip>
 </ion-router-link>
+</form>
 <div class="g-recaptcha"
       data-sitekey="6LdPL-wZAAAAAAzUvjEWXHGLAgKL78wBzB1IR8t7"
       data-callback="onSubmit"
       data-size="invisible">
 </div>
-</form>
 <script>grecaptcha.execute();</script>
 </ion-card>
 

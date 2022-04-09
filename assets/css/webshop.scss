@@ -43,6 +43,20 @@
     text-align: center;
 }
 
+a.fav_btn {
+    color: #00000066;
+    position: absolute;
+    right: 0;
+    font-size: 25px;
+    padding: 5px 5px 0 5px;
+    background: #f4f5f885;
+    border-radius: 100%;
+    margin: 5px;
+}
+span.clicked {
+    color: crimson;
+    font-weight: bold;
+}
 .shop-content {
     display: flex;
     justify-content: space-between;

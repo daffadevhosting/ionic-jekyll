@@ -13,7 +13,7 @@
 <title>Product @ Plus62store</title>
 
 <meta property="og:image" content="http://localhost:4000"/>
-<meta name="description" content="{% for post in site. product %}  &lt;article class="post-shop"&gt;        {{ post. title }}      Rp. {{ post. discount }},00    Rp. {{post. price}}          ...">
+<meta name="description" content="{% for post in site. product %}  &lt;article class="post-shop"&gt;              {{ post. title }}      Rp. {{ post. discount }},00    Rp. {{post. price}}    ...">
 
 <link rel="shortcut icon" type="image/png" href="/assets/images/logo/maskable_icon_x192.png">
 <link rel="shortcut icon" sizes="192x192" href="/assets/images/logo/maskable_icon_x192.png">
@@ -25,7 +25,7 @@
 <meta property="og:url" content="http://localhost:4000/product"/>
 <meta property="og:type" content="article">
 <meta property="og:site_name" content=""/>
-<meta property="og:description" content="{% for post in site. product %}  &lt;article class="post-shop"&gt;        {{ post. title }}      Rp. {{ post. discount }},00    Rp. {{post. price}}          ..."/>
+<meta property="og:description" content="{% for post in site. product %}  &lt;article class="post-shop"&gt;              {{ post. title }}      Rp. {{ post. discount }},00    Rp. {{post. price}}    ..."/>
 
 <!-- Twitter integration -->
 <meta name="twitter:card" content="summary">
@@ -33,7 +33,7 @@
 <meta name="twitter:title" content="Product" />
 
 <meta name="twitter:url" content="http://localhost:4000/product" />
-<meta name="twitter:description" content="{% for post in site. product %}  &lt;article class="post-shop"&gt;        {{ post. title }}      Rp. {{ post. discount }},00    Rp. {{post. price}}          ..." />
+<meta name="twitter:description" content="{% for post in site. product %}  &lt;article class="post-shop"&gt;              {{ post. title }}      Rp. {{ post. discount }},00    Rp. {{post. price}}    ..." />
 <link rel="canonical" href="http://localhost:4000/product">
 <link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4000/feed.xml">
 <link rel="sitemap" type="application/xml" title="Sitemap" href="http://localhost:4000/sitemap.xml" />
@@ -167,6 +167,11 @@
     <article class="post-shop">
 <ion-router-link href="/product/masker-3d-bodir-3lapis-tasikmalaya">
     <ion-card class="grid">
+<a  class="fav_btn" onclick="favOptions()" >
+    <span id="like-1" class="like-btn">
+    <ion-icon name="heart" slot="end"></ion-icon>
+    </span>
+</a>
 <img src="https://cf.shopee.co.id/file/86e632480a9b475919f2d3cf08caa4ef"/>
     <ion-card-header class="shop-header">
         <ion-card-subtitle class="subtitle">Masker 3D Bordir</ion-card-subtitle>
@@ -187,6 +192,11 @@
     <article class="post-shop">
 <ion-router-link href="/product/masker-bordir-tasik-bunga-setaman">
     <ion-card class="grid">
+<a  class="fav_btn" onclick="favOptions()" >
+    <span id="like-2" class="like-btn">
+    <ion-icon name="heart" slot="end"></ion-icon>
+    </span>
+</a>
 <img src="https://cf.shopee.co.id/file/7b1760ae16b5a427c4c9ff32f68a69e4"/>
     <ion-card-header class="shop-header">
         <ion-card-subtitle class="subtitle">Masker Bordir Setaman</ion-card-subtitle>
@@ -207,6 +217,11 @@
     <article class="post-shop">
 <ion-router-link href="/product/masker-bordir-tasik-dahlia">
     <ion-card class="grid">
+<a  class="fav_btn" onclick="favOptions()" >
+    <span id="like-3" class="like-btn">
+    <ion-icon name="heart" slot="end"></ion-icon>
+    </span>
+</a>
 <img src="https://cf.shopee.co.id/file/6549ebebfdff7f4355dc0398f5f5b9e2"/>
     <ion-card-header class="shop-header">
         <ion-card-subtitle class="subtitle">Masker Bordir Dahlia</ion-card-subtitle>
@@ -227,6 +242,11 @@
     <article class="post-shop">
 <ion-router-link href="/product/masker-bordir-tasik-ilalang">
     <ion-card class="grid">
+<a  class="fav_btn" onclick="favOptions()" >
+    <span id="like-4" class="like-btn">
+    <ion-icon name="heart" slot="end"></ion-icon>
+    </span>
+</a>
 <img src="https://cf.shopee.co.id/file/0031e5ba7ee62316a17ecbd36ec7bff6"/>
     <ion-card-header class="shop-header">
         <ion-card-subtitle class="subtitle">Masker Bordir Ilalang</ion-card-subtitle>
@@ -247,6 +267,11 @@
     <article class="post-shop">
 <ion-router-link href="/product/masker-bordir-tasik-rosse">
     <ion-card class="grid">
+<a  class="fav_btn" onclick="favOptions()" >
+    <span id="like-5" class="like-btn">
+    <ion-icon name="heart" slot="end"></ion-icon>
+    </span>
+</a>
 <img src="https://cf.shopee.co.id/file/465836a1d2cbfdd682656a259ebd06e1"/>
     <ion-card-header class="shop-header">
         <ion-card-subtitle class="subtitle">Masker Bordir Rosse</ion-card-subtitle>
@@ -267,6 +292,11 @@
     <article class="post-shop">
 <ion-router-link href="/product/masker-bordir-tasik-smaya">
     <ion-card class="grid">
+<a  class="fav_btn" onclick="favOptions()" >
+    <span id="like-6" class="like-btn">
+    <ion-icon name="heart" slot="end"></ion-icon>
+    </span>
+</a>
 <img src="https://cf.shopee.co.id/file/0f895509b187d2da6ae3e06a460841c0"/>
     <ion-card-header class="shop-header">
         <ion-card-subtitle class="subtitle">Masker Bordir sMaya</ion-card-subtitle>
@@ -287,6 +317,11 @@
     <article class="post-shop">
 <ion-router-link href="/product/masker-bordir-tasik-tulip">
     <ion-card class="grid">
+<a  class="fav_btn" onclick="favOptions()" >
+    <span id="like-7" class="like-btn">
+    <ion-icon name="heart" slot="end"></ion-icon>
+    </span>
+</a>
 <img src="https://cf.shopee.co.id/file/b328e360371fe525dc18747276f31768"/>
     <ion-card-header class="shop-header">
         <ion-card-subtitle class="subtitle">Masker Bordir Tulip</ion-card-subtitle>
@@ -307,6 +342,11 @@
     <article class="post-shop">
 <ion-router-link href="/product/masker-bordir-tasikmalaya-mawar">
     <ion-card class="grid">
+<a  class="fav_btn" onclick="favOptions()" >
+    <span id="like-8" class="like-btn">
+    <ion-icon name="heart" slot="end"></ion-icon>
+    </span>
+</a>
 <img src="https://cf.shopee.co.id/file/8beee9059f2728ffa401e9888064623e"/>
     <ion-card-header class="shop-header">
         <ion-card-subtitle class="subtitle">Masker Bordir Mawar</ion-card-subtitle>
@@ -327,6 +367,11 @@
     <article class="post-shop">
 <ion-router-link href="/product/masker-bordir-tasikmalaya-motif-kucing">
     <ion-card class="grid">
+<a  class="fav_btn" onclick="favOptions()" >
+    <span id="like-9" class="like-btn">
+    <ion-icon name="heart" slot="end"></ion-icon>
+    </span>
+</a>
 <img src="https://cf.shopee.co.id/file/529aa25edddbda7da170ec2e6488e615"/>
     <ion-card-header class="shop-header">
         <ion-card-subtitle class="subtitle">Masker Bordir Kucing</ion-card-subtitle>
@@ -347,6 +392,11 @@
     <article class="post-shop">
 <ion-router-link href="/product/mukena-garcella-rayon-premium">
     <ion-card class="grid">
+<a  class="fav_btn" onclick="favOptions()" >
+    <span id="like-10" class="like-btn">
+    <ion-icon name="heart" slot="end"></ion-icon>
+    </span>
+</a>
 <img src="https://cf.shopee.co.id/file/09a49f974223ab7ee852275e9c0193e0"/>
     <ion-card-header class="shop-header">
         <ion-card-subtitle class="subtitle">Mukena Garcella</ion-card-subtitle>
@@ -608,6 +658,9 @@ function myBri() {
     <script src="/assets/js/form-order.js?version = 1.0" type="text/javascript"></script>
     <script src="/assets/js/question.js" type="text/javascript"></script>
 
+
+
+      <script async src="/assets/js/like.js"></script>
 
 
     

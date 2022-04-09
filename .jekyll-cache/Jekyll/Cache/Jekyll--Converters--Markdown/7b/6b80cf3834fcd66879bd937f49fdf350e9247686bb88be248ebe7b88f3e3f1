@@ -1,9 +1,14 @@
-I"ð<p>{% for post in site.product %}
+I"˜<p>{% for post in site.product %}
     &lt;article class="post-shop"&gt;</p>
 <ion-router-link href="{{site.baseurl}}{{ post.url }}">
     <ion-card class="grid">
 <img src="{{ post.image }}" />
     <ion-card-header class="shop-header">
+<a class="fav_btn" onclick="favOptions()">
+    <span id="like-{{ forloop.index }}" class="like-btn">
+    <ion-icon name="heart" slot="end"></ion-icon>
+    </span>
+</a>
         <ion-card-subtitle class="subtitle">{{ post.title }}</ion-card-subtitle>
             <div class="hiden diskon">Rp. {{ post.discount }},00</div>
         <div class="price">Rp. {{post.price}}</div>

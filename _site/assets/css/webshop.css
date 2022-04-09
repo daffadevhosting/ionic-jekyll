@@ -35,6 +35,10 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 .shop-header { padding: 0; text-align: center; }
 
+a.fav_btn { color: #00000066; position: absolute; right: 0; font-size: 25px; padding: 5px 5px 0 5px; background: #f4f5f885; border-radius: 100%; margin: 5px; }
+
+span.clicked { color: crimson; font-weight: bold; }
+
 .shop-content { display: flex; justify-content: space-between; align-items: center; }
 
 .subtitle { padding: 10px 0px; }

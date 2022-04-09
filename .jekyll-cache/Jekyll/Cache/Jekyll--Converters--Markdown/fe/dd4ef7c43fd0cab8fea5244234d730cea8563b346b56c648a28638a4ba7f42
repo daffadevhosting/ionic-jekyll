@@ -1,18 +1,13 @@
----
-layout: webshop
-title: Product
----
-
-  {% for post in site.product %}
-    <article class="post-shop">
+I" <p>{% for post in site.product %}
+    &lt;article class="post-shop"&gt;</p>
 <ion-router-link href="{{site.baseurl}}{{ post.url }}">
     <ion-card class="grid">
-<a  class="fav_btn" onclick="favOptions()" >
+<a class="fav_btn" onclick="favOptions()">
     <span id="like-{{ forloop.index }}" class="like-btn">
-    <ion-icon name="heart" slot="end"></ion-icon>
+    <ion-icon name="heart-outline" slot="end"></ion-icon>
     </span>
 </a>
-<img src="{{ post.image }}"/>
+<img src="{{ post.image }}" />
     <ion-card-header class="shop-header">
         <ion-card-subtitle class="subtitle">{{ post.title }}</ion-card-subtitle>
             <div class="hiden diskon">Rp. {{ post.discount }},00</div>
@@ -27,5 +22,6 @@ title: Product
       </ion-card-content>
     </ion-card>
 </ion-router-link>
-    </article>
-  {% endfor %}
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;/article&gt;   {% endfor %}
+</code></pre></div></div>
+:ET

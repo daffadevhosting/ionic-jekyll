@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light dark" />
+<meta name="color-scheme" content="light darkmode" />
 <meta name="google-site-verification" content="" />
 <meta http-equiv='cache-control' content='no-cache'>
 <meta http-equiv='expires' content='0'>
@@ -49,15 +49,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 <link href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" rel="stylesheet" />
-    <style>
-      :root {
-        --ion-safe-area-left: 0px;
-        --ion-safe-area-right: 0px;
-      }
-.fancybox__container.is-animated[aria-hidden=false] .fancybox__backdrop, .fancybox__container.is-animated[aria-hidden=false] .fancybox__caption, .fancybox__container.is-animated[aria-hidden=false] .fancybox__nav, .fancybox__container.is-animated[aria-hidden=false] .carousel__dots, .fancybox__container.is-animated[aria-hidden=false] .carousel__button.is-close{
-    top: 0;
-    color: #dc322f;
-}
+<style>
+.fancybox__container.is-animated[aria-hidden=false] .fancybox__backdrop, .fancybox__container.is-animated[aria-hidden=false] .fancybox__caption, .fancybox__container.is-animated[aria-hidden=false] .fancybox__nav, .fancybox__container.is-animated[aria-hidden=false] .carousel__dots, .fancybox__container.is-animated[aria-hidden=false] .carousel__button.is-close{top: 0;color: #dc322f;}.fancybox__content :focus:not(.carousel__button.is-close){outline:none;}.fancybox__html5video, .fancybox__content, .fancybox__iframe{border-radius: 5px;}
     </style>
     <script type="module">
       import { alertController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
@@ -404,6 +397,10 @@
     grid-template-columns: 1fr;
     grid-gap: 40px;}
 }
+.widget-content {
+    padding-top: 15px;
+}
+.fancybox__content{padding:0px;}
 </style>
 
 <ion-toolbar class="widgetCopyright" id="sticky-stop">
@@ -415,7 +412,17 @@
 Jl. Gn. Lingga, Cibeuti, Rt.003/012 <br>
 Kawalu - Tasikmalaya 46182.
 <br><br>
-Lihat di <ion-router-link class="popWin" data-fancybox data-type="iframe" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.7457845051977!2d108.18843941477569!3d-7.382360894673185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9bdc4ceb7b0c03c1!2sPlus62%20Bordir!5e0!3m2!1sid!2sid!4v1618496242157!5m2!1sid!2sid" href="javascript:;">Google Maps</ion-router-link>
+Lihat di 
+<a
+  href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.7457845051977!2d108.18843941477569!3d-7.382360894673185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9bdc4ceb7b0c03c1!2sPlus62%20Bordir!5e0!3m2!1sid!2sid!4v1618496242157!5m2!1sid!2sid"
+  data-fancybox
+  data-type="iframe"
+  data-preload="false"
+  data-width="640"
+  data-height="480"
+>
+  Google Maps
+</a>
 </div>
 <div class="clear"></div>
 </div><div class="widget HTML" data-version="1" id="HTML302">
@@ -484,7 +491,7 @@ Lihat di <ion-router-link class="popWin" data-fancybox data-type="iframe" data-s
     </ion-app>
 <form style="display:none;width:100%;max-width:400px;margin:0px;align-items:stretch;border-radius: 5px;" validate-form id='whatsapp'>
 <input class='pertanyaan' id='nomorAdmin' type='hidden'/>
-        <span class="mb-3" style="margin-bottom: 20px;text-align: center;">
+        <span class="mb-3" style="margin:20px 0;text-align: center;">
             Assalamualaikum! lengkapi data berikut
         </span>
         <ion-item>
@@ -496,7 +503,7 @@ Lihat di <ion-router-link class="popWin" data-fancybox data-type="iframe" data-s
             <ion-textarea class='tanya wajib' type="text" style="border-color:#07bc4c;max-width: 320px;" placeholder="Pertanyaan"></ion-textarea>
         </ion-item>
         <div class="mb-0 text-right">
-            <a type="button" class="sendWAclik kirim" style="margin-right:10px;color:#07bc4c"><ion-icon class="wa" name="paper-plane-outline"style="position: absolute;height: 34px;width: 34px;right: 20px;bottom: 10px;z-index: 40;"></ion-icon></a>
+            <a type="button" class="sendWAclik kirim" style="margin-right:10px;color:#07bc4c"><ion-icon class="wa" name="paper-plane-outline" style="position: relative;margin-bottom: 20px;margin-top: 20px;height: 34px;width: 34px;float: right;bottom: 0;right: 20px;z-index: 40;"></ion-icon></a>
         </div>
     </form>
 

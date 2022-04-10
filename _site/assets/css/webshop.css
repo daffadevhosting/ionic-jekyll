@@ -47,25 +47,25 @@ span.clicked { color: crimson; font-weight: bold; }
 
 .entry { padding: 6px; }
 
-.entry-description { padding: 6px; height: 80px; overflow-y: auto; margin: 15px 0 0 0; box-shadow: inset #33333387 0px 3px 12px -5px, inset #33333387 0px -3px 12px -5px; border-radius: 5px; }
+.entry-description { padding: 6px; height: 180px; overflow-y: auto; margin: 15px 0 0 0; box-shadow: inset #33333387 0px 3px 12px -5px, inset #33333387 0px -3px 12px -5px; border-radius: 5px; }
 
-@media (min-width: 320px) and (max-width: 767.98px) { .entry-description { margin: 15px 0 15px 0; } }
+@media (min-width: 320px) and (max-width: 767.98px) { .entry-description { height: 90px; margin: 15px 0 15px 0; } }
 
-.post-product { display: flex; flex-wrap: nowrap; margin: auto; width: 1020px; }
+.post-product { display: flex; flex-wrap: nowrap; margin: auto; }
 
 @media (min-width: 320px) and (max-width: 767.98px) { .post-product { flex-wrap: wrap; width: -webkit-fill-available; width: 100% !important; } }
 
-.style-picker { display: flex; justify-content: flex-start; flex-wrap: wrap; grid-gap: 10px; align-items: center; margin: 0% 6%; align-content: space-between; }
+.style-picker { display: flex; justify-content: flex-start; flex-wrap: wrap; grid-gap: 10px; align-items: center; align-content: space-between; }
 
 @media (min-width: 320px) and (max-width: 767.98px) { .style-picker { margin: 0%; } }
 
-.product-page { display: flex; width: 790px; flex-wrap: nowrap; }
+.product-page { display: flex; flex-wrap: nowrap; }
 
 @media (min-width: 320px) and (max-width: 767.98px) { .product-page { width: auto; flex-wrap: wrap; } }
 
 .detail-product { width: 480px; padding: 0 10px 10px; }
 
-.product-img { max-width: 680px; }
+.product-img { max-width: 490px; }
 
 @media (min-width: 320px) and (max-width: 767.98px) { .product-img { max-width: auto; } }
 
@@ -77,7 +77,7 @@ select.form-control { display: block; background: transparent; width: 100%; padd
 
 .input-groupQ { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; padding: 6px 0; font-size: 15px; border: 1px solid; border-radius: 50px; }
 
-.app-description-text { position: absolute; bottom: 0px; right: 0px; width: 42%; height: 70%; padding: 10px; overflow-y: auto; box-shadow: #000 0px -3px 15px -5px; }
+.app-description-text { position: absolute; bottom: 0px; right: 0px; width: 49.5%; height: 70%; padding: 10px; box-shadow: #000 0px -3px 15px -5px; }
 
 @media (min-width: 320px) and (max-width: 767.98px) { .app-description-text { position: absolute; bottom: 0px; right: 0px; width: 100%; height: 290px; padding: 10px; overflow-y: auto; } }
 

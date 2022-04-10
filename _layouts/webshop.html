@@ -11,5 +11,38 @@
     {% include widget-footer.html %}
 
     {% include ion-footer.html %}
+<ion-modal  trigger="trigger-cart" id="Cart">
+<ion-modal-header collapse="fade" translucent="true">
+        <ion-toolbar>
+<ion-title>Keranjang Belanja</ion-title>
+    <ion-buttons slot="end">
+      <ion-button onClick="dismissCart()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+        </ion-toolbar>
+     </ion-modal-header>
+<ion-content>
+<style>.keranjang-box .simpleCart_items {max-height: 330px!important;}@media only screen and (max-width:767px){.keranjang-box .simpleCart_items {max-height: 640px!important;}}</style>
+    {% include keranjang.html %}
+</ion-content>
+</ion-modal>
+<script>
+  const sheetModal = document.querySelector('#sheetCart');
+  const cardModal = document.querySelector('#Cart');
+
+  sheetModal.breakpoints = [0.1, 0.5, 1];
+  sheetModal.initialBreakpoint = 0.5;
+  
+  cardModal.swipeToClose = true;
+  cardModal.presentingElement = document.querySelector('ion-app');
+
+async function dismissCart() {
+  await cardModal.dismiss({
+    'dismissed': true
+  });
+}
+
+</script>
 
 </html>

@@ -15,10 +15,18 @@
             </ion-avatar>
             <ion-label>{{ site.name }}</ion-label>
           </ion-chip>
-    <ion-buttons class="mobile-hide" slot="end">
-      <ion-button onclick="myCart()">
+    <ion-buttons class="" slot="end">
+      <ion-button id="trigger-cart">
 <ion-icon name="cart"></ion-icon>
             <ion-badge color="danger" id="cart-menu" class="simpleCart_quantity" style="position: relative;top: -8px;right: 7px;border-radius: 50px;font-size: 10px;padding: 2px 4px;"></ion-badge>
+    </ion-button>
+    </ion-buttons>
+    {% endif %}
+    {% if page.layout == "shop" %}
+    <ion-buttons id="cart-menu" slot="end">
+      <ion-button id="trigger-cart">
+<ion-icon name="cart"></ion-icon>
+            <ion-badge color="danger" class="simpleCart_quantity" style="position: relative;top: -8px;right: 7px;border-radius: 50px;font-size: 10px;padding: 2px 4px;"></ion-badge>
     </ion-button>
     </ion-buttons>
     {% endif %}
@@ -61,13 +69,13 @@
     {% endif %}
           <ion-chip slot="end" onclick="setDarkMode(true)" id="darkBtn">
             <div>
-            <ion-label>DarkMode</ion-label>
+            <ion-label style="display: none;">DarkMode</ion-label>
             <ion-icon name="moon" color="dark"></ion-icon>
             </div>
           </ion-chip>
           <ion-chip slot="end" onclick="setDarkMode(false)" id="lightBtn" style="display: none;">
             <div>
-            <ion-label>LightMode</ion-label>
+            <ion-label style="display: none;">LightMode</ion-label>
             <ion-icon name="partly-sunny"></ion-icon>
             </div>
           </ion-chip>

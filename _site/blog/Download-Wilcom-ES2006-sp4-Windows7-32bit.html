@@ -124,6 +124,7 @@
     
     
     
+    
     <ion-buttons slot="start">
       <ion-button onclick="history.back()"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
     </ion-buttons>
@@ -135,13 +136,13 @@
     
           <ion-chip slot="end" onclick="setDarkMode(true)" id="darkBtn">
             <div>
-            <ion-label>DarkMode</ion-label>
+            <ion-label style="display: none;">DarkMode</ion-label>
             <ion-icon name="moon" color="dark"></ion-icon>
             </div>
           </ion-chip>
           <ion-chip slot="end" onclick="setDarkMode(false)" id="lightBtn" style="display: none;">
             <div>
-            <ion-label>LightMode</ion-label>
+            <ion-label style="display: none;">LightMode</ion-label>
             <ion-icon name="partly-sunny"></ion-icon>
             </div>
           </ion-chip>
@@ -171,7 +172,7 @@ jika terdapat kendala Security Devices Has Timed out <a href="/blog-post/Wilcom-
 
 
   <div class="date">
-    Written on April 10, 2022
+    Written on April 11, 2022
   </div>
   </ion-card-content>
 </ion-card>
@@ -197,7 +198,6 @@ jika terdapat kendala Security Devices Has Timed out <a href="/blog-post/Wilcom-
       </ion-content>
         <ion-footer collapse="fade" id="sticky-stop">
   <ion-toolbar>
-    
     
     <ion-buttons slot="end"><note>
     <ion-button><ion-icon name="logo-github"></ion-icon></ion-button></note>

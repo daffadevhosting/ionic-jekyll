@@ -80,13 +80,14 @@ span.clicked {
 
 .entry-description {
     padding: 6px;
-    height: 80px;
+    height: 180px;
     overflow-y: auto;
     margin: 15px 0 0 0;
     box-shadow: inset #33333387 0px 3px 12px -5px, inset #33333387 0px -3px 12px -5px;
     border-radius: 5px;
 
     @include mobile {
+    height: 90px;
     margin: 15px 0 15px 0;}
 }
 
@@ -94,7 +95,6 @@ span.clicked {
     display:flex;
     flex-wrap: nowrap;
     margin: auto;
-    width: 1020px;
 
     @include mobile {
     flex-wrap: wrap;
@@ -108,7 +108,6 @@ span.clicked {
     flex-wrap: wrap;
     grid-gap: 10px;
     align-items: center;
-    margin: 0% 6%;
     align-content: space-between;
 
     @include mobile {
@@ -117,7 +116,6 @@ span.clicked {
 
 .product-page {
     display: flex;
-    width: 790px;
     flex-wrap: nowrap;
 
     @include mobile {
@@ -131,7 +129,7 @@ span.clicked {
 }
 
 .product-img {
-    max-width: 680px;
+    max-width: 490px;
 
     @include mobile {
     max-width: auto;}
@@ -172,10 +170,9 @@ select.form-control {
     position: absolute;
     bottom: 0px;
     right: 0px;
-    width: 42%;
+    width: 49.5%;
     height: 70%;
     padding: 10px;
-    overflow-y: auto;
     box-shadow: #000 0px -3px 15px -5px;
 
     @include mobile {

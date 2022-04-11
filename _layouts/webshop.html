@@ -28,7 +28,7 @@
 </ion-content>
 </ion-modal>
 <script>
-  const sheetModal = document.querySelector('#sheetCart');
+  const sheetModal = document.querySelector('#sheetOrder');
   const cardModal = document.querySelector('#Cart');
 
   sheetModal.breakpoints = [0.1, 0.5, 1];
@@ -39,6 +39,12 @@
 
 async function dismissCart() {
   await cardModal.dismiss({
+    'dismissed': true
+  });
+}
+
+async function dismissWa() {
+  await sheetModal.dismiss({
     'dismissed': true
   });
 }

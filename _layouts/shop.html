@@ -53,11 +53,15 @@ layout: webshop
 <div class="entry-description" itemprop="description">{{page.description}}
     <p>{{ content }}</p>
 </div>
-
-<ion-buttons class="btn-order">
-<ion-button color="{{page.btnclr}}" class="app-description-content description-content" {{page.outstock}}>{{page.stat}}</ion-button>
+<div class="btn-grup_order app-description-text">
+<ion-buttons slot="start">
+<ion-button color="success" id="trigger-wa">WhatsApp</ion-button>
 </ion-buttons>
 
+<ion-buttons slot="end">
+<ion-button color="{{page.btnclr}}" class="app-description-content description-content" {{page.outstock}}>{{page.stat}}</ion-button>
+</ion-buttons>
+</div>
   <ion-card class="app-description-text" style="margin:0;display:none;">
 <ion-card-header style="padding:0;">
         <ion-buttons class="app-description-content">
@@ -88,19 +92,44 @@ layout: webshop
     </div>
 </div>
 
-
 <ion-buttons class="btn-atc">
         <ion-button color="primary" id="cartButton" class="item_add" slot="end" fill="outline" shape="round" href="javascript:;">Add To Cart</ion-button>
-<script type="text/javascript">
-  $('#cartButton').click(function() {
-    fbq('track', 'Purchase', {currency: "IDR", value: {{ page.price }} });
-  });
-</script>
 </ion-buttons>
 </ion-card-content>
   </ion-card>
 </div>
 </ion-card>
 </article>
+<ion-modal trigger="trigger-wa" id="sheetOrder">
+<ion-modal-header collapse="fade" translucent="true">
+        <ion-toolbar>
+<ion-title>Hubungi Kami</ion-title>
+    <ion-buttons slot="end">
+      <ion-button onClick="dismissWa()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+        </ion-toolbar>
+     </ion-modal-header>
+<ion-content>
+<form style="width:100%;border-radius: 5px;" validate-form id='whatsapp'>
+<input class='pertanyaan' id='nomorAdmin' type='hidden'/>
+        <ion-note align="center" style="margin:20px;">
+            Ada pertanyaan? lengkapi data berikut..
+        </ion-note>
+        <ion-item>
+          <ion-label position="floating">Nama Lengkap</ion-label>
+            <ion-input class='nama wajib' type="text" highlight-color="success" placeholder="Nama"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Pertanyaan</ion-label>
+            <ion-textarea class='tanya wajib' type="text" style="border-color:#07bc4c;max-width: 320px;" placeholder="Pertanyaan"></ion-textarea>
+        </ion-item>
+        <div class="mb-0 text-right">
+            <a type="button" class="sendWAclik kirim" style="margin-right:10px;color:#07bc4c"><ion-icon class="wa" name="paper-plane-outline" style="position: relative;margin-bottom: 20px;margin-top: 20px;height: 34px;width: 34px;float: right;bottom: 0;right: 20px;z-index: 40;"></ion-icon></a>
+        </div>
+    </form>
+</ion-content>
+</ion-modal>
 
 

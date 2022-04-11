@@ -10,7 +10,7 @@ layout: webshop
 <div class="img-product">
           <div class="product-img">
             {% for style in page.styles %}
-          		<div id="product-{{ forloop.index }}" class="style" {% unless forloop.first %}style="display:none;"{% endunless %}>
+          		<div id="product-{{ forloop.index }}" class="style bounceIn" {% unless forloop.first %}style="display:none;"{% endunless %}>
         				<ion-router-link data-fancybox="gallery" href="{{ style.image_path }}"><img src="{{ style.image_path }}" itemprop="image"></ion-router-link>
           		</div>
           	{% endfor %}
@@ -102,8 +102,8 @@ layout: webshop
 </article>
 <ion-modal trigger="trigger-wa" id="sheetOrder">
 <ion-modal-header collapse="fade" translucent="true">
-        <ion-toolbar>
-<ion-title>Hubungi Kami</ion-title>
+        <ion-toolbar color="success">
+<ion-title>WhatsApp Kontak</ion-title>
     <ion-buttons slot="end">
       <ion-button onClick="dismissWa()">
         <ion-icon slot="icon-only" name="close"></ion-icon>
@@ -111,19 +111,19 @@ layout: webshop
     </ion-buttons>
         </ion-toolbar>
      </ion-modal-header>
-<ion-content>
-<form style="width:100%;border-radius: 5px;" validate-form id='whatsapp'>
-<input class='pertanyaan' id='nomorAdmin' type='hidden'/>
+<ion-content padding="ion-padding">
         <ion-note align="center" style="margin:20px;">
             Ada pertanyaan? lengkapi data berikut..
         </ion-note>
+<form style="width:100%;border-radius: 5px;" validate-form id='whatsapp'>
+<input class='pertanyaan' id='nomorAdmin' type='hidden'/>
         <ion-item>
           <ion-label position="floating">Nama Lengkap</ion-label>
             <ion-input class='nama wajib' type="text" highlight-color="success" placeholder="Nama"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="floating">Pertanyaan</ion-label>
-            <ion-textarea class='tanya wajib' type="text" style="border-color:#07bc4c;max-width: 320px;" placeholder="Pertanyaan"></ion-textarea>
+            <ion-textarea class='tanya wajib' type="text" placeholder="Pertanyaan"></ion-textarea>
         </ion-item>
         <div class="mb-0 text-right">
             <a type="button" class="sendWAclik kirim" style="margin-right:10px;color:#07bc4c"><ion-icon class="wa" name="paper-plane-outline" style="position: relative;margin-bottom: 20px;margin-top: 20px;height: 34px;width: 34px;float: right;bottom: 0;right: 20px;z-index: 40;"></ion-icon></a>

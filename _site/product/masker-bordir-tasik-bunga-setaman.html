@@ -220,35 +220,35 @@
 <div class="img-product">
           <div class="product-img">
             
-          		<div id="product-1" class="style" >
+          		<div id="product-1" class="style bounceIn" >
         				<ion-router-link data-fancybox="gallery" href="https://cf.shopee.co.id/file/4160ff1e3d6532387c2cb1e42c586989"><img src="https://cf.shopee.co.id/file/4160ff1e3d6532387c2cb1e42c586989" itemprop="image"></ion-router-link>
           		</div>
           	
-          		<div id="product-2" class="style" style="display:none;">
+          		<div id="product-2" class="style bounceIn" style="display:none;">
         				<ion-router-link data-fancybox="gallery" href="https://cf.shopee.co.id/file/9649bf37febbade6aeb380a951cf0376"><img src="https://cf.shopee.co.id/file/9649bf37febbade6aeb380a951cf0376" itemprop="image"></ion-router-link>
           		</div>
           	
-          		<div id="product-3" class="style" style="display:none;">
+          		<div id="product-3" class="style bounceIn" style="display:none;">
         				<ion-router-link data-fancybox="gallery" href="https://cf.shopee.co.id/file/3e11780af679aa177f7f9bef5efd8292"><img src="https://cf.shopee.co.id/file/3e11780af679aa177f7f9bef5efd8292" itemprop="image"></ion-router-link>
           		</div>
           	
-          		<div id="product-4" class="style" style="display:none;">
+          		<div id="product-4" class="style bounceIn" style="display:none;">
         				<ion-router-link data-fancybox="gallery" href="https://cf.shopee.co.id/file/e30dd74e5e3b3ba1cd6b289e11d8dcbf"><img src="https://cf.shopee.co.id/file/e30dd74e5e3b3ba1cd6b289e11d8dcbf" itemprop="image"></ion-router-link>
           		</div>
           	
-          		<div id="product-5" class="style" style="display:none;">
+          		<div id="product-5" class="style bounceIn" style="display:none;">
         				<ion-router-link data-fancybox="gallery" href="https://cf.shopee.co.id/file/727b24e57f150c74d154a98820d3a113"><img src="https://cf.shopee.co.id/file/727b24e57f150c74d154a98820d3a113" itemprop="image"></ion-router-link>
           		</div>
           	
-          		<div id="product-6" class="style" style="display:none;">
+          		<div id="product-6" class="style bounceIn" style="display:none;">
         				<ion-router-link data-fancybox="gallery" href="https://cf.shopee.co.id/file/2b6e2a502ef2d019edcc23a5c7d6f2c4"><img src="https://cf.shopee.co.id/file/2b6e2a502ef2d019edcc23a5c7d6f2c4" itemprop="image"></ion-router-link>
           		</div>
           	
-          		<div id="product-7" class="style" style="display:none;">
+          		<div id="product-7" class="style bounceIn" style="display:none;">
         				<ion-router-link data-fancybox="gallery" href="https://cf.shopee.co.id/file/558f78e9145e397d7602680aab8f9e46"><img src="https://cf.shopee.co.id/file/558f78e9145e397d7602680aab8f9e46" itemprop="image"></ion-router-link>
           		</div>
           	
-          		<div id="product-8" class="style" style="display:none;">
+          		<div id="product-8" class="style bounceIn" style="display:none;">
         				<ion-router-link data-fancybox="gallery" href="https://cf.shopee.co.id/file/54598674c8596988d618a624476ef710"><img src="https://cf.shopee.co.id/file/54598674c8596988d618a624476ef710" itemprop="image"></ion-router-link>
           		</div>
           	
@@ -372,8 +372,8 @@
 </article>
 <ion-modal trigger="trigger-wa" id="sheetOrder">
 <ion-modal-header collapse="fade" translucent="true">
-        <ion-toolbar>
-<ion-title>Hubungi Kami</ion-title>
+        <ion-toolbar color="success">
+<ion-title>WhatsApp Kontak</ion-title>
     <ion-buttons slot="end">
       <ion-button onClick="dismissWa()">
         <ion-icon slot="icon-only" name="close"></ion-icon>
@@ -381,19 +381,19 @@
     </ion-buttons>
         </ion-toolbar>
      </ion-modal-header>
-<ion-content>
-<form style="width:100%;border-radius: 5px;" validate-form id='whatsapp'>
-<input class='pertanyaan' id='nomorAdmin' type='hidden'/>
+<ion-content padding="ion-padding">
         <ion-note align="center" style="margin:20px;">
             Ada pertanyaan? lengkapi data berikut..
         </ion-note>
+<form style="width:100%;border-radius: 5px;" validate-form id='whatsapp'>
+<input class='pertanyaan' id='nomorAdmin' type='hidden'/>
         <ion-item>
           <ion-label position="floating">Nama Lengkap</ion-label>
             <ion-input class='nama wajib' type="text" highlight-color="success" placeholder="Nama"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="floating">Pertanyaan</ion-label>
-            <ion-textarea class='tanya wajib' type="text" style="border-color:#07bc4c;max-width: 320px;" placeholder="Pertanyaan"></ion-textarea>
+            <ion-textarea class='tanya wajib' type="text" placeholder="Pertanyaan"></ion-textarea>
         </ion-item>
         <div class="mb-0 text-right">
             <a type="button" class="sendWAclik kirim" style="margin-right:10px;color:#07bc4c"><ion-icon class="wa" name="paper-plane-outline" style="position: relative;margin-bottom: 20px;margin-top: 20px;height: 34px;width: 34px;float: right;bottom: 0;right: 20px;z-index: 40;"></ion-icon></a>

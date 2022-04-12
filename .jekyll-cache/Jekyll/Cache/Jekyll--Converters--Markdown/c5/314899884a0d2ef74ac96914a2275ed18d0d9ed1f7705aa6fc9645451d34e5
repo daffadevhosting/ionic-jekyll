@@ -1,4 +1,4 @@
-I"L<div class="payment-point">
+I"ˆ<div class="payment-point">
 <ion-card>
 <img src="/assets/images/qris_logo.jpg" />
 <buttonQris>
@@ -20,8 +20,9 @@
 </buttonBank>
 &lt;/ion-card&gt;
 &lt;/div&gt;
-<ion-chip color="success"><ion-label>Kirim Bukti Pembayaran</ion-label><ion-icon name="arrow-forward-circle-outline"></ion-icon></ion-chip>
-
+<div class="chip">
+<ion-chip color="success" onClick="wa_pay()"><ion-label>Kirim Bukti Pembayaran</ion-label></ion-chip>
+</div>
 <ion-modal trigger="trigger-qris" id="scQris">
 <ion-header collapse="fade" translucent="true">
         <ion-toolbar>
@@ -79,6 +80,10 @@ async function dismissTbank() {
   await sheetModal.dismiss({
     'dismissed': true
   });
+}
+
+function wa_pay() {
+  location.replace('https://wa.me/6281386267897')
 }
 </script>
 <script>

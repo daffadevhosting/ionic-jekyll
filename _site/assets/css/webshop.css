@@ -47,7 +47,7 @@ span.clicked { color: crimson; font-weight: bold; }
 
 .entry { padding: 6px; }
 
-.entry-description { padding: 6px; height: 180px; overflow-y: auto; margin: 15px 0 0 0; box-shadow: inset #33333387 0px 3px 12px -5px, inset #33333387 0px -3px 12px -5px; border-radius: 5px; }
+.entry-description { padding: 6px; height: 180px; overflow-y: auto; margin: 15px 0 0 0; box-shadow: inset #33333387 0 3px 1px -2px, inset #33333387 0 2px 2px 0, inset #33333387 0 1px 5px 0; border-radius: 5px; }
 
 @media (min-width: 320px) and (max-width: 767.98px) { .entry-description { height: 90px; margin: 15px 0 15px 0; } }
 
@@ -113,9 +113,11 @@ select.form-control { display: block; background: transparent; width: 100%; padd
 
 @media (min-width: 320px) and (max-width: 767.98px) { .cekout { flex-wrap: wrap; } }
 
-.payment-point { width: fit-content; display: flex; margin: auto; margin-top: 45px; flex-wrap: nowrap; }
+.payment-point { width: fit-content; display: flex; margin: auto; margin-top: 45px; margin-bottom: 45px; flex-wrap: nowrap; }
 
 @media (min-width: 320px) and (max-width: 767.98px) { .payment-point { width: min-content; flex-wrap: wrap; } }
+
+.chip { width: max-content; margin: auto; }
 
 /* The Modal (background) */
 .modal { display: none; /* Hidden by default */ position: fixed; /* Stay in place */ z-index: 1; /* Sit on top */ padding-top: 100px; /* Location of the box */ left: 0; top: 0; width: 100%; /* Full width */ height: 100%; /* Full height */ overflow: auto; /* Enable scroll if needed */ background-color: black; /* Fallback color */ background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */ }

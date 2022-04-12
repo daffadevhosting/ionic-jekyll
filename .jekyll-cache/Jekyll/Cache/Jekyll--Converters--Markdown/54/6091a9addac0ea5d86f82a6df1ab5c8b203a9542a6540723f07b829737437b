@@ -1,10 +1,4 @@
----
-layout: payment-page
-title: Pembayaran
-value: payment
----
-
-<div class="payment-point">
+I"e<div class="payment-point">
 <ion-card>
 <img src="/assets/images/qris_logo.jpg" />
 <buttonQris>
@@ -12,10 +6,10 @@ value: payment
 <ion-icon name="barcode-outline" slot="start"></ion-icon>
 <ion-label>Scan Qris</ion-label>
 <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
-</ion-card>
+&lt;/ion-card&gt;
 <ion-card>
 <img src="/assets/images/bank_transfer.jpg" />
-</ion-item>
+&lt;/ion-item&gt;
 <buttonQris>
 <buttonBank>
 <ion-item id="trigger-transfer" class="ion-activated" style="cursor:pointer">
@@ -24,12 +18,12 @@ value: payment
 <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
 </ion-item>
 </buttonBank>
-</ion-card>
-</div>
+&lt;/ion-card&gt;
+&lt;/div&gt;
 <div class="chip">
-<ion-chip color="success" onClick="wa_pay()"><ion-label>Kirim Bukti Pembayaran</ion-label><ion-icon name="arrow-forward-circle-outline"></ion-icon></ion-chip>
+<ion-chip color="success"><ion-label>Kirim Bukti Pembayaran</ion-label><ion-icon name="arrow-forward-circle-outline"></ion-icon></ion-chip>
 </div>
-<ion-modal  trigger="trigger-qris" id="scQris">
+<ion-modal trigger="trigger-qris" id="scQris">
 <ion-header collapse="fade" translucent="true">
         <ion-toolbar>
 <ion-title>Scan Qris</ion-title>
@@ -45,7 +39,7 @@ value: payment
 </ion-content>
 </ion-modal>
 
-<ion-modal  trigger="trigger-transfer" id="tfBank">
+<ion-modal trigger="trigger-transfer" id="tfBank">
 <ion-header collapse="fade" translucent="true">
         <ion-toolbar>
 <ion-title>Transfer Bank</ion-title>
@@ -59,15 +53,15 @@ value: payment
   <ion-content>
 <ion-item>
 <ion-label>Bank BRI</ion-label>
-<input type="text" id="bri" value="000501121217502" style="border: none!important;background: transparent;" readonly>
+<input type="text" id="bri" value="000501121217502" style="border: none!important;background: transparent;" readonly="" />
                   <div class="input-group-append">
                     <span onclick="myBri()">
 <i class="far fa-copy" style="font-size:25px;cursor:pointer;"></i></span>
                   </div>
 </ion-item>
-<ion-item >
+<ion-item>
 <ion-label>Bank BTPN</ion-label>
-<input type="text" id="btpn" value="903700011795" style="border: none!important;background: transparent;" readonly>
+<input type="text" id="btpn" value="903700011795" style="border: none!important;background: transparent;" readonly="" />
                   <div class="input-group-append">
                     <span onclick="myBtpn()">
 <i class="far fa-copy" style="font-size:25px;cursor:pointer;"></i></span>
@@ -86,10 +80,6 @@ async function dismissTbank() {
   await sheetModal.dismiss({
     'dismissed': true
   });
-}
-
-function wa_pay() {
-  location.replace('https://wa.me/081386267897')
 }
 </script>
 <script>
@@ -130,3 +120,5 @@ function wa_pay() {
   cardModal.swipeToClose = true;
   cardModal.presentingElement = document.querySelector('ion-app');
 </script>
+</buttonQris></ion-card></ion-item></buttonQris></ion-card></div>
+:ET

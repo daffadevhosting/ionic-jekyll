@@ -83,7 +83,7 @@ span.clicked {
     height: 180px;
     overflow-y: auto;
     margin: 15px 0 0 0;
-    box-shadow: inset #33333387 0px 3px 12px -5px, inset #33333387 0px -3px 12px -5px;
+    box-shadow: inset #33333387 0 3px 1px -2px, inset #33333387 0 2px 2px 0, inset #33333387 0 1px 5px 0;
     border-radius: 5px;
 
     @include mobile {
@@ -256,6 +256,7 @@ select.form-control {
     display: flex;
     margin: auto;
     margin-top: 45px;
+    margin-bottom: 45px;
     flex-wrap: nowrap;
 
     @include mobile {
@@ -263,6 +264,10 @@ select.form-control {
     flex-wrap: wrap;}
 }
 
+.chip {
+    width: max-content;
+    margin: auto;
+}
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */

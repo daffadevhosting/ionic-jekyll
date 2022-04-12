@@ -12,7 +12,7 @@
 <title>Pembayaran @ Plus62store</title>
 
 <meta property="og:image" content="http://localhost:4000"/>
-<meta name="description" content="Scan Qris&lt;/ion-card&gt;&lt;/ion-item&gt;Transfer Bank&lt;/ion-card&gt;&lt;/div&gt;    Scan Qris                         Transfer Bank                    B...">
+<meta name="description" content="Scan Qris&lt;/ion-card&gt;&lt;/ion-item&gt;Transfer Bank&lt;/ion-card&gt;&lt;/div&gt;Kirim Bukti Pembayaran    Scan Qris                         Transfer Ban...">
 
 <link rel="shortcut icon" type="image/png" href="/assets/images/logo/maskable_icon_x192.png">
 <link rel="shortcut icon" sizes="192x192" href="/assets/images/logo/maskable_icon_x192.png">
@@ -24,7 +24,7 @@
 <meta property="og:url" content="http://localhost:4000/pembayaran"/>
 <meta property="og:type" content="article">
 <meta property="og:site_name" content=""/>
-<meta property="og:description" content="Scan Qris&lt;/ion-card&gt;&lt;/ion-item&gt;Transfer Bank&lt;/ion-card&gt;&lt;/div&gt;    Scan Qris                         Transfer Bank                    B..."/>
+<meta property="og:description" content="Scan Qris&lt;/ion-card&gt;&lt;/ion-item&gt;Transfer Bank&lt;/ion-card&gt;&lt;/div&gt;Kirim Bukti Pembayaran    Scan Qris                         Transfer Ban..."/>
 
 <!-- Twitter integration -->
 <meta name="twitter:card" content="summary">
@@ -32,7 +32,7 @@
 <meta name="twitter:title" content="Pembayaran" />
 
 <meta name="twitter:url" content="http://localhost:4000/pembayaran" />
-<meta name="twitter:description" content="Scan Qris&lt;/ion-card&gt;&lt;/ion-item&gt;Transfer Bank&lt;/ion-card&gt;&lt;/div&gt;    Scan Qris                         Transfer Bank                    B..." />
+<meta name="twitter:description" content="Scan Qris&lt;/ion-card&gt;&lt;/ion-item&gt;Transfer Bank&lt;/ion-card&gt;&lt;/div&gt;Kirim Bukti Pembayaran    Scan Qris                         Transfer Ban..." />
 <link rel="canonical" href="http://localhost:4000/pembayaran">
 <link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4000/feed.xml">
 <link rel="sitemap" type="application/xml" title="Sitemap" href="http://localhost:4000/sitemap.xml" />
@@ -177,7 +177,9 @@
 </buttonBank>
 </ion-card>
 </div>
-
+<div class="chip">
+<ion-chip color="success" onClick="wa_pay()"><ion-label>Kirim Bukti Pembayaran</ion-label><ion-icon name="arrow-forward-circle-outline"></ion-icon></ion-chip>
+</div>
 <ion-modal  trigger="trigger-qris" id="scQris">
 <ion-header collapse="fade" translucent="true">
         <ion-toolbar>
@@ -235,6 +237,10 @@ async function dismissTbank() {
   await sheetModal.dismiss({
     'dismissed': true
   });
+}
+
+function wa_pay() {
+  location.replace('https://wa.me/081386267897')
 }
 </script>
 <script>

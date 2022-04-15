@@ -5,7 +5,7 @@
             <ion-avatar>
             <img src="{{ site.avatar }}" />
             </ion-avatar>
-            <ion-label>{{ site.name }}</ion-label>
+            <ion-label>{{ site.title }}</ion-label>
           </ion-chip>
     {% endif %}
     {% if page.layout == "webshop" %}
@@ -13,12 +13,12 @@
             <ion-avatar>
             <img src="{{ site.avatar }}" />
             </ion-avatar>
-            <ion-label>{{ site.name }}</ion-label>
+            <ion-label>{{ site.title }}</ion-label>
           </ion-chip>
     <ion-buttons slot="end">
       <ion-button id="trigger-cart">
 <ion-icon name="cart"></ion-icon>
-            <ion-badge color="danger" class="simpleCart_quantity" style="position: relative;top: -8px;right: 7px;border-radius: 50px;font-size: 10px;padding: 2px 4px;"></ion-badge>
+            <ion-badge color="danger" class="simpleCart_quantity" style="position:absolute;top:1px;right:-6px;border-radius:50px;font-size: 11px;padding: 2px 4px;"></ion-badge>
     </ion-button>
     </ion-buttons>
     {% endif %}
@@ -26,7 +26,7 @@
     <ion-buttons id="cart-menu" slot="end">
       <ion-button id="trigger-cart">
 <ion-icon name="cart"></ion-icon>
-            <ion-badge color="danger" class="simpleCart_quantity" style="position: relative;top: -8px;right: 7px;border-radius: 50px;font-size: 10px;padding: 2px 4px;"></ion-badge>
+            <ion-badge color="danger" class="simpleCart_quantity" style="position:absolute;top:1px;right:-6px;border-radius:50px;font-size: 11px;padding: 2px 4px;"></ion-badge>
     </ion-button>
     </ion-buttons>
     {% endif %}

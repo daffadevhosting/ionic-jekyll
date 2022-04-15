@@ -147,6 +147,8 @@ nav a { margin-left: 20px; color: #333; text-align: right; font-weight: 300; let
 
 footer { padding: 20px 0; text-align: center; }
 
+#footer { font-weight: 900; }
+
 .highlight { background-color: #efefef; padding: 7px 7px 7px 10px; border: 1px solid #ddd; -moz-box-shadow: 3px 3px rgba(0, 0, 0, 0.1); -webkit-box-shadow: 3px 3px rgba(0, 0, 0, 0.1); box-shadow: 3px 3px rgba(0, 0, 0, 0.1); margin: 20px 0 20px 0; overflow: scroll; }
 
 code { font-family: 'Bitstream Vera Sans Mono','Courier', monospace; }

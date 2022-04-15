@@ -3,14 +3,9 @@
         <ion-footer collapse="fade" id="sticky-stop">
   <ion-toolbar>
 <ion-chip disabled>
-<ion-label>Template By <span id="footer" title="{{site.dev}}">{{site.dev}}</span></ion-label>
+<ion-label>Template By <span id="footer" title="{{site.dev}}">{{site.dv}}</span></ion-label>
 </ion-chip>
     {% if page.layout == "default" %}
-    <ion-buttons class="mobile-show" slot="start">
-      <ion-button onclick="myProduct()">
-         <ion-icon name="storefront" color="primary"></ion-icon>
-      </ion-button>
-    </ion-buttons>
     {% endif %}
     <ion-buttons slot="end"><note>
     <ion-button><ion-icon name="logo-github"></ion-icon></ion-button></note>
@@ -18,7 +13,6 @@
   </ion-toolbar>
         </ion-footer>
     </ion-app>
-
 <script>
 function myBlog() {
   location.replace('/blog')
@@ -77,6 +71,15 @@ function setDarkMode(isDark) {
     document.body.classList.toggle("darkmode");
 }
 
+var id_aktif;
+function on(clicked_id) { document.getElementById("overlay").style.display = "block";
+document.getElementById(clicked_id).style.display = "block";
+id_aktif = clicked_id;
+}
+function off() {
+document.getElementById("overlay").style.display = "none";
+document.getElementById(id_aktif).style.display = "none";
+}
 </script>
 
 <script type="text/javascript">
@@ -112,6 +115,12 @@ function myBri() {
         await alert.present();
       }
 </script>
+<div id="overlay" onclick="off()"></div>
+  <div class="myModal" id="modal1">
+    <div class="modalBody" id="body">
+      <p>Untuk mengaktifkan kembali template,<br/>Mohon Jangan merubah/menghapus bagian footer<br/>Terima kasih.</p>
+    </div>
+  </div>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
     <script src="{{site.baseurl}}/assets/js/jquery-3.6.0.js"></script>
     <script src="{{site.baseurl}}/assets/js/simpleCart.js?version = 1.2"></script>

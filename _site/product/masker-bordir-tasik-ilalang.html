@@ -302,7 +302,25 @@
             
         	</div>
 
-<div class="entry-description" itemprop="description">Masker Kain Bordir Bunga. -Bahan kain 100% Katun dengan 3 lapisan.
+<ion-accordion-group class="mobile-show" style="margin-top: 22px;">
+  <ion-accordion>
+    <ion-item slot="header">
+      <ion-label>Deskripsi Produk</ion-label>
+    </ion-item>
+
+    <ion-list slot="content">
+Masker Kain Bordir Bunga. -Bahan kain 100% Katun dengan 3 lapisan.
+<ul>
+  <li>Lapisan Katun + Vislin,</li>
+  <li>Bordir Manual ( JUKI ),</li>
+  <li>Tali Karet Earloop &amp; Headloop.</li>
+  <li>Tali Kain Ikat</li>
+</ul>
+
+    </ion-list>
+  </ion-accordion>
+</ion-accordion-group>
+<div class="entry-description mobile-hide" itemprop="description">Masker Kain Bordir Bunga. -Bahan kain 100% Katun dengan 3 lapisan.
     <p><ul>
   <li>Lapisan Katun + Vislin,</li>
   <li>Bordir Manual ( JUKI ),</li>
@@ -311,7 +329,7 @@
 </ul>
 </p>
 </div>
-<div class="btn-grup_order app-description-text">
+<div class="btn-grup_order">
 <ion-buttons slot="start">
 <ion-button color="success" id="trigger-wa">WhatsApp</ion-button>
 </ion-buttons>
@@ -321,13 +339,15 @@
 </ion-buttons>
 </div>
   <ion-card class="app-description-text" style="margin:0;display:none;">
-<ion-card-header style="padding:0;">
+<ion-card-header color="light" style="padding:0;">
+    <ion-toolbar>
         <ion-buttons class="app-description-content">
           <ion-button color="danger"><ion-icon name="close-circle"></ion-icon>
           </ion-button>
         </ion-buttons>
+    </ion-toolbar>
 </ion-card-header>
-<ion-card-content style="padding:0;">
+<ion-card-content style="padding:10px;">
 
           <select class="item form-control item_model" style="display:block;" >
         <label>Model Tali</label>
@@ -441,7 +461,7 @@
         <ion-footer collapse="fade" id="sticky-stop">
   <ion-toolbar>
 <ion-chip disabled>
-<ion-label>Template By <span id="footer" title="NdanG"></span></ion-label>
+<ion-label>Template By <span id="footer" title="NdanG">NdanG</span></ion-label>
 </ion-chip>
     
     <ion-buttons slot="end"><note>

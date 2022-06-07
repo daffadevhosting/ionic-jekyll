@@ -17,16 +17,16 @@
           </ion-chip>
     <ion-buttons slot="end">
       <ion-button id="trigger-cart">
-<ion-icon name="cart"></ion-icon>
-            <ion-badge color="danger" class="simpleCart_quantity" style="position:absolute;top:1px;right:-6px;border-radius:50px;font-size: 11px;padding: 2px 4px;"></ion-badge>
+            <ion-badge color="danger" class="simpleCart_quantity" style="position:absolute;top:-6px;right:-6px;border-radius:50px;font-size: 11px;padding: 2px 4px;"></ion-badge>
+<ion-icon slot="icon-only" name="cart"></ion-icon>
     </ion-button>
     </ion-buttons>
     {% endif %}
     {% if page.layout == "shop" %}
     <ion-buttons id="cart-menu" slot="end">
       <ion-button id="trigger-cart">
-<ion-icon name="cart"></ion-icon>
-            <ion-badge color="danger" class="simpleCart_quantity" style="position:absolute;top:1px;right:-6px;border-radius:50px;font-size: 11px;padding: 2px 4px;"></ion-badge>
+            <ion-badge color="danger" class="simpleCart_quantity" style="position:absolute;top:-6px;right:-6px;border-radius:50px;font-size: 11px;padding: 2px 4px;"></ion-badge>
+<ion-icon slot="icon-only" name="cart"></ion-icon>
     </ion-button>
     </ion-buttons>
     {% endif %}
@@ -40,32 +40,32 @@
     {% endif %}
     {% if page.layout == "post" %}
     <ion-buttons slot="start">
-      <ion-button onclick="history.back()"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+      <ion-button onclick="history.back()"><ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon></ion-button>
     </ion-buttons>
     {% endif %}
     {% if page.layout == "shop" %}
     <ion-buttons slot="start">
-      <ion-button onclick="history.back()"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+      <ion-button onclick="history.back()"><ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon></ion-button>
     </ion-buttons>
     {% endif %}
     {% if page.layout == "page" %}
     <ion-buttons slot="start">
-      <ion-button onclick="history.back()"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+      <ion-button onclick="history.back()"><ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon></ion-button>
     </ion-buttons>
     {% endif %}
     {% if page.layout == "cart-page" %}
     <ion-buttons slot="start">
-      <ion-button onclick="myProduct()"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+      <ion-button onclick="myProduct()"><ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon></ion-button>
     </ion-buttons>
     {% endif %}
     {% if page.layout == "payment-page" %}
     <ion-buttons slot="start">
-      <ion-button onclick="myProduct()"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+      <ion-button onclick="myProduct()"><ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon></ion-button>
     </ion-buttons>
     {% endif %}
     {% if page.layout == "checkout-page" %}
     <ion-buttons slot="start">
-      <ion-button onclick="history.back()"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+      <ion-button onclick="history.back()"><ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon></ion-button>
     </ion-buttons>
     {% endif %}
           <ion-chip slot="end" onclick="setDarkMode(true)" id="darkBtn">

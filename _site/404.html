@@ -116,10 +116,50 @@
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
     <!-- Created with Jekyll - https://jekyllrb.com -->
 </head>
   <body>
+    <style>
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+.preloader .loading {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  font: 14px arial;
+  border-radius: 30%;
+  overflow: hidden;
+}
+.loading-text {
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 150px;
+    left: 40%;
+    right: 40%;
+    font-family: system-ui;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$(".preloader").delay(3500).fadeOut(550);
+});
+</script>
+<div class="preloader">
+  <div class="loading">
+    <img src="/assets/css/loader.gif" width="80">
+  </div>
+    <!--<div class="loading-text"><center><b>Loading...</b></center></div>-->
+</div>
+
+
     <ion-app>
           <ion-header collapse="fade" translucent="true">
         <ion-toolbar>
@@ -280,7 +320,7 @@
 </ion-chip>
     
     <ion-buttons slot="end"><note>
-    <ion-button><ion-icon name="logo-github"></ion-icon></ion-button></note>
+    <ion-button><ion-icon slot="icon-only" name="logo-github"></ion-icon></ion-button></note>
     </ion-buttons>
   </ion-toolbar>
         </ion-footer>

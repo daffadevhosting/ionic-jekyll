@@ -128,6 +128,7 @@
   height: 100%;
   z-index: 9999;
 }
+
 .preloader .loading {
   position: absolute;
   left: 50%;
@@ -152,12 +153,12 @@ $(document).ready(function(){
 $(".preloader").delay(3500).fadeOut(550);
 });
 </script>
-<div class="preloader">
+<ion-content class="preloader" fullscreen>
   <div class="loading">
-    <img src="/assets/css/loader.gif" width="80">
+    <img src="/assets/css/loading.webp" width="80">
   </div>
     <!--<div class="loading-text"><center><b>Loading...</b></center></div>-->
-</div>
+</ion-content>
 
 
     <ion-app>

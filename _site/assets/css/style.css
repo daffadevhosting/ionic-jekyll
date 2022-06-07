@@ -22,7 +22,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 /**************/
 html { font-size: 100%; }
 
-body { background: #fff; font: 18px/1.4 Helvetica, Arial, sans-serif; color: #333; }
+body { font: 18px/1.4 Helvetica, Arial, sans-serif; }
 
 .container { margin: 0 auto; max-width: 1040px; padding: 0 0px; width: 100%; }
 

@@ -1,39 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light darkmode" />
 <meta name="google-site-verification" content="" />
+<meta name="yandex-verification" content="42c9b7a5a8c7355c" />
 <meta http-equiv='cache-control' content='no-cache'>
 <meta http-equiv='expires' content='0'>
 <meta http-equiv='pragma' content='no-cache'>
-<title>Checkout @ Plus62store</title>
+<title>Keranjang Belanja @ Plus62store</title>
 
 <meta property="og:image" content="http://localhost:4000"/>
-<meta name="description" content="     Keranjang Belanja Kamu     {% include keranjang. html %}   Total belanja sebesar ( *Belum Termasuk Ongkir )Silahkan isi data pengiriman dibawah ini. .  ...">
+<meta name="description" content="  &lt;ion-card class="cart-page"&gt;    &lt;ion-list&gt; Keranjang Belanja      &lt;ion-item-sliding&gt;          &lt;/ion-item-sliding&gt;     Grand Total: ...">
 
 <link rel="shortcut icon" type="image/png" href="/assets/images/logo/maskable_icon_x192.png">
 <link rel="shortcut icon" sizes="192x192" href="/assets/images/logo/maskable_icon_x192.png">
 <link rel="apple-touch-icon" href="/assets/images/logo/maskable_icon_x192.png">
 
  <!-- Facebook integration -->
-<meta property="og:title" content="Checkout"/>
+<meta property="og:title" content="Keranjang Belanja"/>
 
-<meta property="og:url" content="http://localhost:4000/checkout"/>
+<meta property="og:url" content="http://localhost:4000/p=p62s_cart.html"/>
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Plus62store"/>
-<meta property="og:description" content="     Keranjang Belanja Kamu     {% include keranjang. html %}   Total belanja sebesar ( *Belum Termasuk Ongkir )Silahkan isi data pengiriman dibawah ini. .  ..."/>
+<meta property="og:description" content="  &lt;ion-card class="cart-page"&gt;    &lt;ion-list&gt; Keranjang Belanja      &lt;ion-item-sliding&gt;          &lt;/ion-item-sliding&gt;     Grand Total: ..."/>
 
 <!-- Twitter integration -->
 <meta name="twitter:card" content="summary">
 
-<meta name="twitter:title" content="Checkout" />
+<meta name="twitter:title" content="Keranjang Belanja" />
 
-<meta name="twitter:url" content="http://localhost:4000/checkout" />
-<meta name="twitter:description" content="     Keranjang Belanja Kamu     {% include keranjang. html %}   Total belanja sebesar ( *Belum Termasuk Ongkir )Silahkan isi data pengiriman dibawah ini. .  ..." />
-<link rel="canonical" href="http://localhost:4000/checkout">
+<meta name="twitter:url" content="http://localhost:4000/p=p62s_cart.html" />
+<meta name="twitter:description" content="  &lt;ion-card class="cart-page"&gt;    &lt;ion-list&gt; Keranjang Belanja      &lt;ion-item-sliding&gt;          &lt;/ion-item-sliding&gt;     Grand Total: ..." />
+<link rel="canonical" href="http://localhost:4000/p=p62s_cart.html">
 <link rel="alternate" type="application/rss+xml" title="Plus62store" href="http://localhost:4000/feed.xml">
 <link rel="sitemap" type="application/xml" title="Sitemap" href="http://localhost:4000/sitemap.xml" />
      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -94,6 +96,8 @@
   }
 }
 </script>
+    
+    
     <!-- Facebook Pixel Code -->
     
 <!-- End Facebook Pixel Code -->
@@ -128,11 +132,11 @@
     
     
     
-    
-    
     <ion-buttons slot="start">
-      <ion-button onclick="history.back()"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+      <ion-button onclick="myProduct()"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
     </ion-buttons>
+    
+    
     
           <ion-chip slot="end" onclick="setDarkMode(true)" id="darkBtn">
             <div>
@@ -152,23 +156,13 @@
       <ion-content fullscreen>
 
 
-    <div id="main" role="main" class="container">
+    <div id="webshop" class="shop-container">
+     <div class="etalase">
       <style>
-.keranjang-box .simpleCart_increment, .keranjang-box .simpleCart_decrement, .keranjang-box .item-remove, .simpleCart_items .item-remove, .keranjang-box .item-link {display:none !important;}.keranjang-box .item-quantity {padding: 0 !important;}
+.keranjang-box {max-height: 100%;overflow-x: hidden;overflow-y: auto;width: 1060px;}.keranjang-box .simpleCart_items {max-height: 375px!important;margin-bottom: 0px!important;box-shadow: none!important;}.entry{margin-top:0;}@media only screen and (max-width:727px){.entry{width: 100%;margin-top:0%;}.keranjang-box .simpleCart_items {max-height: 600px!important;}}
 </style>
-
-    <style type="text/css">.keranjang-box .harga-total{display:none!important;}.keranjang-box .simpleCart_items{max-height: 310px!important;}.keranjang-box .item-thumb img{width: 75px!important;}small{font-size:12px;}.masthead,.product{display:none!important;}.not_if{background: #18ce0f;color:#fff;padding: 10px;border-radius: 5px;line-height: 25px;box-shadow: #33333387 0 3px 1px -2px, #33333387 0 2px 2px 0, #33333387 0 1px 5px 0;}.form-coll{display:flex;justify-content:space-between;}ion-footer{display:none !important;}@media only screen and (max-width:767px){.card-form{margin-bottom:22%;}.keranjang-box .simpleCart_items {max-height: 250px!important;}}</style>
-
-
-<ion-card class="review-checkout">
-  <ion-item>
-    <ion-icon name="cart-outline" slot="start"></ion-icon>
-    <ion-label>Keranjang Belanja Kamu</ion-label>
-    <ion-note slot="end" color="primary"><ion-badge color="danger" id="cart-menu" class="simpleCart_quantity"></ion-badge></ion-note>
-  </ion-item>
-<ion-card-content>
-    
-<style>
+  <div class="entry">
+    <style>
 .keranjang.dekstop{position:relative;width:60px;text-align:left;padding:5px 0;-webkit-box-ordinal-group:3;-ms-flex-order:3;order:3;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}
 .notif-tambah-product{width:255px;position:absolute;z-index:99;font-size:14px;right:-10px;background:#00b35e;padding:10px 20px;opacity:1;display:none;color:#fff;top:65px;border-radius:15px;-webkit-box-shadow:0 2px 5px 0 rgba(56,56,56,.49);box-shadow:0 2px 5px 0 rgba(56,56,56,.49);}
 .keranjang .simpleCart_quantity{width:20px;height:20px;background:#ff0000;position:absolute;border-radius:100%;color:#ffffff;text-align:center;line-height:20px;font-size:12px;z-index:3}
@@ -180,15 +174,15 @@
 .keranjang.dekstop .keranjang-icon{display:inline-block;padding:7px;margin:3px 0 3px 5px;border-radius:20px;width:24px;height:24px;cursor:pointer;-webkit-transition:all .2s;transition:all .2s}
 .keranjang.dekstop .keranjang-icon svg{height:22px;width:22px;display:inline-block;}
 .keranjang.dekstop .keranjang-icon path{fill:#ffffff;}
-@media only screen and (max-width:767px){.is-post .keranjang.mobile,.keranjang.dekstop{display:none;}.is-post .keranjang.dekstop{display:block;}.keranjang.mobile{position:relative;display:block;width:100%;text-align:center;}.keranjang.mobile .keranjang-icon{display:block;width:100%;height:100%;text-align:center;margin:0 auto;border-ridius:0;}.keranjang.mobile .keranjang-icon svg{position:relative;display:block;margin:0 auto;width:36px;height:36px;}.keranjang.mobile .keranjang-icon path{fill:#444444;}.keranjang.mobile .simpleCart_quantity{top:-5px;left:50%;}}
+@media only screen and (max-width:727px){.is-post .keranjang.mobile,.keranjang.dekstop{display:none;}.is-post .keranjang.dekstop{display:block;}.keranjang.mobile{position:relative;display:block;width:100%;text-align:center;}.keranjang.mobile .keranjang-icon{display:block;width:100%;height:100%;text-align:center;margin:0 auto;border-ridius:0;}.keranjang.mobile .keranjang-icon svg{position:relative;display:block;margin:0 auto;width:36px;height:36px;}.keranjang.mobile .keranjang-icon path{fill:#444444;}.keranjang.mobile .simpleCart_quantity{top:-5px;left:50%;}}
 /* Tabel Daftar Belanja*/
 .keranjang-box .simpleCart_items::-webkit-scrollbar{width:2px;background-color:transparent}
 .keranjang-box:hover .simpleCart_items::-webkit-scrollbar-thumb{background-color:#ddd;border-radius:5px}
 .keranjang-box .headerRow,.keranjang-box .item-price{display:none}
-.keranjang-box .simpleCart_items{max-height: 250px;overflow-y:auto;margin-bottom:20px;padding: 10px 10px 0 10px;box-shadow: inset #33333387 0 3px 1px -2px, inset #33333387 0 2px 2px 0, inset #33333387 0 1px 5px 0;border-radius: 3px;}
+.keranjang-box .simpleCart_items{max-height: 253px;overflow-y:auto;margin-bottom:20px;padding: 10px 10px 0 10px;box-shadow: inset #000 0px -5px 8px -6px, inset #000 0 5px 8px -6px;border-radius: 3px;}
 .keranjang-box .itemRow{overflow:hidden;font-size:12px;line-height:1.5;width:100%;font-weight:700;display:inline-block;margin-bottom: 10px;}
 .keranjang-box .simpleCart_items::after {content: "";text-align: center;z-index: 0;position: absolute;top: 50px;left: 50%;padding: 10px;transform: translate(-50%,-45%);max-width: 500px;width: 90%;overflow: hidden;margin: auto;}
-.keranjang-box .item-thumb{float:left;}
+.keranjang-box .item-thumb{float:left}
 .keranjang-box .item-thumb img{width:95px;height:auto;border-radius:.3rem;float:left;margin:0 10px 0 0}
 .keranjang-box .item-decrement,.item-quantity,.keranjang-box .item-increment{font-size:12px;display:table-cell}
 .keranjang-box .item-berat {display: none;}
@@ -200,7 +194,8 @@
 .keranjang-box .item-total{color:#ff460c;font-weight:600;font-size:14px}
 .keranjang-box sp.sub-total{display:inline-block;color:#333}
 .keranjang-box .item-remove,.simpleCart_items .item-remove{float:right;display:block;position:relative;}
-.keranjang-box .item-link {display: none;margin: 3px -5px -5px;padding: 3px 5px;}.keranjang-box .simpleCart_increment{background-image:url("data:image/svg+xml,<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M13,7H11V11H7V13H11V17H13V13H17V11H13V7Z' fill='%23a6a6ad'/></svg>")!important}
+.keranjang-box .item-link {margin: 3px -5px -5px;padding: 3px 5px;}
+.keranjang-box .simpleCart_increment{background-image:url("data:image/svg+xml,<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M13,7H11V11H7V13H11V17H13V13H17V11H13V7Z' fill='%23a6a6ad'/></svg>")!important}
 .keranjang-box .simpleCart_increment,.keranjang-box .simpleCart_decrement{width:20px;height:20px;cursor:pointer;display:inline-block;background-image:url("data:image/svg+xml,<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M7,13H17V11H7' fill='%23a6a6ad'/></svg>");background-size:20px 20px;background-position:center center;background-repeat:no-repeat;vertical-align:middle;text-indent:-9999px}
 .keranjang-box .item-remove a.simpleCart_remove,.simpleCart_items .item-remove a.simpleCart_remove{display:block;width:20px;height:20px;background:url("data:image/svg+xml,<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19M8.46,11.88L9.87,10.47L12,12.59L14.12,10.47L15.53,11.88L13.41,14L15.53,16.12L14.12,17.53L12,15.41L9.88,17.53L8.47,16.12L10.59,14L8.46,11.88M15.5,4L14.5,3H9.5L8.5,4H5V6H19V4H15.5Z' fill='%23a6a6ad'/></svg>") no-repeat;text-indent:-9999px;background-size:20px}
 .keranjang-box a.view-cart,.keranjang-box a.tombol-bukatutup{position:relative;display:inline-block;color:#ffffff;padding:5px 10px;border-radius:15px;text-align:center;width:40%}
@@ -209,82 +204,70 @@
 .keranjang-box a.view-cart:after{content: "Bayar Sekarang";}
 .keranjang-box a.view-cart.active:after{content: "Tutup";}
 .keranjang-box .ck-btn{margin-bottom:10px;text-align:center}
-.keranjang-box .harga-total{margin:0 0 10px;padding:0 8px;font-size:14px;font-weight:500}
+.keranjang-box .harga-total{margin:0 0 10px;padding:10px;font-size:14px;font-weight:500}
 .keranjang-box span.simpleCart_total{font-size:16px;font-weight:600;color:#ff460c}
 #jam, #menit, #detik{display:inline-block;}
 #jam-digital,#hasil,.wrapper-footer,.fab{display:none;}
 .produk-page {margin:0px!important;}
 span.simpleCart_shipping, span.simpleCart_grandTotal {font-weight: 600;color:#ff460c;}
 </style>
+        <ion-card class="cart-page">
+            <ion-list>
+<ion-list-header> Keranjang Belanja <ion-note color="primary" class="simpleCart_quantity" slot="end"></ion-note></ion-list-header>
+               <ion-item-sliding>
   <div class="keranjang-box simplecart-cart">
     <div class="simpleCart_items"></div>
+               </ion-item-sliding>
     <div class="harga-total">
-   <ion-label><span>Total Pembelian </span><span class="simpleCart_quantity"></span> items : <span class="simpleCart_total"></span> </ion-label><br />
-<span style="font-size:10px;">( *Belum Termasuk Ongkir )</span>
-    
-    
+      <span>Grand Total: </span><span class="simpleCart_quantity"></span> items = <span class="simpleCart_total"></span>
+          <ion-button class="co-btn item_add" style="float: right;" onclick="checkOut()">CheckOut</ion-button><br />
+ <span style="font-size:10px;">( *Belum Termasuk Ongkir )</span>
     </div>
-</div>
-
-</ion-card-content>
+  </div>
+</ion-list>
 </ion-card>
 
-<ion-card class="card-form" style="max-width: 680px;padding:6px;width: 100%;border: 1px solid #eee;border-radius: 5px;box-shadow: rgb(0 0 0 / 20%) 0px 3px 1px -2px, rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 1px 5px 0px;">
-<form class='wrapHead data-form validate-form' id='whatsapp-order'>
-<div class="not_if">
-      <span>Total belanja </span>sebesar <b><span class="simpleCart_total"></span></b><p/>
-<span style="font-size:10px;"> ( *Belum Termasuk Ongkir )</span><p/>
-<ion-note color="danger">Silahkan isi data pengiriman dibawah ini..</ion-note>
-</div>
-<p/><br/>
-<input class='order' id='AdminToko' type='hidden'/>
-<ion-item>
-  <ion-label position="stacked">Nama Lengkap</ion-label>
-                  <ion-input id="nama" type="text" class="nama wajib" placeholder="Nama Lengkap"></ion-input>
-</ion-item>
-<ion-item>
-  <ion-label position="stacked">No. WhatsApp</ion-label>
-                  <ion-input id="nomor" type="number" min="11" class="nomor wajib" placeholder="Nomor WhatsApp"></ion-input>
-</ion-item>
-<ion-item>
-  <ion-label position="stacked">E-Mail</ion-label>
-                  <ion-input id="email" type="email" class="email wajib" placeholder="Alamat E-mail"></ion-input>
-</ion-item>
-        <ion-item>
-          <ion-label>Kurir</ion-label>
-          <ion-select class="informasi wajib" value="J%26T Express" placeholder="Pilih Kurir " interface="action-sheet">
-            <ion-select-option value="J%26T Express">J&amp;T Express</ion-select-option>
-            <ion-select-option value="JNE Express">JNE Express</ion-select-option>
-            <ion-select-option value="*Grab Express">*GrabExpress</ion-select-option>
-            <ion-select-option value="*GoSend">*GoSend</ion-select-option>
-          </ion-select>
-        </ion-item>
-        <ion-item>
-          <ion-label position="stacked">Alamat Pengiriman</ion-label>
-          <ion-input id="alamat" class="alamat wajib" placeholder="Alamat Rumah"></ion-input>
-          <ion-input id="kota" class="kota wajib" placeholder="Kota"></ion-input>
-          <ion-input id="provinsi" class="provinsi wajib" placeholder="Provinsi"></ion-input>
-          <ion-input id="kodepos" class="kodepos wajib" placeholder="Kode Pos"></ion-input>
-        </ion-item>
-<br/><p/>
-      <ion-router-link id='order' class="order">
-<ion-chip color="success" style="float:right;">
-<ion-icon name="logo-whatsapp"></ion-icon>
-<ion-label>Send Order</ion-label>
-</ion-chip>
-</ion-router-link>
-</form>
-<div class="g-recaptcha"
-      data-sitekey="6LdPL-wZAAAAAAzUvjEWXHGLAgKL78wBzB1IR8t7"
-      data-callback="onSubmit"
-      data-size="invisible">
-</div>
-<script>grecaptcha.execute();</script>
-</ion-card>
+  </div>
 
-
-    
+     </div>
     </div>
+    <style>
+.widgetCopyright .widgetFooter {
+    padding: 40px 0;
+    font-size: 95%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+    text-align: center;
+}
+.widgetCopyright .widgetFooter .widget .payShipIcon li {
+    display: inline-block;
+    height: 36px;
+    width: 72px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    margin: 3px 2px;
+    background-color: #fff;
+    border-radius: 2px;
+    background-position: center center;
+    background-size: 70% auto;
+    background-repeat: no-repeat;
+}
+
+@media (min-width: 320px) and (max-width: 767.98px){
+.widgetCopyright .widgetFooter {
+    padding: 40px 20px;
+    font-size: 95%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 40px;}
+}
+.widget-content {
+    padding-top: 15px;
+}
+.fancybox__content{padding:0px;}
+</style>
+
+
 
     
       </ion-content>
@@ -310,11 +293,11 @@ function myProduct() {
 }
 
 function checkOut() {
-  location.replace('/checkout')
+  location.replace('/p=p62s_checkout')
 }
 
 function myCart() {
-  location.replace('/cart')
+  location.replace('/p=p62s_cart')
 }
 </script>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
@@ -468,7 +451,102 @@ $(function() {
 </script>
 
 
-
+<ion-modal  trigger="trigger-cart" id="Cart">
+<ion-modal-header collapse="fade" translucent="true">
+        <ion-toolbar>
+<ion-title>Keranjang Belanja</ion-title>
+    <ion-buttons slot="end">
+      <ion-button onClick="dismissCart()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+        </ion-toolbar>
+     </ion-modal-header>
+<ion-content>
+<style>.keranjang-box .simpleCart_items {max-height: 330px!important;}@media only screen and (max-width:767px){.keranjang-box .simpleCart_items {max-height: 640px!important;}}</style>
     
+<style>
+.keranjang.dekstop{position:relative;width:60px;text-align:left;padding:5px 0;-webkit-box-ordinal-group:3;-ms-flex-order:3;order:3;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}
+.notif-tambah-product{width:255px;position:absolute;z-index:99;font-size:14px;right:-10px;background:#00b35e;padding:10px 20px;opacity:1;display:none;color:#fff;top:65px;border-radius:15px;-webkit-box-shadow:0 2px 5px 0 rgba(56,56,56,.49);box-shadow:0 2px 5px 0 rgba(56,56,56,.49);}
+.keranjang .simpleCart_quantity{width:20px;height:20px;background:#ff0000;position:absolute;border-radius:100%;color:#ffffff;text-align:center;line-height:20px;font-size:12px;z-index:3}
+.keranjang.dekstop .simpleCart_quantity{top:3px;left:30px;}
+.keranjang-box{overflow-x:hidden;overflow-y:auto}
+.keranjang-box .close-keranjang{position:absolute;right:15px;padding:5px;border:1px solid #ddd;border-radius:15px;font-size:10px;font-weight:600}
+.keranjang-box .close-keranjang a.tombol-bukatutup{width:auto;background:transparent;color:#444444;padding:0 2px}
+.background-transparent-box{position:fixed;z-index:999;top:0;left:0;width:100%;height:100%;background:rgba(0, 0, 0, 0.5);display:none;}
+.keranjang.dekstop .keranjang-icon{display:inline-block;padding:7px;margin:3px 0 3px 5px;border-radius:20px;width:24px;height:24px;cursor:pointer;-webkit-transition:all .2s;transition:all .2s}
+.keranjang.dekstop .keranjang-icon svg{height:22px;width:22px;display:inline-block;}
+.keranjang.dekstop .keranjang-icon path{fill:#ffffff;}
+@media only screen and (max-width:767px){.is-post .keranjang.mobile,.keranjang.dekstop{display:none;}.is-post .keranjang.dekstop{display:block;}.keranjang.mobile{position:relative;display:block;width:100%;text-align:center;}.keranjang.mobile .keranjang-icon{display:block;width:100%;height:100%;text-align:center;margin:0 auto;border-ridius:0;}.keranjang.mobile .keranjang-icon svg{position:relative;display:block;margin:0 auto;width:36px;height:36px;}.keranjang.mobile .keranjang-icon path{fill:#444444;}.keranjang.mobile .simpleCart_quantity{top:-5px;left:50%;}}
+/* Tabel Daftar Belanja*/
+.keranjang-box .simpleCart_items::-webkit-scrollbar{width:2px;background-color:transparent}
+.keranjang-box:hover .simpleCart_items::-webkit-scrollbar-thumb{background-color:#ddd;border-radius:5px}
+.keranjang-box .headerRow,.keranjang-box .item-price{display:none}
+.keranjang-box .simpleCart_items{max-height: 250px;overflow-y:auto;margin-bottom:20px;padding: 10px 10px 0 10px;box-shadow: inset #33333387 0 3px 1px -2px, inset #33333387 0 2px 2px 0, inset #33333387 0 1px 5px 0;border-radius: 3px;}
+.keranjang-box .itemRow{overflow:hidden;font-size:12px;line-height:1.5;width:100%;font-weight:700;display:inline-block;margin-bottom: 10px;}
+.keranjang-box .simpleCart_items::after {content: "";text-align: center;z-index: 0;position: absolute;top: 50px;left: 50%;padding: 10px;transform: translate(-50%,-45%);max-width: 500px;width: 90%;overflow: hidden;margin: auto;}
+.keranjang-box .item-thumb{float:left;}
+.keranjang-box .item-thumb img{width:95px;height:auto;border-radius:.3rem;float:left;margin:0 10px 0 0}
+.keranjang-box .item-decrement,.item-quantity,.keranjang-box .item-increment{font-size:12px;display:table-cell}
+.keranjang-box .item-berat {display: none;}
+.keranjang-box .item-totalberat {display: none;}
+.keranjang-box .item-name{font-size:13px;display:inline-block}
+.keranjang-box .item-pilihan1,.keranjang-box .item-pilihan2,.keranjang-box .item-varian1,.keranjang-box .item-varian2,.item-total{font-size:10px}
+.keranjang-box .item-pilihan1,.keranjang-box .item-pilihan2{float:left;margin-right:5px}
+.keranjang-box .item-quantity{padding:0 10px;font-size:14px;vertical-align:middle}
+.keranjang-box .item-total{color:#ff460c;font-weight:600;font-size:14px}
+.keranjang-box sp.sub-total{display:inline-block;color:#333}
+.keranjang-box .item-remove,.simpleCart_items .item-remove{float:right;display:block;position:relative;}
+.keranjang-box .item-link {display: none;margin: 3px -5px -5px;padding: 3px 5px;}.keranjang-box .simpleCart_increment{background-image:url("data:image/svg+xml,<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M13,7H11V11H7V13H11V17H13V13H17V11H13V7Z' fill='%23a6a6ad'/></svg>")!important}
+.keranjang-box .simpleCart_increment,.keranjang-box .simpleCart_decrement{width:20px;height:20px;cursor:pointer;display:inline-block;background-image:url("data:image/svg+xml,<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M7,13H17V11H7' fill='%23a6a6ad'/></svg>");background-size:20px 20px;background-position:center center;background-repeat:no-repeat;vertical-align:middle;text-indent:-9999px}
+.keranjang-box .item-remove a.simpleCart_remove,.simpleCart_items .item-remove a.simpleCart_remove{display:block;width:20px;height:20px;background:url("data:image/svg+xml,<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19M8.46,11.88L9.87,10.47L12,12.59L14.12,10.47L15.53,11.88L13.41,14L15.53,16.12L14.12,17.53L12,15.41L9.88,17.53L8.47,16.12L10.59,14L8.46,11.88M15.5,4L14.5,3H9.5L8.5,4H5V6H19V4H15.5Z' fill='%23a6a6ad'/></svg>") no-repeat;text-indent:-9999px;background-size:20px}
+.keranjang-box a.view-cart,.keranjang-box a.tombol-bukatutup{position:relative;display:inline-block;color:#ffffff;padding:5px 10px;border-radius:15px;text-align:center;width:40%}
+.keranjang-box a.view-cart{background:#20d374}
+.keranjang-box a.tombol-bukatutup{background:#ff5621}
+.keranjang-box a.view-cart:after{content: "Bayar Sekarang";}
+.keranjang-box a.view-cart.active:after{content: "Tutup";}
+.keranjang-box .ck-btn{margin-bottom:10px;text-align:center}
+.keranjang-box .harga-total{margin:0 0 10px;padding:0 8px;font-size:14px;font-weight:500}
+.keranjang-box span.simpleCart_total{font-size:16px;font-weight:600;color:#ff460c}
+#jam, #menit, #detik{display:inline-block;}
+#jam-digital,#hasil,.wrapper-footer,.fab{display:none;}
+.produk-page {margin:0px!important;}
+span.simpleCart_shipping, span.simpleCart_grandTotal {font-weight: 600;color:#ff460c;}
+</style>
+  <div class="keranjang-box simplecart-cart">
+    <div class="simpleCart_items"></div>
+    <div class="harga-total">
+   <ion-label><span>Total Pembelian </span><span class="simpleCart_quantity"></span> items : <span class="simpleCart_total"></span> </ion-label><br />
+<span style="font-size:10px;">( *Belum Termasuk Ongkir )</span>
+    
+    
+    </div>
+</div>
+
+</ion-content>
+</ion-modal>
+<script>
+  const sheetModal = document.querySelector('#sheetOrder');
+  const cardModal = document.querySelector('#Cart');
+
+  sheetModal.breakpoints = [0.0, 0.6, 0.0];
+  sheetModal.initialBreakpoint = 0.6;
+  
+  cardModal.swipeToClose = true;
+  cardModal.presentingElement = document.querySelector('ion-app');
+
+async function dismissCart() {
+  await cardModal.dismiss({
+    'dismissed': true
+  });
+}
+
+async function dismissWa() {
+  await sheetModal.dismiss({
+    'dismissed': true
+  });
+}
+
+</script>
 
 </html>

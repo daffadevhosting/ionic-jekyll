@@ -143,6 +143,114 @@
   }
 }
 </script>
+    {% if page.url == '/product/' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "LocalBusiness",
+  "name": "Plus62 Store",
+  "address": "Jl. Gn. Lingga, Cibeuti, Rt.003/012Kawalu - Tasikmalaya 46182.",
+  "image": "https://1.bp.blogspot.com/-1bWHHqO2Jt0/X2ZgjgIVRVI/AAAAAAAAFZ8/XCb6roqGxhIn-K34II1L8BuLDoAePrmsgCLcBGAsYHQ/s0/192x192.png",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": " 5",
+    "ratingCount": "3550",
+    "bestRating": "3500",
+    "reviewCount": "2657"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "-7.382312105672588",
+    "longitude": "108.19063653829551"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "validFrom": "2021-01-01T00:00:00.000Z",
+    "validThrough": "3000-01-01T00:00:00.000Z",
+    "opens": "07:00",
+    "closes": "16:00",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ]
+  },
+  "telephone": "081386267897",
+  "priceRange": "Rp. 22.000",
+  "department": [
+    {
+      "@type": "LocalBusiness",
+      "name": "Plus62 Store",
+      "address": "Jl. Gn. Lingga, Cibeuti, Rt.003/012\nKawalu - Tasikmalaya 46182.\n\nLihat di Google Maps",
+      "image": "https://1.bp.blogspot.com/-1bWHHqO2Jt0/X2ZgjgIVRVI/AAAAAAAAFZ8/XCb6roqGxhIn-K34II1L8BuLDoAePrmsgCLcBGAsYHQ/s0/192x192.png",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+    "ratingValue": " 5",
+    "ratingCount": "3550",
+    "bestRating": "3500",
+    "reviewCount": "2657"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-7.382304125745099",
+        "longitude": "108.19063653829551"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "validFrom": "2021-01-01T00:00:00.000Z",
+        "validThrough": "3000-01-01T00:00:00.000Z",
+        "opens": "07:00",
+        "closes": "16:00",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ]
+      },
+      "telephone": "081386267897",
+      "priceRange": "Rp. 20.000",
+      "menu": "https://plus62store.my.id/product",
+      "url": "https://plus62store.my.id"
+    }
+  ],
+  "menu": "https://plus62store.my.id/product",
+  "servesCuisine": "Masker Bordir Manual",
+  "url": "https://plus62store.my.id"
+}
+</script>
+    {% endif %}
+    {% if page.layout == 'post' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Article",
+  "author": {
+    "@type": "Person",
+    "name": "NoBody"
+  },
+  "headline": "{{ page.title }}",
+  "image": {
+    "@type": "ImageObject",
+    "url": "{{ page.img }}"
+  },
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "publisher": {
+    "@type": "Organization",
+    "name": "NoBody",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://1.bp.blogspot.com/-1bWHHqO2Jt0/X2ZgjgIVRVI/AAAAAAAAFZ8/XCb6roqGxhIn-K34II1L8BuLDoAePrmsgCLcBGAsYHQ/s0/192x192.png"
+    }
+  },
+  "keywords": "{{ page.title }}",
+  "description": "{{ page.excerpt| strip_html }}"
+}
+</script>
+    {% endif %}
     {% include fb-pixel.html %}
     {% include onesignal.html %}
     {% include analytics.html %}

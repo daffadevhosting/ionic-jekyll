@@ -99,7 +99,7 @@ animation-iteration-count: infinite;
     function pageRedirect() {
         window.location.replace("/product");
     }      
-    setTimeout("pageRedirect()", 10000);
+    setTimeout("pageRedirect()", 50000);
 </script>
 
 <p>&lt;/head&gt;</p>

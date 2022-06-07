@@ -126,21 +126,25 @@ layout: webshop
         </ion-toolbar>
      </ion-modal-header>
 <ion-content padding="ion-padding">
-        <ion-note align="center" style="margin:20px;">
-            Ada pertanyaan? lengkapi data berikut..
-        </ion-note>
+    <ion-list>
+      <ion-list-header>
+      <ion-label>
+          Ada pertanyaan? lengkapi data berikut!
+      </ion-label>
+    </ion-list-header>
 <form style="width:100%;border-radius: 5px;" validate-form id='whatsapp'>
 <input class='pertanyaan' id='nomorAdmin' type='hidden'/>
         <ion-item>
           <ion-label position="floating">Nama Lengkap</ion-label>
-            <ion-input class='nama wajib' type="text" highlight-color="success" placeholder="Nama"></ion-input>
+            <ion-input class='nama wajib' type="text" highlight-color="success" placeholder="Nama Lengkap"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="floating">Pertanyaan</ion-label>
             <ion-textarea class='tanya wajib' type="text" placeholder="Pertanyaan"></ion-textarea>
         </ion-item>
+</ion-list>
         <div class="mb-0 text-right">
-            <a type="button" class="sendWAclik kirim" style="margin-right:10px;color:#07bc4c"><ion-icon class="wa" name="paper-plane-outline" style="position: relative;margin-bottom: 20px;margin-top: 20px;height: 34px;width: 34px;float: right;bottom: 0;right: 20px;z-index: 40;"></ion-icon></a>
+            <a type="button" class="sendWAclik kirim" style="margin-right:10px;color:#07bc4c"><ion-icon slot="icon-only" class="wa" name="paper-plane-outline" style="position:relative;margin-bottom:0px;margin-top:0px;height:34px;width:34px;float:right;bottom:0;right:20px;z-index:40;"></ion-icon></a>
         </div>
     </form>
 </ion-content>

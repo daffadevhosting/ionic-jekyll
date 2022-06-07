@@ -7,6 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light darkmode" />
 <meta name="google-site-verification" content="" />
+<meta name="yandex-verification" content="42c9b7a5a8c7355c" />
 <meta http-equiv='cache-control' content='no-cache'>
 <meta http-equiv='expires' content='0'>
 <meta http-equiv='pragma' content='no-cache'>
@@ -95,6 +96,8 @@
   }
 }
 </script>
+    
+    
     <!-- Facebook Pixel Code -->
     
 <!-- End Facebook Pixel Code -->
@@ -545,11 +548,11 @@ function myProduct() {
 }
 
 function checkOut() {
-  location.replace('/checkout')
+  location.replace('/p=p62s_checkout')
 }
 
 function myCart() {
-  location.replace('/cart')
+  location.replace('/p=p62s_cart')
 }
 </script>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
@@ -787,8 +790,8 @@ span.simpleCart_shipping, span.simpleCart_grandTotal {font-weight: 600;color:#ff
   const sheetModal = document.querySelector('#sheetOrder');
   const cardModal = document.querySelector('#Cart');
 
-  sheetModal.breakpoints = [0.1, 0.5, 1];
-  sheetModal.initialBreakpoint = 0.5;
+  sheetModal.breakpoints = [0.0, 0.6, 0.0];
+  sheetModal.initialBreakpoint = 0.6;
   
   cardModal.swipeToClose = true;
   cardModal.presentingElement = document.querySelector('ion-app');

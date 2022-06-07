@@ -1,11 +1,4 @@
----
-layout: cart-page
-title: Keranjang Belanja
-value: cart
-permalink: /p=p62s_cart.html
----
-
-<style>
+I"Ì<style>
 .keranjang.dekstop{position:relative;width:60px;text-align:left;padding:5px 0;-webkit-box-ordinal-group:3;-ms-flex-order:3;order:3;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}
 .notif-tambah-product{width:255px;position:absolute;z-index:99;font-size:14px;right:-10px;background:#00b35e;padding:10px 20px;opacity:1;display:none;color:#fff;top:65px;border-radius:15px;-webkit-box-shadow:0 2px 5px 0 rgba(56,56,56,.49);box-shadow:0 2px 5px 0 rgba(56,56,56,.49);}
 .keranjang .simpleCart_quantity{width:20px;height:20px;background:#ff0000;position:absolute;border-radius:100%;color:#ffffff;text-align:center;line-height:20px;font-size:12px;z-index:3}
@@ -54,18 +47,22 @@ permalink: /p=p62s_cart.html
 .produk-page {margin:0px!important;}
 span.simpleCart_shipping, span.simpleCart_grandTotal {font-weight: 600;color:#ff460c;}
 </style>
-        <ion-card class="cart-page">
-            <ion-list>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;ion-card class="cart-page"&gt;
+        &lt;ion-list&gt;
+</code></pre></div></div>
 <ion-list-header> Keranjang Belanja <ion-note color="primary" class="simpleCart_quantity" slot="end"></ion-note></ion-list-header>
-               <ion-item-sliding>
-  <div class="keranjang-box simplecart-cart">
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>           &lt;ion-item-sliding&gt;
+</code></pre></div></div>
+<div class="keranjang-box simplecart-cart">
     <div class="simpleCart_items"></div>
-               </ion-item-sliding>
+               &lt;/ion-item-sliding&gt;
     <div class="harga-total">
       <span>Grand Total: </span><span class="simpleCart_quantity"></span> items = <span class="simpleCart_total"></span>
-          <ion-button class="co-btn item_add" style="float: right;" onclick="checkOut()">CheckOut</ion-button><br />
+          <ion-button class="co-btn item_add" style="float: right;" onclick="myCart()">CheckOut</ion-button><br />
  <span style="font-size:10px;">( *Belum Termasuk Ongkir )</span>
     </div>
   </div>
-</ion-list>
-</ion-card>
+<p>&lt;/ion-list&gt;
+&lt;/ion-card&gt;</p>
+:ET

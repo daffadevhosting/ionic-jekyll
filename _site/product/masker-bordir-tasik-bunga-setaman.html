@@ -7,6 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light darkmode" />
 <meta name="google-site-verification" content="" />
+<meta name="yandex-verification" content="42c9b7a5a8c7355c" />
 <meta http-equiv='cache-control' content='no-cache'>
 <meta http-equiv='expires' content='0'>
 <meta http-equiv='pragma' content='no-cache'>
@@ -145,6 +146,8 @@
   }
 }
 </script>
+    
+    
     <!-- Facebook Pixel Code -->
     
 <!-- End Facebook Pixel Code -->
@@ -224,31 +227,31 @@
         				<ion-router-link data-fancybox="gallery" href="https://cf.shopee.co.id/file/4160ff1e3d6532387c2cb1e42c586989"><img src="https://cf.shopee.co.id/file/4160ff1e3d6532387c2cb1e42c586989" itemprop="image"></ion-router-link>
           		</div>
           	
-          		<div id="product-2" class="style bounceIn" style="display:none;">
+          		<div id="product-2" class="style bounceIn"  style="display:none;" >
         				<ion-router-link data-fancybox="gallery" href="https://cf.shopee.co.id/file/9649bf37febbade6aeb380a951cf0376"><img src="https://cf.shopee.co.id/file/9649bf37febbade6aeb380a951cf0376" itemprop="image"></ion-router-link>
           		</div>
           	
-          		<div id="product-3" class="style bounceIn" style="display:none;">
+          		<div id="product-3" class="style bounceIn"  style="display:none;" >
         				<ion-router-link data-fancybox="gallery" href="https://cf.shopee.co.id/file/3e11780af679aa177f7f9bef5efd8292"><img src="https://cf.shopee.co.id/file/3e11780af679aa177f7f9bef5efd8292" itemprop="image"></ion-router-link>
           		</div>
           	
-          		<div id="product-4" class="style bounceIn" style="display:none;">
+          		<div id="product-4" class="style bounceIn"  style="display:none;" >
         				<ion-router-link data-fancybox="gallery" href="https://cf.shopee.co.id/file/e30dd74e5e3b3ba1cd6b289e11d8dcbf"><img src="https://cf.shopee.co.id/file/e30dd74e5e3b3ba1cd6b289e11d8dcbf" itemprop="image"></ion-router-link>
           		</div>
           	
-          		<div id="product-5" class="style bounceIn" style="display:none;">
+          		<div id="product-5" class="style bounceIn"  style="display:none;" >
         				<ion-router-link data-fancybox="gallery" href="https://cf.shopee.co.id/file/727b24e57f150c74d154a98820d3a113"><img src="https://cf.shopee.co.id/file/727b24e57f150c74d154a98820d3a113" itemprop="image"></ion-router-link>
           		</div>
           	
-          		<div id="product-6" class="style bounceIn" style="display:none;">
+          		<div id="product-6" class="style bounceIn"  style="display:none;" >
         				<ion-router-link data-fancybox="gallery" href="https://cf.shopee.co.id/file/2b6e2a502ef2d019edcc23a5c7d6f2c4"><img src="https://cf.shopee.co.id/file/2b6e2a502ef2d019edcc23a5c7d6f2c4" itemprop="image"></ion-router-link>
           		</div>
           	
-          		<div id="product-7" class="style bounceIn" style="display:none;">
+          		<div id="product-7" class="style bounceIn"  style="display:none;" >
         				<ion-router-link data-fancybox="gallery" href="https://cf.shopee.co.id/file/558f78e9145e397d7602680aab8f9e46"><img src="https://cf.shopee.co.id/file/558f78e9145e397d7602680aab8f9e46" itemprop="image"></ion-router-link>
           		</div>
           	
-          		<div id="product-8" class="style bounceIn" style="display:none;">
+          		<div id="product-8" class="style bounceIn"  style="display:none;" >
         				<ion-router-link data-fancybox="gallery" href="https://cf.shopee.co.id/file/54598674c8596988d618a624476ef710"><img src="https://cf.shopee.co.id/file/54598674c8596988d618a624476ef710" itemprop="image"></ion-router-link>
           		</div>
           	
@@ -403,21 +406,25 @@ Bahan kain 100% Katun dengan 3 lapisan,
         </ion-toolbar>
      </ion-modal-header>
 <ion-content padding="ion-padding">
-        <ion-note align="center" style="margin:20px;">
-            Ada pertanyaan? lengkapi data berikut..
-        </ion-note>
+    <ion-list>
+      <ion-list-header>
+      <ion-label>
+          Ada pertanyaan? lengkapi data berikut!
+      </ion-label>
+    </ion-list-header>
 <form style="width:100%;border-radius: 5px;" validate-form id='whatsapp'>
 <input class='pertanyaan' id='nomorAdmin' type='hidden'/>
         <ion-item>
           <ion-label position="floating">Nama Lengkap</ion-label>
-            <ion-input class='nama wajib' type="text" highlight-color="success" placeholder="Nama"></ion-input>
+            <ion-input class='nama wajib' type="text" highlight-color="success" placeholder="Nama Lengkap"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="floating">Pertanyaan</ion-label>
             <ion-textarea class='tanya wajib' type="text" placeholder="Pertanyaan"></ion-textarea>
         </ion-item>
+</ion-list>
         <div class="mb-0 text-right">
-            <a type="button" class="sendWAclik kirim" style="margin-right:10px;color:#07bc4c"><ion-icon class="wa" name="paper-plane-outline" style="position: relative;margin-bottom: 20px;margin-top: 20px;height: 34px;width: 34px;float: right;bottom: 0;right: 20px;z-index: 40;"></ion-icon></a>
+            <a type="button" class="sendWAclik kirim" style="margin-right:10px;color:#07bc4c"><ion-icon slot="icon-only" class="wa" name="paper-plane-outline" style="position:relative;margin-bottom:0px;margin-top:0px;height:34px;width:34px;float:right;bottom:0;right:20px;z-index:40;"></ion-icon></a>
         </div>
     </form>
 </ion-content>
@@ -489,11 +496,11 @@ function myProduct() {
 }
 
 function checkOut() {
-  location.replace('/checkout')
+  location.replace('/p=p62s_checkout')
 }
 
 function myCart() {
-  location.replace('/cart')
+  location.replace('/p=p62s_cart')
 }
 </script>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
@@ -651,7 +658,7 @@ var _0x12b9=['console','jkFHd','counter','wcuZU','test','NQuvv','trace','SUfaX',
 </script>
 <script>
 function myCart() {
-  location.replace("/cart")
+  location.replace("/p=p62s_cart")
 }
 </script>
 
@@ -786,8 +793,8 @@ span.simpleCart_shipping, span.simpleCart_grandTotal {font-weight: 600;color:#ff
   const sheetModal = document.querySelector('#sheetOrder');
   const cardModal = document.querySelector('#Cart');
 
-  sheetModal.breakpoints = [0.1, 0.5, 1];
-  sheetModal.initialBreakpoint = 0.5;
+  sheetModal.breakpoints = [0.0, 0.6, 0.0];
+  sheetModal.initialBreakpoint = 0.6;
   
   cardModal.swipeToClose = true;
   cardModal.presentingElement = document.querySelector('ion-app');

@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light darkmode" />
 <meta name="google-site-verification" content="" />
+<meta name="yandex-verification" content="42c9b7a5a8c7355c" />
 <meta http-equiv='cache-control' content='no-cache'>
 <meta http-equiv='expires' content='0'>
 <meta http-equiv='pragma' content='no-cache'>
@@ -94,6 +95,8 @@
   }
 }
 </script>
+    
+    
     <!-- Facebook Pixel Code -->
     
 <!-- End Facebook Pixel Code -->
@@ -155,7 +158,13 @@
     <div id="main" role="main" class="container">
       <article class="post-page">
   <div class="entry">
-    <style>main{background: #eceff1!important;}small{font-size:12px;}ion-header, ion-footer{display:none;}.qris{width:335px;}.navbar,.footer{display:none;}.gif{width:300px;margin-top: 12%!important;border-radius:3%;margin:auto;}</style>
+    <script>
+    function pageRedirect() {
+        window.location.replace("/pembayaran");
+    }      
+    setTimeout("pageRedirect()", 5000);  
+</script>
+<style>main{background: #eceff1!important;}small{font-size:12px;}ion-header, ion-footer{display:none;}.qris{width:335px;}.navbar,.footer{display:none;}.gif{width:300px;margin-top: 12%!important;border-radius:3%;margin:auto;}</style>
 <ion-card class="gif">
 <img src="/assets/images/success.gif"/><ion-item><ion-icon color="primary" name="checkmark-done-outline" slot="start"></ion-icon><ion-label>Order Berhasil Terkirim</ion-label><ion-icon color="success" name="logo-whatsapp" slot="end"></ion-icon></ion-item> <ion-item color="primary" href="/pembayaran"><ion-icon name="cash-outline" slot="start"></ion-icon><ion-label>Pembayaran DISINI</ion-label><ion-icon name="chevron-forward-outline" slot="end"></ion-icon></ion-item></ion-card>
 
@@ -189,11 +198,11 @@ function myProduct() {
 }
 
 function checkOut() {
-  location.replace('/checkout')
+  location.replace('/p=p62s_checkout')
 }
 
 function myCart() {
-  location.replace('/cart')
+  location.replace('/p=p62s_cart')
 }
 </script>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>

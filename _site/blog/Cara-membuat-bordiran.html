@@ -110,7 +110,7 @@
     "@type": "ImageObject",
     "url": "/assets/images/blog/Logo-Bordir.jpg"
   },
-  "datePublished": "2022-06-08T06:48:27+07:00",
+  "datePublished": "2022-06-09T22:21:39+07:00",
   "publisher": {
     "@type": "Organization",
     "name": "NoBody",
@@ -270,7 +270,7 @@ Semoga artikel ini bermanfaat.Jangan sungkan memberikan masukan atau saran pada 
 
 
   <div class="date">
-    Written on June  8, 2022
+    Written on June  9, 2022
   </div>
   </ion-card-content>
 </ion-card>
@@ -473,6 +473,13 @@ $(function() {
 //]]>
 </script>
 
+<script>
+  if('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js')
+    })
+  }
+</script>
 
 
     

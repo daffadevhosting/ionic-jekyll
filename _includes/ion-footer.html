@@ -129,3 +129,10 @@ function myBri() {
     <script src="{{site.baseurl}}/assets/js/question.js" type="text/javascript"></script>
 
 {% include jsScript.html %}
+<script>
+  if('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('{{ site.baseurl }}/sw.js')
+    })
+  }
+</script>

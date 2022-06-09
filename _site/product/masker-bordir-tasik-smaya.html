@@ -747,6 +747,13 @@ $(function() {
 //]]>
 </script>
 
+<script>
+  if('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js')
+    })
+  }
+</script>
 
 <ion-modal  trigger="trigger-cart" id="Cart">
 <ion-modal-header collapse="fade" translucent="true">

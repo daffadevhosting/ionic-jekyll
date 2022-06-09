@@ -110,7 +110,7 @@
     "@type": "ImageObject",
     "url": "https://1.bp.blogspot.com/-WAXDCl6E0cA/X424RdO-zTI/AAAAAAAAFvw/R8QvOZ6ActYeoHM1kG-AKFp3xU2OPC2MQCLcBGAsYHQ/s1280/securitydevicetimeout.jpg"
   },
-  "datePublished": "2022-06-08T06:48:27+07:00",
+  "datePublished": "2022-06-09T22:21:39+07:00",
   "publisher": {
     "@type": "Organization",
     "name": "NoBody",
@@ -243,7 +243,7 @@ Langkah yang pertama silakan Anda download terlebih dahulu file <a href="http://
 
 
   <div class="date">
-    Written on June  8, 2022
+    Written on June  9, 2022
   </div>
   </ion-card-content>
 </ion-card>
@@ -446,6 +446,13 @@ $(function() {
 //]]>
 </script>
 
+<script>
+  if('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js')
+    })
+  }
+</script>
 
 
     

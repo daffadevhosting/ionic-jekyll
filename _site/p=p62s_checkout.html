@@ -175,7 +175,7 @@ $(".preloader").delay(3500).fadeOut(550);
     
     
     <ion-buttons slot="start">
-      <ion-button onclick="history.back()"><ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon></ion-button>
+      <ion-button onclick="myProduct()"><ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon></ion-button>
     </ion-buttons>
     
           <ion-chip slot="end" onclick="setDarkMode(true)" id="darkBtn">
@@ -512,6 +512,13 @@ $(function() {
 //]]>
 </script>
 
+<script>
+  if('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js')
+    })
+  }
+</script>
 
 
     

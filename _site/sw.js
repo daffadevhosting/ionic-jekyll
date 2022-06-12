@@ -25,10 +25,10 @@ registerRoute(
 )
 
 workbox.precaching.precacheAndRoute([
-  { url: '/', revision: '202206092221' },
-  { url: '/product', revision: '202206092221' },
-  { url: '/assets/css/style.css', revision: '202206092221' },
-  { url: '/assets/css/webshop.css', revision: '202206092221' }
+  { url: '/', revision: '202206121535' },
+  { url: '/product', revision: '202206121535' },
+  { url: '/assets/css/style.css', revision: '202206121535' },
+  { url: '/assets/css/webshop.css', revision: '202206121535' }
 ])
 
 registerRoute(

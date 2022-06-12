@@ -377,7 +377,7 @@ Masker kain bordir manual tasikmalaya murah meriah,
 </div>
 <div class="btn-grup_order">
 <ion-buttons slot="start">
-<ion-button color="success" id="trigger-wa">WhatsApp</ion-button>
+<ion-button color="success" id="trigger-wa">Contact</ion-button>
 </ion-buttons>
 
 <ion-buttons slot="end">
@@ -387,8 +387,8 @@ Masker kain bordir manual tasikmalaya murah meriah,
   <ion-card class="app-description-text" style="margin:0;display:none;">
 <ion-card-header color="light" style="padding:0;">
     <ion-toolbar>
-        <ion-buttons class="app-description-content">
-          <ion-button color="danger"><ion-icon name="close-circle"></ion-icon>
+        <ion-buttons slot="end" class="app-description-content">
+          <ion-button color="danger"><ion-icon slot="icon-only" name="close-circle"></ion-icon>
           </ion-button>
         </ion-buttons>
     </ion-toolbar>
@@ -635,24 +635,7 @@ function myBri() {
     <script src="/assets/js/form-order.js?version = 1.0" type="text/javascript"></script>
     <script src="/assets/js/question.js" type="text/javascript"></script>
 
-
-  <script>
-    var id = document.querySelector('#cartButton');
-    id.addEventListener('click', handleButtonClick);
-
-    async function handleButtonClick() {
-      const toast = await toastController.create({
-        color: 'dark',
-        duration: 2500,
-        position: 'bottom',
-        message: 'Masker Bordir Dahlia, berhasil masuk ke keranjang belanja.'
-      });
-
-      await toast.present();
-    }
-  </script>
-
-      <script async src="/assets/js/like.js"></script>
+<script async src="/assets/js/like.js"></script>
 
       <script async src="/assets/js/style-picker.js"></script>
       <script async src="/assets/js/add-to-cart.js"></script>
@@ -668,7 +651,7 @@ function myBri() {
       const toast = await toastController.create({
         color: 'dark',
         duration: 2500,
-        position: 'bottom',
+        position: 'top',
         message: 'Masker Bordir Dahlia, berhasil masuk ke keranjang belanja.'
       });
 

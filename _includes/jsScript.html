@@ -1,21 +1,4 @@
-{% if page.layout == "shop" %}
-  <script>
-    var id = document.querySelector('#cartButton');
-    id.addEventListener('click', handleButtonClick);
-
-    async function handleButtonClick() {
-      const toast = await toastController.create({
-        color: 'dark',
-        duration: 2500,
-        position: 'bottom',
-        message: '{{ page.title }}, berhasil masuk ke keranjang belanja.'
-      });
-
-      await toast.present();
-    }
-  </script>
-{% endif %}
-      <script async src="{{site.baseurl}}/assets/js/like.js"></script>
+<script async src="{{site.baseurl}}/assets/js/like.js"></script>
 {% if page.layout == "shop" %}
       <script async src="{{site.baseurl}}/assets/js/style-picker.js"></script>
       <script async src="{{site.baseurl}}/assets/js/add-to-cart.js"></script>
@@ -33,7 +16,7 @@
       const toast = await toastController.create({
         color: 'dark',
         duration: 2500,
-        position: 'bottom',
+        position: 'top',
         message: '{{ page.title }}, berhasil masuk ke keranjang belanja.'
       });
 

@@ -1,4 +1,4 @@
-I"˜<style type="text/css">.keranjang-box .harga-total{display:none!important;}.keranjang-box .simpleCart_items{max-height: 310px!important;}.keranjang-box .item-thumb img{width: 75px!important;}small{font-size:12px;}.masthead,.product{display:none!important;}.not_if{background: #18ce0f;color:#fff;padding: 10px;border-radius: 5px;line-height: 25px;box-shadow: #33333387 0 3px 1px -2px, #33333387 0 2px 2px 0, #33333387 0 1px 5px 0;}.form-coll{display:flex;justify-content:space-between;}ion-footer{display:none !important;}@media only screen and (max-width:767px){.card-form{margin-bottom:22%;}.keranjang-box .simpleCart_items {max-height: 250px!important;}}</style>
+I"ù<style type="text/css">.keranjang-box .harga-total{display:none!important;}.keranjang-box .simpleCart_items{max-height: 310px!important;}.keranjang-box .item-thumb img{width: 75px!important;}small{font-size:12px;}.masthead,.product{display:none!important;}.not_if{background: #18ce0f;color:#fff;padding: 10px;border-radius: 5px;line-height: 25px;box-shadow: #33333387 0 3px 1px -2px, #33333387 0 2px 2px 0, #33333387 0 1px 5px 0;}.form-coll{display:flex;justify-content:space-between;}ion-footer{display:none !important;}@media only screen and (max-width:767px){.card-form{margin-bottom:22%;}.keranjang-box .simpleCart_items {max-height: 250px!important;}}</style>
 
 <ion-card class="review-checkout">
   <ion-item>
@@ -14,12 +14,12 @@
 <ion-card class="card-form" style="max-width: 680px;padding:6px;width: 100%;border: 1px solid #eee;border-radius: 5px;box-shadow: rgb(0 0 0 / 20%) 0px 3px 1px -2px, rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 1px 5px 0px;">
 <form class="wrapHead data-form validate-form" id="whatsapp-order">
 <div class="not_if">
-      <span>Total belanja </span>sebesar <b><span class="simpleCart_total"></span></b><p />
+      <span>Total belanja </span>sebesar &lt;b"&gt;&lt;span class="simpleCart_total" style="font-size:larger;font-weight:900;&gt;&lt;/span&gt;&lt;/b&gt;<p />
 <span style="font-size:10px;"> ( *Belum Termasuk Ongkir )</span><p />
 <ion-note color="danger">Silahkan isi data pengiriman dibawah ini..</ion-note>
 </div>
 <p /><br />
-<input class="order" id="AdminToko" type="hidden" />
+<input class="order adminwa" id="AdminToko" value="{{site.admin}}" type="hidden" />
 <ion-item>
   <ion-label position="stacked">Nama Lengkap</ion-label>
                   <ion-input id="nama" type="text" class="nama wajib" placeholder="Nama Lengkap"></ion-input>

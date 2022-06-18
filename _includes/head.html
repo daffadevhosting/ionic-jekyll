@@ -3,7 +3,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light darkmode" />
-<meta name="google-site-verification" content="{{site.verify}}" />
+<meta name="google-site-verification" content="{{site.G-verify}}" />
 <meta name="yandex-verification" content="42c9b7a5a8c7355c" />
 <meta http-equiv='cache-control' content='no-cache'>
 <meta http-equiv='expires' content='0'>
@@ -21,7 +21,12 @@
 <meta property="og:title" content="{{ page.title }}"/>
 {% if page.image %}<meta property="og:image" content="{{ page.image | prepend: site.baseurl | prepend: site.url }}"/>{% endif %}
 <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url }}"/>
+    {% if page.url == '/product/' %}
+<meta property="og:type" content="product">
+    {% endif %}
+    {% if page.url == '/blog/' %}
 <meta property="og:type" content="article">
+    {% endif %}
 <meta property="og:site_name" content="{{ site.title }}"/>
 <meta property="og:description" content="{% if pagecontent_description.size > 10 %}{{ pagecontent_description }}{% else %}{{ site.description }}{% endif %}"/>
 
@@ -143,7 +148,7 @@
   }
 }
 </script>
-    {% if page.url == '/product' %}
+    {% if page.url == '/product/' %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org/",

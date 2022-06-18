@@ -110,6 +110,7 @@ animation-iteration-count: infinite;
   <body>
     <ion-app>
       <ion-content fullscreen class="ion-padding" scroll-y="false">
+    <ion-note id="WelcomeMessage"></ion-note>
         <ion-slides>
           <ion-slide>
             <div class="slide">
@@ -197,7 +198,13 @@ var slides = document.querySelector('ion-slides');
 
 slides.options = {
   initialSlide: 0,
-  speed: 400
+  speed: 500
 }
 </script>
 <script  src="assets/js/script.js"></script>
+
+<script type="text/javascript">
+var Messages = new Date,
+    Jams = Messages.getHours();
+document.getElementById("WelcomeMessage").innerHTML = 5 <= Jams && Jams <= 11 ? "Selamat Pagi" : 12 <= Jams && Jams <= 15 ? "Selamat Siang" : 15 <= Jams && Jams <= 17 ? "Selamat Sore" : 18 <= Jams && Jams <= 23 ? "Selamat malam" : "Selamat malam menjelang pagi";
+</script>

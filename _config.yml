@@ -18,7 +18,7 @@ fb-profile: 435671100899312
 fb-pages: 107881477662203
 signal-id: 23925364-ab76-466d-b529-44ea74b5d7c1
 safari-web-ID: web.onesignal.auto.0f4ef0fc-d020-4184-9066-253532c318fc
-G-verify:
+G-verify: 
 comen: 30234
 
 # Build settings
@@ -31,7 +31,7 @@ collections:
   blog:
     output: true
 
-permalink: /:title
+permalink: /:title/
 
 defaults:
 - scope:

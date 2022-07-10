@@ -227,6 +227,7 @@ select.form-control {
 .review-checkout {
     width:50%;
     max-height: 390px;
+    height: fit-content;
 
     @include mobile {
     width: 100%;}

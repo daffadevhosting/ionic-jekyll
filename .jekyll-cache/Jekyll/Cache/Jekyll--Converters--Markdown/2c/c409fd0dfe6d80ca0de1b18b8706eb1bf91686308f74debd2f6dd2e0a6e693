@@ -1,4 +1,4 @@
-I"á<style type="text/css">.keranjang-box .harga-total{display:none!important;}.keranjang-box .simpleCart_items{max-height: 310px!important;}.keranjang-box .item-thumb img{width: 75px!important;}small{font-size:12px;}.masthead,.product{display:none!important;}.not_if{background: #18ce0f;color:#fff;padding: 10px;border-radius: 5px;line-height: 25px;box-shadow: #33333387 0 3px 1px -2px, #33333387 0 2px 2px 0, #33333387 0 1px 5px 0;}.form-coll{display:flex;justify-content:space-between;}ion-footer{display:none !important;}@media only screen and (max-width:767px){.card-form{margin-bottom:22%;}.keranjang-box .simpleCart_items {max-height: 250px!important;}}</style>
+I"ï<style type="text/css">.keranjang-box .harga-total{display:none!important;}.keranjang-box .simpleCart_items{max-height: 310px!important;}.keranjang-box .item-thumb img{width: 75px!important;}small{font-size:12px;}.masthead,.product{display:none!important;}.not_if{background: #18ce0f;color:#fff;padding: 10px;border-radius: 5px;line-height: 25px;box-shadow: #33333387 0 3px 1px -2px, #33333387 0 2px 2px 0, #33333387 0 1px 5px 0;}.form-coll{display:flex;justify-content:space-between;}ion-footer{display:none !important;}@media only screen and (max-width:767px){.card-form{margin-bottom:22%;}.keranjang-box .simpleCart_items {max-height: 250px!important;}}</style>
 
 <ion-card class="review-checkout">
   <ion-item>
@@ -19,7 +19,7 @@
 <ion-note color="danger">Silahkan isi data pengiriman dibawah ini..</ion-note>
 </div>
 <p /><br />
-<input class="order adminwa" id="AdminToko" value="{{site.admin}}" type="hidden" />
+<input class="order adminwa" id="AdminToko" value="{{ site.env.WA_KEY }}" type="hidden" />
 <ion-item>
   <ion-label position="stacked">Nama Lengkap</ion-label>
                   <ion-input id="nama" type="text" class="nama wajib" placeholder="Nama Lengkap"></ion-input>
@@ -57,7 +57,7 @@
 </ion-router-link>
 </form>
 <style>.grecaptcha-badge{z-index:1;}</style>
-<div class="g-recaptcha" data-sitekey="{{site.sitekey}}" data-callback="onSubmit" data-size="invisible">
+<div class="g-recaptcha" data-sitekey="{{ site.env.SITE_KEY }}" data-callback="onSubmit" data-size="invisible">
 </div>
 <script>grecaptcha.execute();</script>
 </ion-card>

@@ -1,7 +1,6 @@
 # Welcome to Jekyll!
 BlogID: 2141768081939130795
 dev: NdanG
-admin: 0813-8626-7897
 title: Plus62store
 email: plus6store.info@gmail.com
 avatar: https://1.bp.blogspot.com/-1bWHHqO2Jt0/X2ZgjgIVRVI/AAAAAAAAFZ8/XCb6roqGxhIn-K34II1L8BuLDoAePrmsgCLcBGAsYHQ/s0/192x192.png
@@ -10,7 +9,6 @@ baseurl: ""
 url: "https://plus62store.my.id"
 twitter_username: x1666
 github_username:  7897git
-sitekey: 6LdPL-wZAAAAAAzUvjEWXHGLAgKL78wBzB1IR8t7
 fb-pixel: 904845437026791
 fb-appID: 437300347340287
 fb-admin: 158878762428839
@@ -24,6 +22,10 @@ comen: 30234
 # Build settings
 plugins:
   - jekyll-feed
+  - jekyll-dotenv
+  - jekyll-sitemap
+  - jekyll-archives
+  - jekyll-figure
 
 collections:
   product:
@@ -64,14 +66,4 @@ compress_html:
   ignore:
     envs: development
 
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude: [lib, config.rb, .sass-cache, Capfile, config, log, Rakefile, Rakefile.rb, tmp, Gemfile, Gemfile.lock, README.md, LICENSE.md, node_modules, gulpfile.js, package.json, package-lock.json]

@@ -242,6 +242,23 @@ select.form-control {
 
     @include mobile {display:none;}
 }
+.img_post {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+.overlay {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #00000085;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+.overlay::before {content: 'HABIS';color: #fff;font-weight: bolder;}
+}
 
 .cekout {
     width: 100%;

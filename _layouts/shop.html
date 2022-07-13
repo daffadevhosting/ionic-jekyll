@@ -11,14 +11,15 @@ layout: webshop
           <div class="product-img">
             {% for style in page.styles %}
           		<div id="product-{{ forloop.index }}" class="style bounceIn" {% unless forloop.first %} style="display:none;" {% endunless %}>
-        				<ion-router-link data-fancybox="gallery" href="{{ style.image_path }}"><img src="{{ style.image_path }}" itemprop="image"></ion-router-link>
+        				<ion-router-link data-fancybox="gallery" href="{{ style.image_path }}">
+            <img class="img-thumb lazyimg" src="{{site.baseurl}}/assets/images/placeholder.png" data-src="{{ style.image_path }}" itemprop="image"></ion-router-link>
           		</div>
           	{% endfor %}
           </div>
 <img class="item_thumb hiden" src="{{page.image}}" alt="{{page.title}}" style="display:none!important"/>
 </div>
 <div class="detail-product">
-  <ion-item style="margin-bottom: 6px;">
+  <ion-item class="ion-no-padding" style="margin-bottom: 6px;">
   <div itemprop="name" class="item_name"><ion-label>{{ page.title }}</ion-label>
 <a class="fav_btn" onclick="favOptions()" >
     <span id="like-{{ page.noID }}" class="like-btn">
@@ -39,10 +40,10 @@ layout: webshop
 <div class="page-price item_price" itemprop="priceCurrency" content="IDR">Rp. {{page.price}}</div>
 
 <link itemprop="availability" href="https://schema.org/InStock" />
-            {% for stock in page.stok %}
-<div style="padding: 10px  0;color: #{{ stock.color }};">{{stock.stokis}}</div>
-            {% endfor %}
-
+            
+<div class="ion-padding">
+<ion-text {% if page.stok != 'Tersedia' %} color="danger"{% else %}color="success"{% endif %}>{{page.stok}}</ion-text>
+</div>
         	<div class="style-picker">
             {% for style in page.styles %}
               <div id="product-{{ forloop.index }}" {% if forloop.first %} class="item_color" {% endif %} style="text-align:center;width:75px;border-radius:25px;padding:8px;background-color:{{ style.color }};cursor:pointer;box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);">
@@ -52,7 +53,7 @@ layout: webshop
 
 <ion-accordion-group class="mobile-show" style="margin-top: 22px;">
   <ion-accordion>
-    <ion-item slot="header">
+    <ion-item class="ion-no-padding" slot="header">
       <ion-label>Deskripsi Produk</ion-label>
     </ion-item>
 
@@ -71,7 +72,7 @@ layout: webshop
 </ion-buttons>
 
 <ion-buttons slot="end">
-<ion-button color="{{page.btnclr}}" class="app-description-content description-content" {{page.outstock}}>{{page.stat}}</ion-button>
+<ion-button color="{% if page.stok != 'Tersedia' %}danger{% else %}primary{% endif %}" class="app-description-content description-content" {% if page.stok != 'Tersedia' %}disabled{% else %}{% endif %}>{% if page.stok != 'Tersedia' %}Stok Habis{% else %}Beli Sekarang{% endif %}</ion-button>
 </ion-buttons>
 </div>
   <ion-card class="app-description-text" style="margin:0;display:none;">
@@ -144,7 +145,7 @@ layout: webshop
         </ion-item>
 </ion-list>
         <div class="mb-0 text-right">
-            <a type="button" class="sendWAclik kirim" style="margin-right:10px;color:#07bc4c"><ion-icon slot="icon-only" class="wa" name="paper-plane-outline" style="position:relative;margin-bottom:0px;margin-top:0px;height:34px;width:34px;float:right;bottom:0;right:20px;z-index:40;"></ion-icon></a>
+            <a type="button" class="sendWAclik kirim" style="margin-right:10px;color:#07bc4c"><ion-icon slot="icon-only" class="wa" name="paper-plane-outline" style="position:relative;margin-bottom:0px;margin-top:25px;height:34px;width:34px;float:right;bottom:0;right:20px;z-index:40;"></ion-icon></a>
         </div>
     </form>
 </ion-content>

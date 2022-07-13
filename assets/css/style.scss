@@ -119,6 +119,13 @@ img {
   max-width: none;
 }
 
+.index_devider {
+    width: 100%;
+    height: 15%;
+  @include mobile {
+    height: 35%;}
+}
+
 .date {
   font-style: italic;
   color: $gray;

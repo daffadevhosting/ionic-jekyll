@@ -1,0 +1,4 @@
+I"\<p>{% for post in site.posts %}
+    {% include ion_products.html %}
+  {% endfor %}</p>
+:ET

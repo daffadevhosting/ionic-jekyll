@@ -1,0 +1,28 @@
+
+    <article class="post-shop">
+<ion-router-link href="{{site.baseurl}}{{ post.url }}">
+    <ion-card class="grid">
+<a  class="fav_btn" onclick="favOptions()" >
+    <span id="like-{{ post.noID }}" class="like-btn">
+    <ion-icon name="heart" slot="end"></ion-icon>
+    </span>
+</a>
+<div class="img_post">
+<img class="img-thumb lazyimg rounded" src="{{site.baseurl}}/assets/images/placeholder.png" data-src="{{ post.image }}" alt="{{ item.title }}" />
+{% if post.stok != 'Tersedia' %}<div class="overlay"></div>{% else %}{% endif %}
+</div>
+    <ion-card-header class="shop-header">
+        <ion-card-subtitle class="subtitle">{{ post.title }}</ion-card-subtitle>
+            <div class="hiden diskon">Rp. {{ post.discount }},00</div>
+        <div class="price">Rp. {{post.price}}</div>
+    </ion-card-header>
+      <ion-card-content class="entry">
+            <div class="shop-content">
+            <div class="sale">{{post.riv}} Terjual</div>
+            <div class="rate">
+            <ion-icon name="star" style="color:#f3ae0f;" aria-label="star" role="img" class="md hydrated"></ion-icon> {{ post.rating }}</div>
+            </div>
+      </ion-card-content>
+    </ion-card>
+</ion-router-link>
+    </article>

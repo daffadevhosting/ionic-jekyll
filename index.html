@@ -104,7 +104,7 @@ animation-iteration-count: infinite;
     function pageRedirect() {
         window.location.replace("/product");
     }      
-    setTimeout("pageRedirect()", 50000);
+    setTimeout("pageRedirect()", 80000);
 </script>
   </head>
   <body>
@@ -145,6 +145,7 @@ animation-iteration-count: infinite;
           <ion-slide>
             <img src="assets/images/logo/olshop.webp" />
             <h2>Siap Berbelanja?</h2>
+            <div class="index_devider"></div>
             <ion-button fill="clear" onclick="myProduct()" style="margin-top:20px;">Go Shopping <ion-icon slot="end" name="cart"></ion-icon></ion-button>
           </ion-slide>
         </ion-slides>
@@ -201,7 +202,7 @@ slides.options = {
   speed: 500
 }
 </script>
-<script  src="assets/js/script.js"></script>
+<script  src="{{ '/assets/js/script.js' | prepend: site.baseurl }}"></script>
 
 <script type="text/javascript">
 var Messages = new Date,

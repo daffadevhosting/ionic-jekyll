@@ -28,8 +28,6 @@ plugins:
   - jekyll-figure
 
 collections:
-  product:
-    output: true
   blog:
     output: true
 
@@ -37,7 +35,7 @@ permalink: /:title/
 
 defaults:
 - scope:
-    type: product
+    type: posts
   values:
     layout: shop
 
@@ -60,6 +58,16 @@ defaults:
     type: blog
   values:
     layout: post
+
+# Archives
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layout: archive
+  permalinks:
+    category: '/category/:name/'
+    tags: '/tag/:name/'
 
 compress_html:
   clippings: all

@@ -1,4 +1,4 @@
-I":<style>
+I"]<style>
 :root {
     --ion-safe-area-top: 20px;
     --ion-safe-area-bottom: 22px;
@@ -96,13 +96,6 @@ animation-iteration-count: infinite;
 .preloader{display:none!important}
     </style>
 
-<script>
-    function pageRedirect() {
-        window.location.replace("/product");
-    }      
-    setTimeout("pageRedirect()", 80000);
-</script>
-
 <p>&lt;/head&gt;</p>
 <body>
     <ion-app>
@@ -140,10 +133,45 @@ animation-iteration-count: infinite;
           </ion-slide>
 
           <ion-slide>
-            <img src="assets/images/logo/olshop.webp" />
-            <h2>Siap Berbelanja?</h2>
-            <div class="index_devider"></div>
-            <ion-button fill="clear" onclick="myProduct()" style="margin-top:20px;">Go Shopping <ion-icon slot="end" name="cart"></ion-icon></ion-button>
+            <img src="https://img.freepik.com/free-icon/google_318-278809.jpg" />
+            <h2>Sign In dengan Google</h2>
+            <p>Untuk melanjutkan silahkan sign in dengan google anda.</p>
+            <ion-button id="sign-in-button" color="primary" style="margin-top:10px;"><ion-icon slot="start" name="logo-google"></ion-icon> Sign In</ion-button>
+
+    <script type="module">
+      const firebaseConfig = {
+          apiKey: "{{ site.env.API_KEY }}",
+          authDomain: "{{ site.env.AUTH_DOMAIN }}",
+          databaseURL: "{{ site.env.DATABASE_URL }}",
+          projectId: "{{ site.env.PROJECT_ID }}",
+          storageBucket: "{{ site.env.STORAGE_BUCKET }}",
+          messagingSenderId: "{{ site.env.SENDER_ID }}",
+          appId: "{{ site.env.APP_ID }}",
+          measurementId: "{{ site.env.MEASUREMENT_ID }}"
+      };
+      firebase.initializeApp(firebaseConfig);
+      
+      const auth = firebase.auth();
+      
+      const userSignedInDiv = document.getElementById('user-signed-in');
+      const signInButton = document.getElementById('sign-in-button');
+      
+      function toggleUI() {
+        if (auth.currentUser) {
+          location.href = "{{site.baseurl}}/product";
+        } else {
+        }
+      }
+      
+      signInButton.addEventListener('click', () => {
+        const provider = new firebase.auth.GoogleAuthProvider();
+        auth.signInWithPopup(provider);
+      });
+      
+      auth.onAuthStateChanged(user => {
+        toggleUI();
+      });
+    </script>
           </ion-slide>
         </ion-slides>
       </ion-content>

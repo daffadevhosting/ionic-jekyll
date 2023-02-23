@@ -68,6 +68,9 @@
       <ion-button onclick="myProduct()"><ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon></ion-button>
     </ion-buttons>
     {% endif %}
+    <ion-buttons slot="end">
+      <ion-button id="sign-out-button"><ion-icon slot="icon-only" name="log-out-outline"></ion-icon></ion-button>
+    </ion-buttons>
           <ion-chip slot="end" onclick="setDarkMode(true)" id="darkBtn">
             <div>
             <ion-label style="display: none;">DarkMode</ion-label>
@@ -82,3 +85,41 @@
           </ion-chip>
         </ion-toolbar>
      </ion-header>
+      
+     <script type="module">
+       const firebaseConfig = {
+           apiKey: "{{ site.env.API_KEY }}",
+           authDomain: "{{ site.env.AUTH_DOMAIN }}",
+           databaseURL: "{{ site.env.DATABASE_URL }}",
+           projectId: "{{ site.env.PROJECT_ID }}",
+           storageBucket: "{{ site.env.STORAGE_BUCKET }}",
+           messagingSenderId: "{{ site.env.SENDER_ID }}",
+           appId: "{{ site.env.APP_ID }}",
+           measurementId: "{{ site.env.MEASUREMENT_ID }}"
+       };
+       firebase.initializeApp(firebaseConfig);
+       
+       const auth = firebase.auth();
+       
+       const userSignedOutDiv = document.getElementById('user-signed-out');
+       const userSignedInDiv = document.getElementById('user-signed-in');
+       const userDisplayName = document.getElementById('user-display-name');
+       const userEmail = document.getElementById('user-email');
+       const signOutButton = document.getElementById('sign-out-button');
+     
+       function toggleUI() {
+         if (auth.currentUser) {
+           userDisplayName.textContent = auth.currentUser.displayName;
+           userEmail.textContent = auth.currentUser.email;
+         } else {
+           location.href = "{{site.baseurl}}/";
+         }
+       }
+       signOutButton.addEventListener('click', () => {
+         auth.signOut();
+       });
+       
+       auth.onAuthStateChanged(user => {
+         toggleUI();
+       });
+     </script>

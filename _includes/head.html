@@ -4,6 +4,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light darkmode" />
 <meta name="google-site-verification" content="{{site.G-verify}}" />
+<script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+
+<script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
 <meta name="yandex-verification" content="42c9b7a5a8c7355c" />
 <meta http-equiv='cache-control' content='no-cache'>
 <meta http-equiv='expires' content='0'>
@@ -38,8 +42,8 @@
 <meta name="twitter:url" content="{{ site.url }}{{ page.url }}" />
 <meta name="twitter:description" content="{% if pagecontent_description.size > 10 %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
 <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
-<link rel="sitemap" type="application/xml" title="Sitemap" href="{{ "/sitemap.xml" | prepend: site.baseurl | prepend: site.url }}" />
+<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}">
+<link rel="sitemap" type="application/xml" title="Sitemap" href="{{ '/sitemap.xml' | prepend: site.baseurl | prepend: site.url }}" />
      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
      <script>
        function onSubmit(token) {
@@ -267,6 +271,6 @@
 </head>
   <body>
     {% include preload.html %}
-    <ion-app>
-    {% include ion-header.html %}
+    <ion-app> {% if page.url == "{{site.baseurl}}/" %}{% elsif page.url contains '/product/' or page.layout == 'default' %}
+    {% include ion-header.html %}{% elsif page.layout == 'webshop' or page.layout == 'checkout-page' %}{% include ion-header.html %}{% endif %}
       <ion-content fullscreen>

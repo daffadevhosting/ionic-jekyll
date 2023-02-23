@@ -74,4 +74,4 @@ compress_html:
   ignore:
     envs: development
 
-exclude: [lib, config.rb, .sass-cache, Capfile, config, log, Rakefile, Rakefile.rb, tmp, Gemfile, Gemfile.lock, README.md, LICENSE.md, node_modules, gulpfile.js, package.json, package-lock.json]
+exclude: [lib, config.rb, .sass-cache, .env, Capfile, config, log, Rakefile, Rakefile.rb, tmp, Gemfile, Gemfile.lock, README.md, LICENSE.md, node_modules, gulpfile.js, package.json, package-lock.json]

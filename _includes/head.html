@@ -272,5 +272,5 @@
   <body>
     {% include preload.html %}
     <ion-app> {% if page.url == "{{site.baseurl}}/" %}{% elsif page.url contains '/product/' or page.layout == 'default' %}
-    {% include ion-header.html %}{% elsif page.layout == 'webshop' or page.layout == 'checkout-page' %}{% include ion-header.html %}{% endif %}
+    {% include ion-header.html %}{% elsif page.layout == 'webshop' or page.layout == 'checkout-page' %}{% include ion-header.html %}{% elsif page.layout == 'post' or page.layout == 'payment-page' %}{% include ion-header.html %}{% endif %}
       <ion-content fullscreen>

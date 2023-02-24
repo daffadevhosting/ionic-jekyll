@@ -1,4 +1,4 @@
-I"]<style>
+I"T<style>
 :root {
     --ion-safe-area-top: 20px;
     --ion-safe-area-bottom: 22px;
@@ -134,8 +134,8 @@ animation-iteration-count: infinite;
 
           <ion-slide>
             <img src="https://img.freepik.com/free-icon/google_318-278809.jpg" />
-            <h2>Sign In dengan Google</h2>
-            <p>Untuk melanjutkan silahkan sign in dengan google anda.</p>
+            <h2>Sign In</h2>
+            <p>Untuk melanjutkan silahkan Sign in dengan akun google anda.</p>
             <ion-button id="sign-in-button" color="primary" style="margin-top:10px;"><ion-icon slot="start" name="logo-google"></ion-icon> Sign In</ion-button>
 
     <script type="module">

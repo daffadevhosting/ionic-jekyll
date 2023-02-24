@@ -1,4 +1,4 @@
-I"ˆ<div class="payment-point">
+I"Ž<div class="payment-point">
 <ion-card>
 <img src="/assets/images/qris_logo.jpg" />
 <buttonQris>
@@ -93,7 +93,7 @@ function wa_pay() {
       async function handleButtonClick() {
         const alert = await alertController.create({
           message: 'Kamu akan melakukan pembayaran melalui transfer BANK, silahkan Copy Paste nomor Rekening kami.',
-          buttons: ['Agree'],
+          buttons: ['Oke, Baik'],
         });
 
         await alert.present();
@@ -118,7 +118,7 @@ function wa_pay() {
   const sheetModal = document.querySelector('#tfBank');
   const cardModal = document.querySelector('#scQris');
 
-  sheetModal.breakpoints = [0.1, 0.5, 1];
+  sheetModal.breakpoints = [0.1, 0.5, 0.5];
   sheetModal.initialBreakpoint = 0.5;
   
   cardModal.swipeToClose = true;

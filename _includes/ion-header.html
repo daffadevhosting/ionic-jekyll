@@ -47,6 +47,10 @@
     <ion-buttons slot="start">
       <ion-button onclick="history.back()"><ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon></ion-button>
     </ion-buttons>
+    <ion-chip slot="start">
+      <ion-icon name="person-circle" color="dark"></ion-icon>
+      <ion-label id="user-display-name"></ion-label>
+    </ion-chip>
     {% endif %}
     {% if page.layout == "page" %}
     <ion-buttons slot="start">
@@ -67,6 +71,10 @@
     <ion-buttons slot="start">
       <ion-button onclick="myProduct()"><ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon></ion-button>
     </ion-buttons>
+    <ion-chip slot="end">
+      <ion-icon name="person-circle" color="dark"></ion-icon>
+      <ion-label id="user-display-name"></ion-label>
+    </ion-chip>
     {% endif %}
     <ion-buttons slot="end">
       <ion-button id="sign-out-button"><ion-icon slot="icon-only" name="log-out-outline"></ion-icon></ion-button>

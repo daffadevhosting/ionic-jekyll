@@ -1,0 +1,31 @@
+{
+  "name": "ionic-jekyll",
+  "version": "1.21.2",
+  "description": "Toko Online Jekyll simpleCart checkout WhatsApp",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daffadevhosting/ionic-jekyll.git"
+  },
+  "keywords": [
+    "online-shop",
+    "online-store",
+    "webshop",
+    "shopping"
+  ],
+  "author": "unangningEU",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/daffadevhosting/ionic-jekyll/issues"
+  },
+  "homepage": "https://github.com/daffadevhosting/ionic-jekyll#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.58.3"
+  }
+}

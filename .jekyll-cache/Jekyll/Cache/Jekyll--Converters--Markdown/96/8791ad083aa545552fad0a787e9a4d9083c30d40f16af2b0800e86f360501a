@@ -1,11 +1,4 @@
----
-layout: index
-title: Plus62 Store
-description: Static online-shop simpleCart jekyllrb & ionic v.6
-image: /image/logo/maskable_icon.png
----
-
-<style>
+I"m<style>
 :root {
     --ion-safe-area-top: 20px;
     --ion-safe-area-bottom: 22px;
@@ -102,16 +95,16 @@ animation-iteration-count: infinite;
   } 
 .preloader{display:none!important}
     </style>
-    
-  </head>
-  <body>
+
+<p>&lt;/head&gt;</p>
+<body>
     <ion-app>
-      <ion-content fullscreen class="ion-padding" scroll-y="false">
+      <ion-content fullscreen="" class="ion-padding" scroll-y="false">
     <ion-note id="WelcomeMessage"></ion-note>
         <ion-slides>
           <ion-slide>
             <div class="slide">
-              <img src="assets/images/logo/plus62.webp" style="border-radius: 100%;"/>
+              <img src="assets/images/logo/plus62.webp" style="border-radius: 100%;" />
               <h2>Selamat Datang</h2>
               <p>
                 WebShop <b>Plus62store</b> menawarkan berbagai macam jenis masker bordir yang aman dan nyaman dipakai sehari-hari.
@@ -234,7 +227,6 @@ slides.options = {
   speed: 500
 }
 </script>
-<div class="hidden">
           <ion-chip slot="end" onclick="setDarkMode(true)" id="darkBtn">
             <div>
             <ion-label style="display: none;">DarkMode</ion-label>
@@ -247,11 +239,12 @@ slides.options = {
             <ion-icon name="partly-sunny"></ion-icon>
             </div>
           </ion-chip>
-</div>
-<script  src="{{ '/assets/js/script.js' | prepend: site.baseurl }}"></script>
+<script src="{{ '/assets/js/script.js' | prepend: site.baseurl }}"></script>
 
 <script type="text/javascript">
 var Messages = new Date,
     Jams = Messages.getHours();
 document.getElementById("WelcomeMessage").innerHTML = 5 <= Jams && Jams <= 11 ? "Selamat Pagi" : 12 <= Jams && Jams <= 15 ? "Selamat Siang" : 15 <= Jams && Jams <= 17 ? "Selamat Sore" : 18 <= Jams && Jams <= 23 ? "Selamat malam" : "Selamat malam menjelang pagi";
 </script>
+</body>
+:ET

@@ -12,7 +12,7 @@
 <meta http-equiv='cache-control' content='no-cache'>
 <meta http-equiv='expires' content='0'>
 <meta http-equiv='pragma' content='no-cache'>
-<title>{% if page.title and page.title != 'Home' %}{{ page.title }} @ {% endif %}{{ site.title }}</title>
+<title>{% if page.url == '/' %}{{ page.title }}{% elsif page.title %}{{ page.title }} @ {{ site.title }}{% endif %}</title>
 {% assign pagecontent_description = page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 160 %}
 <meta property="og:image" content="{{ page.image | prepend: site.baseurl | prepend: site.url }}"/>
 <meta name="description" content="{% if pagecontent_description.size > 10 %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
@@ -51,9 +51,9 @@
        }
      </script>
 
-<script type="module" src="{{ '/assets/vendor/@ionic/core/dist/ionic/ionic.esm.js' | relative_url }}"></script>
-<script nomodule src="{{ '/assets/vendor/@ionic/core/dist/ionic/ionic.js' | relative_url }}"></script>
-<link rel="stylesheet" href="{{ '/assets/vendor/@ionic/core/css/ionic.bundle.css' | relative_url }}" />
+<script type="module" src="{{ '/assets/vendor/@ionic/core/dist/ionic/ionic.esm.js?v=6.0' | relative_url }}"></script>
+<script nomodule src="{{ '/assets/vendor/@ionic/core/dist/ionic/ionic.js?v=6.0' | relative_url }}"></script>
+<link rel="stylesheet" href="{{ '/assets/vendor/@ionic/core/css/ionic.bundle.css?v=6.0' | relative_url }}" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 <link href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" rel="stylesheet" />
 <script src="https://cdnjs.plus62store.my.id/jsScript/jquery-3.6.0.js"></script>
@@ -61,19 +61,19 @@
 .fancybox__container.is-animated[aria-hidden=false] .fancybox__backdrop, .fancybox__container.is-animated[aria-hidden=false] .fancybox__caption, .fancybox__container.is-animated[aria-hidden=false] .fancybox__nav, .fancybox__container.is-animated[aria-hidden=false] .carousel__dots, .fancybox__container.is-animated[aria-hidden=false] .carousel__button.is-close{top: 0;color: #dc322f;}.fancybox__content :focus:not(.carousel__button.is-close){outline:none;}.fancybox__html5video, .fancybox__content, .fancybox__iframe{border-radius: 5px;}
     </style>
     <script type="module">
-      import { alertController } from "{{ '/assets/vendor/@ionic/core/dist/ionic/index.esm.js' | relative_url }}";
+      import { alertController } from "{{ '/assets/vendor/@ionic/core/dist/ionic/index.esm.js?v=6.0' | relative_url }}";
       window.alertController = alertController;
     </script>
   <script type="module">
-    import { toastController } from "{{ '/assets/vendor/@ionic/core/dist/ionic/index.esm.js' | relative_url }}";
+    import { toastController } from "{{ '/assets/vendor/@ionic/core/dist/ionic/index.esm.js?v=6.0' | relative_url }}";
     window.toastController = toastController;
   </script>
   <script type="module">
-    import { modalController } from "{{ '/assets/vendor/@ionic/core/dist/ionic/index.esm.js' | relative_url }}";
+    import { modalController } from "{{ '/assets/vendor/@ionic/core/dist/ionic/index.esm.js?v=6.0' | relative_url }}";
     window.modalController = modalController;
   </script>
-<link rel="stylesheet" href="{{ '/assets/css/style.css' | prepend: site.baseurl }}">
-<link rel="stylesheet" href="{{ '/assets/css/webshop.css' | prepend: site.baseurl }}">
+<link rel="stylesheet" href="{{ '/assets/css/style.css?v=1.21.2' | prepend: site.baseurl }}">
+<link rel="stylesheet" href="{{ '/assets/css/webshop.css?v=1.21.2' | prepend: site.baseurl }}">
 <link rel="stylesheet" href="{{ '/assets/css/darkmode.css' | prepend: site.baseurl }}">
 <link rel="stylesheet" href="{{ '/assets/css/scrollbar.css' | prepend: site.baseurl }}">
 <link rel="manifest" href="{{ '/manifest.json' | prepend: site.baseurl }}">
